@@ -1,13 +1,16 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="http://www.semanticweb.org/alle_/ontologies/2026/5/untitled-ontology-23/"
-     xml:base="http://www.semanticweb.org/alle_/ontologies/2026/5/untitled-ontology-23/"
+<rdf:RDF xmlns="https://alessandro-rocchi.github.io/project_InformationScienceandCH/ontology/DDOntology#"
+     xml:base="https://alessandro-rocchi.github.io/project_InformationScienceandCH/ontology/DDOntology"
+     xmlns:dd="https://alessandro-rocchi.github.io/project_InformationScienceandCH/ontology/DDOntology#"
+     xmlns:cbo="http://comicmeta.org/cbo/"
+     xmlns:crm="http://www.cidoc-crm.org/cidoc-crm/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:terms="http://purl.org/dc/terms/">
-    <owl:Ontology rdf:about="http://www.semanticweb.org/alle_/ontologies/2026/5/untitled-ontology-23">
+    <owl:Ontology rdf:about="https://alessandro-rocchi.github.io/project_InformationScienceandCH/ontology/DDOntology#">
         <terms:creator xml:lang="en">Alessandro Rocchi</terms:creator>
         <rdfs:label xml:lang="en">Dylan Dog Ontology</rdfs:label>
     </owl:Ontology>
@@ -28,6 +31,136 @@
     <!-- http://purl.org/dc/terms/creator -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/ns/prov#wasInfluencedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/prov#wasInfluencedBy"/>
+    
+
+
+    <!-- https://alessandro-rocchi.github.io/project_InformationScienceandCH/ontology/DDOntology#appearanceInspiredBy -->
+
+    <owl:ObjectProperty rdf:about="https://alessandro-rocchi.github.io/project_InformationScienceandCH/ontology/DDOntology#appearanceInspiredBy">
+        <rdfs:subPropertyOf rdf:resource="https://alessandro-rocchi.github.io/project_InformationScienceandCH/ontology/DDOntology#isInspiredBy"/>
+        <rdfs:domain rdf:resource="http://comicmeta.org/cbo/Character"/>
+        <rdfs:range rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E21_Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://alessandro-rocchi.github.io/project_InformationScienceandCH/ontology/DDOntology#familyNameInspiredBy -->
+
+    <owl:ObjectProperty rdf:about="https://alessandro-rocchi.github.io/project_InformationScienceandCH/ontology/DDOntology#familyNameInspiredBy">
+        <rdfs:subPropertyOf rdf:resource="https://alessandro-rocchi.github.io/project_InformationScienceandCH/ontology/DDOntology#isInspiredBy"/>
+        <rdfs:domain rdf:resource="http://comicmeta.org/cbo/Character"/>
+        <rdfs:range rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E21_Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://alessandro-rocchi.github.io/project_InformationScienceandCH/ontology/DDOntology#firstNameInspiredBy -->
+
+    <owl:ObjectProperty rdf:about="https://alessandro-rocchi.github.io/project_InformationScienceandCH/ontology/DDOntology#firstNameInspiredBy">
+        <rdfs:subPropertyOf rdf:resource="https://alessandro-rocchi.github.io/project_InformationScienceandCH/ontology/DDOntology#isInspiredBy"/>
+        <rdfs:domain rdf:resource="http://comicmeta.org/cbo/Character"/>
+        <rdfs:range rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E21_Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://alessandro-rocchi.github.io/project_InformationScienceandCH/ontology/DDOntology#inspiredByFictional -->
+
+    <owl:ObjectProperty rdf:about="https://alessandro-rocchi.github.io/project_InformationScienceandCH/ontology/DDOntology#inspiredByFictional">
+        <rdfs:subPropertyOf rdf:resource="https://alessandro-rocchi.github.io/project_InformationScienceandCH/ontology/DDOntology#isInspiredBy"/>
+        <rdfs:domain rdf:resource="http://dbpedia.org/ontology/FictionalCharacter"/>
+        <rdfs:range rdf:resource="http://dbpedia.org/ontology/FictionalCharacter"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://alessandro-rocchi.github.io/project_InformationScienceandCH/ontology/DDOntology#isATributeTo -->
+
+    <owl:ObjectProperty rdf:about="https://alessandro-rocchi.github.io/project_InformationScienceandCH/ontology/DDOntology#isATributeTo">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://comicmeta.org/cbo/Character"/>
+        <rdfs:range rdf:resource="http://dbpedia.org/ontology/FictionalCharacter"/>
+        <rdfs:range rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E21_Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://alessandro-rocchi.github.io/project_InformationScienceandCH/ontology/DDOntology#isInspiredBy -->
+
+    <owl:ObjectProperty rdf:about="https://alessandro-rocchi.github.io/project_InformationScienceandCH/ontology/DDOntology#isInspiredBy">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/prov#wasInfluencedBy"/>
+        <rdfs:domain rdf:resource="http://comicmeta.org/cbo/Character"/>
+        <rdfs:domain rdf:resource="http://dbpedia.org/ontology/FictionalCharacter"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://alessandro-rocchi.github.io/project_InformationScienceandCH/ontology/DDOntology#mimicPoseOf -->
+
+    <owl:ObjectProperty rdf:about="https://alessandro-rocchi.github.io/project_InformationScienceandCH/ontology/DDOntology#mimicPoseOf">
+        <rdfs:domain rdf:resource="http://comicmeta.org/cbo/Character"/>
+        <rdfs:range rdf:resource="http://dbpedia.org/ontology/FictionalCharacter"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://comicmeta.org/cbo/Character -->
+
+    <owl:Class rdf:about="http://comicmeta.org/cbo/Character"/>
+    
+
+
+    <!-- http://comicmeta.org/cbo/Issue -->
+
+    <owl:Class rdf:about="http://comicmeta.org/cbo/Issue"/>
+    
+
+
+    <!-- http://dbpedia.org/ontology/FictionalCharacter -->
+
+    <owl:Class rdf:about="http://dbpedia.org/ontology/FictionalCharacter"/>
+    
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/E21_Person -->
+
+    <owl:Class rdf:about="http://www.cidoc-crm.org/cidoc-crm/E21_Person"/>
+    
+
+
+    <!-- https://alessandro-rocchi.github.io/project_InformationScienceandCH/ontology/DDOntology#Albo -->
+
+    <owl:Class rdf:about="https://alessandro-rocchi.github.io/project_InformationScienceandCH/ontology/DDOntology#Albo">
+        <rdfs:subClassOf rdf:resource="http://comicmeta.org/cbo/Issue"/>
+    </owl:Class>
 </rdf:RDF>
 
 
