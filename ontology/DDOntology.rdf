@@ -8,10 +8,14 @@
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:terms="http://purl.org/dc/terms/">
+     xmlns:frbroo="http://iflastandards.info/ns/fr/frbr/frbroo/"
+     xmlns:schema="http://schema.org/"
+     xmlns:dcterms="http://purl.org/dc/terms/"
+     xmlns:ontology="http://dbpedia.org/ontology/">
     <owl:Ontology rdf:about="https://alessandro-rocchi.github.io/project_InformationScienceandCH/ontology/DDOntology#">
-        <terms:creator xml:lang="en">Alessandro Rocchi</terms:creator>
+        <dcterms:creator xml:lang="en">Alessandro Rocchi</dcterms:creator>
         <rdfs:label xml:lang="en">Dylan Dog Ontology</rdfs:label>
     </owl:Ontology>
     
@@ -30,7 +34,9 @@
 
     <!-- http://purl.org/dc/terms/creator -->
 
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator">
+        <rdfs:range rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E21_Person"/>
+    </owl:AnnotationProperty>
     
 
 
@@ -45,9 +51,179 @@
     
 
 
+    <!-- http://comicmeta.org/cbo/artist -->
+
+    <owl:ObjectProperty rdf:about="http://comicmeta.org/cbo/artist">
+        <rdfs:domain rdf:resource="https://alessandro-rocchi.github.io/project_InformationScienceandCH/ontology/DDOntology#Albo"/>
+        <rdfs:range rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E21_Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://comicmeta.org/cbo/character -->
+
+    <owl:ObjectProperty rdf:about="http://comicmeta.org/cbo/character">
+        <rdfs:domain rdf:resource="http://comicmeta.org/cbo/Character"/>
+        <rdfs:range rdf:resource="http://comicmeta.org/cbo/Series"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://comicmeta.org/cbo/coverArtist -->
+
+    <owl:ObjectProperty rdf:about="http://comicmeta.org/cbo/coverArtist">
+        <rdfs:domain rdf:resource="https://alessandro-rocchi.github.io/project_InformationScienceandCH/ontology/DDOntology#Albo"/>
+        <rdfs:range rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E21_Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://comicmeta.org/cbo/creator -->
+
+    <owl:ObjectProperty rdf:about="http://comicmeta.org/cbo/creator">
+        <rdfs:domain rdf:resource="http://comicmeta.org/cbo/Series"/>
+        <rdfs:range rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E21_Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://comicmeta.org/cbo/writer -->
+
+    <owl:ObjectProperty rdf:about="http://comicmeta.org/cbo/writer">
+        <rdfs:domain rdf:resource="https://alessandro-rocchi.github.io/project_InformationScienceandCH/ontology/DDOntology#Albo"/>
+        <rdfs:range rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E21_Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://dbpedia.org/ontology/director -->
+
+    <owl:ObjectProperty rdf:about="http://dbpedia.org/ontology/director">
+        <rdfs:domain rdf:resource="http://dbpedia.org/ontology/Film"/>
+        <rdfs:range rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E21_Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://dbpedia.org/ontology/portrayer -->
+
+    <owl:ObjectProperty rdf:about="http://dbpedia.org/ontology/portrayer">
+        <rdfs:domain rdf:resource="http://dbpedia.org/ontology/FictionalCharacter"/>
+        <rdfs:range rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E21_Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://dbpedia.org/ontology/starring -->
+
+    <owl:ObjectProperty rdf:about="http://dbpedia.org/ontology/starring">
+        <rdfs:domain rdf:resource="http://dbpedia.org/ontology/Film"/>
+        <rdfs:range rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E21_Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://iflastandards.info/ns/fr/frbr/frbroo/R17_created -->
+
+    <owl:ObjectProperty rdf:about="http://iflastandards.info/ns/fr/frbr/frbroo/R17_created">
+        <rdfs:domain rdf:resource="http://iflastandards.info/ns/fr/frbr/frbroo/F28_Expression_Creation"/>
+        <rdfs:range rdf:resource="http://iflastandards.info/ns/fr/frbr/frbroo/F2_Expression"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://iflastandards.info/ns/fr/frbr/frbroo/R24_created -->
+
+    <owl:ObjectProperty rdf:about="http://iflastandards.info/ns/fr/frbr/frbroo/R24_created">
+        <rdfs:domain rdf:resource="http://iflastandards.info/ns/fr/frbr/frbroo/F3_Manifestation"/>
+        <rdfs:range rdf:resource="http://iflastandards.info/ns/fr/frbr/frbroo/F30_Publication_Event"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://iflastandards.info/ns/fr/frbr/frbroo/R3_is_realised_in -->
+
+    <owl:ObjectProperty rdf:about="http://iflastandards.info/ns/fr/frbr/frbroo/R3_is_realised_in">
+        <rdfs:domain rdf:resource="http://iflastandards.info/ns/fr/frbr/frbroo/F1_Work"/>
+        <rdfs:range rdf:resource="http://iflastandards.info/ns/fr/frbr/frbroo/F2_Expression"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://iflastandards.info/ns/fr/frbr/frbroo/R4_embodies -->
+
+    <owl:ObjectProperty rdf:about="http://iflastandards.info/ns/fr/frbr/frbroo/R4_embodies">
+        <rdfs:domain rdf:resource="http://iflastandards.info/ns/fr/frbr/frbroo/F3_Manifestation"/>
+        <rdfs:range rdf:resource="http://iflastandards.info/ns/fr/frbr/frbroo/F2_Expression"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/creator -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/creator">
+        <rdfs:domain rdf:resource="http://comicmeta.org/cbo/Character"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/hasPart -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/hasPart">
+        <rdfs:domain rdf:resource="http://comicmeta.org/cbo/Series"/>
+        <rdfs:range rdf:resource="https://alessandro-rocchi.github.io/project_InformationScienceandCH/ontology/DDOntology#Albo"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://schema.org/creator -->
+
+    <owl:ObjectProperty rdf:about="http://schema.org/creator">
+        <rdfs:domain rdf:resource="http://dbpedia.org/ontology/FictionalCharacter"/>
+        <rdfs:range rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E21_Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://schema.org/homeLocation -->
+
+    <owl:ObjectProperty rdf:about="http://schema.org/homeLocation">
+        <rdfs:domain rdf:resource="http://comicmeta.org/cbo/Character"/>
+        <rdfs:range rdf:resource="http://comicmeta.org/cbo/Location"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/P14_carried_out_by -->
+
+    <owl:ObjectProperty rdf:about="http://www.cidoc-crm.org/cidoc-crm/P14_carried_out_by">
+        <rdfs:domain rdf:resource="http://iflastandards.info/ns/fr/frbr/frbroo/F28_Expression_Creation"/>
+        <rdfs:range rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E21_Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/P89_falls_within -->
+
+    <owl:ObjectProperty rdf:about="http://www.cidoc-crm.org/cidoc-crm/P89_falls_within">
+        <rdfs:domain rdf:resource="http://comicmeta.org/cbo/Location"/>
+        <rdfs:range rdf:resource="http://comicmeta.org/cbo/Location"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.w3.org/ns/prov#wasInfluencedBy -->
 
     <owl:ObjectProperty rdf:about="http://www.w3.org/ns/prov#wasInfluencedBy"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/knows -->
+
+    <owl:ObjectProperty rdf:about="http://xmlns.com/foaf/0.1/knows">
+        <rdfs:domain rdf:resource="http://comicmeta.org/cbo/Character"/>
+        <rdfs:range rdf:resource="http://comicmeta.org/cbo/Character"/>
+    </owl:ObjectProperty>
     
 
 
@@ -112,12 +288,58 @@
     
 
 
-    <!-- https://alessandro-rocchi.github.io/project_InformationScienceandCH/ontology/DDOntology#mimicPoseOf -->
+    <!-- https://alessandro-rocchi.github.io/project_InformationScienceandCH/ontology/DDOntology#isNameATributeTo -->
 
-    <owl:ObjectProperty rdf:about="https://alessandro-rocchi.github.io/project_InformationScienceandCH/ontology/DDOntology#mimicPoseOf">
-        <rdfs:domain rdf:resource="http://comicmeta.org/cbo/Character"/>
-        <rdfs:range rdf:resource="http://dbpedia.org/ontology/FictionalCharacter"/>
+    <owl:ObjectProperty rdf:about="https://alessandro-rocchi.github.io/project_InformationScienceandCH/ontology/DDOntology#isNameATributeTo">
+        <rdfs:subPropertyOf rdf:resource="https://alessandro-rocchi.github.io/project_InformationScienceandCH/ontology/DDOntology#isATributeTo"/>
     </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://comicmeta.org/cbo/issueNumber -->
+
+    <owl:DatatypeProperty rdf:about="http://comicmeta.org/cbo/issueNumber">
+        <rdfs:domain rdf:resource="https://alessandro-rocchi.github.io/project_InformationScienceandCH/ontology/DDOntology#Albo"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://comicmeta.org/cbo/publicationDate -->
+
+    <owl:DatatypeProperty rdf:about="http://comicmeta.org/cbo/publicationDate">
+        <rdfs:domain rdf:resource="https://alessandro-rocchi.github.io/project_InformationScienceandCH/ontology/DDOntology#Albo"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/date -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/date">
+        <rdfs:domain rdf:resource="http://dbpedia.org/ontology/Film"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/issued -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/issued">
+        <rdfs:domain rdf:resource="http://iflastandards.info/ns/fr/frbr/frbroo/F3_Manifestation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
     
 
 
@@ -140,13 +362,73 @@
 
     <!-- http://comicmeta.org/cbo/Issue -->
 
-    <owl:Class rdf:about="http://comicmeta.org/cbo/Issue"/>
+    <owl:Class rdf:about="http://comicmeta.org/cbo/Issue">
+        <rdfs:subClassOf rdf:resource="http://schema.org/CreativeWork"/>
+    </owl:Class>
+    
+
+
+    <!-- http://comicmeta.org/cbo/Location -->
+
+    <owl:Class rdf:about="http://comicmeta.org/cbo/Location"/>
+    
+
+
+    <!-- http://comicmeta.org/cbo/Series -->
+
+    <owl:Class rdf:about="http://comicmeta.org/cbo/Series">
+        <rdfs:subClassOf rdf:resource="http://schema.org/CreativeWork"/>
+    </owl:Class>
     
 
 
     <!-- http://dbpedia.org/ontology/FictionalCharacter -->
 
     <owl:Class rdf:about="http://dbpedia.org/ontology/FictionalCharacter"/>
+    
+
+
+    <!-- http://dbpedia.org/ontology/Film -->
+
+    <owl:Class rdf:about="http://dbpedia.org/ontology/Film">
+        <rdfs:subClassOf rdf:resource="http://schema.org/CreativeWork"/>
+    </owl:Class>
+    
+
+
+    <!-- http://iflastandards.info/ns/fr/frbr/frbroo/F1_Work -->
+
+    <owl:Class rdf:about="http://iflastandards.info/ns/fr/frbr/frbroo/F1_Work"/>
+    
+
+
+    <!-- http://iflastandards.info/ns/fr/frbr/frbroo/F28_Expression_Creation -->
+
+    <owl:Class rdf:about="http://iflastandards.info/ns/fr/frbr/frbroo/F28_Expression_Creation"/>
+    
+
+
+    <!-- http://iflastandards.info/ns/fr/frbr/frbroo/F2_Expression -->
+
+    <owl:Class rdf:about="http://iflastandards.info/ns/fr/frbr/frbroo/F2_Expression"/>
+    
+
+
+    <!-- http://iflastandards.info/ns/fr/frbr/frbroo/F30_Publication_Event -->
+
+    <owl:Class rdf:about="http://iflastandards.info/ns/fr/frbr/frbroo/F30_Publication_Event"/>
+    
+
+
+    <!-- http://iflastandards.info/ns/fr/frbr/frbroo/F3_Manifestation -->
+
+    <owl:Class rdf:about="http://iflastandards.info/ns/fr/frbr/frbroo/F3_Manifestation"/>
+    
+
+
+    <!-- http://schema.org/CreativeWork -->
+
+    <owl:Class rdf:about="http://schema.org/CreativeWork"/>
     
 
 

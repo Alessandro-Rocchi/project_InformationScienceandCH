@@ -1,0 +1,141 @@
+@prefix cbo: <http://comicmeta.org/cbo/> .
+@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix dbo: <http://dbpedia.org/ontology/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dd: <https://alessandro-rocchi.github.io/project_InformationScienceandCH/ontology/DDOntology#> .
+@prefix dd_data: <https://alessandro-rocchi.github.io/project_InformationScienceandCH/rdf_dataset/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix frbroo: <http://iflastandards.info/ns/fr/frbr/frbroo/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix schema1: <http://schema.org/> .
+
+dd_data:d_dog a cbo:Character,
+        dbo:FictionalCharacter ;
+    cbo:character dd_data:dd_comic_series ;
+    dcterms:creator dd_data:a_stano,
+        dd_data:c_villa,
+        dd_data:t_sclavi ;
+    schema1:homeLocation dd_data:craven_road_7 ;
+    owl:sameAs <http://www.wikidata.org/entity/Q1774370> ;
+    foaf:knows dd_data:groucho ;
+    dd:apparenceInspiredBy dd_data:r_everett ;
+    dd:familyNameInspiredBy dd_data:dm_thomas ;
+    dd:givenNameInspiredBy dd_data:dd_kelly .
+
+dd_data:f_dellamorte a dbo:FictionalCharacter ;
+    dbo:portrayer dd_data:r_everett ;
+    schema1:character dd_data:dellamorte_book,
+        dd_data:dellamorte_film ;
+    schema1:creator dd_data:t_sclavi .
+
+dd_data:american_werewolf_london a dbo:Film ;
+    dbo:director dd_data:j_landis ;
+    owl:sameAs <http://www.wikidata.org/entity/Q467290> .
+
+dd_data:craven_road_7 a cbo:Location ;
+    crm:P89_falls_within dd_data:london ;
+    dd:isNameaTributeTo dd_data:w_craven .
+
+dd_data:d_argento a crm:E21_Person ;
+    owl:sameAs <http://viaf.org/viaf/100276085> .
+
+dd_data:dawn_of_the_dead a dbo:Film ;
+    dbo:director dd_data:g_romero ;
+    owl:sameAs <http://www.wikidata.org/entity/Q219155> .
+
+dd_data:dd_comic_series a cbo:Series ;
+    cbo:creator dd_data:t_sclavi ;
+    dcterms:hasPart dd_data:dd_nr1,
+        dd_data:dd_nr3,
+        dd_data:dd_nr67 ;
+    dcterms:publisher dd_data:sb_editore ;
+    schema1:contentLocation dd_data:london ;
+    owl:sameAs <http://www.wikidata.org/entity/Q12098> .
+
+dd_data:dd_kelly a dbo:FictionalCharacter ;
+    schema1:character dd_data:dog_book ;
+    schema1:creator dd_data:m_spillane .
+
+dd_data:dd_nr1 a dd:Albo ;
+    cbo:artist dd_data:a_stano ;
+    cbo:coverArtist dd_data:c_villa ;
+    cbo:writer dd_data:t_sclavi ;
+    dcterms:references dd_data:american_werewolf_london,
+        dd_data:dawn_of_the_dead ;
+    owl:sameAs <http://id.sbn.it/bid/RAV1384287> .
+
+dd_data:dd_nr3 a dd:Albo ;
+    cbo:coverArtist dd_data:c_villa ;
+    cbo:writer dd_data:t_sclavi ;
+    dcterms:references dd_data:suspiria ;
+    owl:sameAs <http://id.sbn.it/bid/RAV1387262> .
+
+dd_data:dd_nr67 a dd:Albo ;
+    cbo:coverArtist dd_data:a_stano ;
+    cbo:writer dd_data:t_sclavi ;
+    dcterms:references dd_data:pascal_book ;
+    owl:sameAs <http://id.sbn.it/bid/RAV1428241> .
+
+dd_data:dellamorte_film a dbo:Film ;
+    dbo:starring dd_data:r_everett ;
+    dcterms:references dd_data:dellamorte_book ;
+    owl:sameAs <http://id.sbn.it/opera/CAG0751357> .
+
+dd_data:dm_thomas a crm:E21_Person ;
+    owl:sameAs <http://viaf.org/viaf/73860698> .
+
+dd_data:dog_book a frbroo:F1_Work ;
+    crm:P14_carried_out_by dd_data:m_spillane ;
+    owl:sameAs <http://id.sbn.it/bid/TO00392471> .
+
+dd_data:g_marx a crm:E21_Person ;
+    owl:sameAs <http://viaf.org/viaf/120720626> .
+
+dd_data:g_romero a crm:E21_Person ;
+    owl:sameAs <http://viaf.org/viaf/64016615> .
+
+dd_data:groucho a cbo:Character ;
+    dd:isaTributeTo dd_data:g_marx .
+
+dd_data:j_landis a crm:E21_Person ;
+    owl:sameAs <http://viaf.org/viaf/79164545> .
+
+dd_data:l_pirandello a crm:E21_Person ;
+    owl:sameAs <http://viaf.org/viaf/64010465> .
+
+dd_data:pascal_book a frbroo:F1_Work ;
+    crm:P14_carried_out_by dd_data:l_pirandello ;
+    owl:sameAs <http://id.sbn.it/opera/CFI0138942> .
+
+dd_data:sb_editore a crm:E74_Group ;
+    owl:sameAs <http://viaf.org/viaf/182167411> .
+
+dd_data:suspiria a dbo:Film ;
+    dbo:director dd_data:d_argento ;
+    owl:sameAs <http://www.wikidata.org/entity/Q546900> .
+
+dd_data:w_craven a crm:E21_Person ;
+    owl:sameAs <http://viaf.org/viaf/84239961> .
+
+dd_data:dellamorte_book a frbroo:F1_Work ;
+    crm:P14_carried_out_by dd_data:t_sclavi ;
+    owl:sameAs <http://id.sbn.it/opera/LIG0219392> .
+
+dd_data:london a cbo:Location ;
+    owl:sameAs <http://sws.geonames.org/2643743> .
+
+dd_data:m_spillane a crm:E21_Person ;
+    owl:sameAs <http://viaf.org/viaf/12315338> .
+
+dd_data:a_stano a crm:E21_Person ;
+    owl:sameAs <http://viaf.org/viaf/71466214> .
+
+dd_data:c_villa a crm:E21_Person ;
+    owl:sameAs <http://viaf.org/viaf/90305811> .
+
+dd_data:r_everett a crm:E21_Person ;
+    owl:sameAs <http://viaf.org/viaf/85439687> .
+
+dd_data:t_sclavi a crm:E21_Person ;
+    owl:sameAs <http://viaf.org/viaf/34475770> .
+
