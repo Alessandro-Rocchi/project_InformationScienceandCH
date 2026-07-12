@@ -15,16 +15,8 @@
 @base <https://alessandro-rocchi.github.io/project_InformationScienceandCH/ontology/DDOntology#> .
 
 <https://alessandro-rocchi.github.io/project_InformationScienceandCH/ontology/DDOntology#> rdf:type owl:Ontology ;
-                                                                                            dcterms:creator "Alessandro Rocchi" ;
+                                                                                            rdfs:comment "created by: Alessandro Rocchi" ;
                                                                                             rdfs:label "Dylan Dog Ontology"@en .
-
-#################################################################
-#    Annotation properties
-#################################################################
-
-###  http://purl.org/dc/terms/creator
-dcterms:creator rdf:type owl:AnnotationProperty .
-
 
 #################################################################
 #    Object Properties
