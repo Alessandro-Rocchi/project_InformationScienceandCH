@@ -25,7 +25,7 @@
                     <publisher>Wikimedia Foundation</publisher>
                     <ptr target="https://it.wikipedia.org/wiki/Dylan_Dog"/>
                 </bibl>
-                <listBibl type="cited_source_in_page">
+                <listBibl type="source_in_page">
                     <bibl xml:id="dd_comic_series" type="comic_Series" sameAs="http://www.wikidata.org/entity/Q12098">
                         <title level="s">Dylan Dog</title>
                         <author ref="#t_sclavi"/>
