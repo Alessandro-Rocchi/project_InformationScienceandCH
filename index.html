@@ -72,7 +72,7 @@
                     <div class="row">
                         <div class="col-lg-9 mb-4">
                             <div class="border rounded shadow-sm" style="height: 75vh; width: 100%;">
-                                <iframe src="./html/zoom-page.html" style="width: 100%; height: 100%; border: none; border-radius: inherit;"></iframe>
+                                <iframe src="html/zoom-page.html?img=../images/DDConceptualModelExam.png" style="width: 100%; height: 100%; border: none; border-radius: inherit;"></iframe>
                             </div>
                         </div>
                         <div class="col-lg-3">
@@ -83,7 +83,7 @@
                                 <div class="card-body">
                                     <p class="mb-2"><span class="badge bg-warning text-dark me-2">Yellow Rectangle</span> Main Entity</p>
                                     <p class="mb-2"><span class="badge bg-info text-dark me-2">Blue Hexagon</span> Specific Attribute</p>
-                                    <p class="mb-0"><span class="badge border border-success text-success me-2">Green Oval</span> External Resource (URI)</p>
+                                    <p class="mb-0"><span class="badge bg-success text-dark border border-success me-2">Green Oval</span> External Resource (URI)</p>
                                 </div>
                             </div>
                         </div>
@@ -353,7 +353,66 @@
                         </div>
                     </div>
                 </div>
-
+                <div class="row mt-4">
+                    <div class="col-12">
+                         <h4 class="mb-4 pb-2 fw-bold text-uppercase">
+                            Classes used from the ontologies:
+                        </h4>
+                        <p>From these ontologies I used these classes:</p>
+                        <ul>
+                            <li>frbroo:F1_Work</li>
+                            <li>frbroo:F2_Expression</li>
+                            <li>frbroo:F3_Manifestation_Product_Type</li>
+                            <li>frbroo:F28_Expression_Creation</li>
+                            <li>frbroo:F30_Publication_Event</li>
+                            <li>foaf:Image</li>
+                            <li>crm:E21_Person</li>
+                            <li>crm:E74_Group</li>
+                            <li>dbo:Film</li>
+                            <li>dbo:FictionalCharacter</li>
+                            <li>cbo:Location</li>
+                            <li>cbo:Character</li>
+                            <li>cbo:Series</li>
+                            <li>cbo:Issue</li>
+                            <li>dd:Albo</li>
+                            <li>rdfs:Resource</li>
+                            <li>schema:CreativeWork</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+           <section class="container-fluid mt-3" id="conceptual_model_zoom">
+                <div class="container-fluid mt-4">
+                    <div class="row">
+                        <div class="col-lg-9 mb-4">
+                            <div class="border rounded shadow-sm" style="height: 75vh; width: 100%;">
+                                <iframe src="html/zoom-page.html?img=../images/DDConceptualModelExam.png" style="width: 100%; height: 100%; border: none;"></iframe>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="card shadow-sm">
+                                <div class="card-header bg-light">
+                                    <h5 class="mb-0">Model Legend</h5>
+                                </div>
+                                <div class="card-body">
+                                    <p class="mb-2"><span class="badge bg-warning text-dark me-2">Yellow Rectangle</span> Main Entity</p>
+                                    <p class="mb-2"><span class="badge bg-info text-dark me-2">Blue Hexagon</span> Specific Attribute</p>
+                                    <p class="mb-0"><span class="badge bg-success text-dark border border-success me-2">Green Oval</span> External Resource (URI)</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="container-fluid mt-4" id="idk">
+                <div class="row">
+                    <div class="col-12">
+                        <h3 class="mb-4 pb-2 fw-bold text-uppercase">Why creating a new class instead of using an existing one?</h3>
+                        <p>In my project I created a the class <code>dd:Albo</code> instead of using the existing <code>cbo:Issue</code> because in the italian comic industry, the term "albo" refers to a specific type of publication that has unique characteristics not covered by "issue" concept which is more related to the american comic industry. In particular an Albo in italy is a monthly publication that contains a self-contained story. Sometimes the story includes some references to a horizontal plot, but this is not required.</p>
+                        <p>On the other hand, an American “issue” refers to a specific installment in a series that will later be compiled into a single volume to form a complete story. In fact, in the U.S., there is the concept of a “run” that is, a series of installments that must be read in order to fully appreciate the entire plot. In contrast, in the traditional Italian comic book scene (with a few exceptions), this concept does not exist, and the Albi are self-contained.</p>
+                        <p>So to describe better my domain I created the new class <code>dd:Albo</code> which is a specialized entity to represent the unique characteristics of Italian comic publications. I decide to make it a subclass of the existing <code>cbo:Issue</code> class because it shares some common properties with the existing class, but it also has distinct characteristics that warrant its own classification.</p>
+                    </div>
+                </div>
             </section>
         </section>
     </body>

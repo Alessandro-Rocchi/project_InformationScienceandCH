@@ -64,33 +64,41 @@
     </div>
 
     <div id="container">
-        <img id="immagine-zoom" src="../images/DDConceptualModelExam.png" alt="Dettaglio">
+        <img id="immagine-zoom" src="" alt="Dettaglio">
     </div>
 
     <script>
         const elemento = document.getElementById('immagine-zoom');
         
+        // 1. Legge l'URL dell'iframe e cerca il parametro "?img="
+        const parametriUrl = new URLSearchParams(window.location.search);
+        const nomeImmagine = parametriUrl.get('img');
+
+        // 2. Assegna l'immagine dinamicamente
+        if (nomeImmagine) {
+            elemento.src = nomeImmagine;
+        } else {
+            // Immagine di fallback nel caso dimenticassi di inserire il parametro
+            elemento.alt = "Errore: Nessuna immagine specificata"; 
+        }
+
+        // 3. Funzione di avvio di Panzoom
         function avviaZoom() {
-            // Configurazione base e solida
             const panzoom = Panzoom(elemento, {
-                maxScale: 3.5, 
+                maxScale: 10, 
                 minScale: 1, 
-                step: 0.3,
+                step: 0.3
             });
 
-            // Inizializza eventi
+            // Inizializza gli eventi
             elemento.parentElement.addEventListener('wheel', panzoom.zoomWithWheel);
             document.getElementById('zoom-in').addEventListener('click', panzoom.zoomIn);
             document.getElementById('zoom-out').addEventListener('click', panzoom.zoomOut);
             document.getElementById('reset').addEventListener('click', panzoom.reset);
         }
 
-        // Avvio sicuro
-        if (elemento.complete) {
-            avviaZoom();
-        } else {
-            elemento.addEventListener('load', avviaZoom);
-        }
+        // ATTENZIONE: Avvia la logica di zoom SOLO quando la nuova immagine è stata caricata
+        elemento.addEventListener('load', avviaZoom);
         
     </script>
 
