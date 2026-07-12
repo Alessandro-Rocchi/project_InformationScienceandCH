@@ -1,10 +1,10 @@
 import lxml.etree as ET
 
 # Read the content of a XML file
-dom = ET.parse('dylanDog_TEI.xml')
+dom = ET.parse('./xml/dylanDog_TEI.xml')
 
 # Read the XSL file
-xslt = ET.parse('dd_XSLT.xslt')
+xslt = ET.parse('./xslt/dd_XSLT.xslt')
 
 # Build a XSL transformer
 # create an instance of the class XSLT
@@ -15,5 +15,5 @@ transform = ET.XSLT(xslt)
 newdom = transform(dom)
 
 # write the string in a html document
-with open("dylanDog_py.html", "wb") as f:
+with open("./html/dylanDog_py.html", "wb") as f:
  f.write(ET.tostring(newdom, pretty_print=True))

@@ -301,6 +301,8 @@
 
     <owl:ObjectProperty rdf:about="https://alessandro-rocchi.github.io/project_InformationScienceandCH/ontology/DDOntology#isNameATributeTo">
         <rdfs:subPropertyOf rdf:resource="https://alessandro-rocchi.github.io/project_InformationScienceandCH/ontology/DDOntology#isATributeTo"/>
+        <rdfs:domain rdf:resource="http://comicmeta.org/cbo/Location"/>
+        <rdfs:range rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E21_Person"/>
     </owl:ObjectProperty>
     
 

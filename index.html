@@ -15,7 +15,7 @@
             <p>By Alessandro Rocchi</p>
         </header>
         <section class="container-fluid mt-4" id="introduzione">
-            <h2>Introduction</h2>
+            <h2 class="mb-4 pb-2 fw-bold text-uppercase">Introduction</h2>
             <div class="row">
                 <div class="col-md-12">
                     <p>The goal of this project is to create structured data starting from a Wikipedia page and related entities</p>
@@ -23,9 +23,9 @@
             </div>
         </section>
         <section class="container-fluid mt-4" id="domain">
-            <h2>Domain Analysis</h2>
+            <h2 class="mb-4 pb-2 fw-bold text-uppercase">Domain Analysis</h2>
             <section class="container-fluid mt-3" id="idea">
-                <h3>Project Idea</h3>
+                <h3 class="mb-4 pb-2 fw-bold text-uppercase">Project Idea</h3>
                 <div class="row">
                     <div class="col-12">
                         <p>The main idea behind this project is to leverage the wealth of information available on Wikipedia and other online sources to create a comprehensive and interconnected dataset of Dylan Dog citations. The research question is: <strong>How can we effectively represent and link Dylan Dog citations in a structured, machine-readable format?</strong></p>
@@ -39,7 +39,7 @@
                 </div>
             </section>
             <section class="container-fluid mt-3" id="entities">
-                <h3>Entities</h3>
+                <h3 class="mb-4 pb-2 fw-bold text-uppercase">Entities</h3>
                 <div class="row">
                     <div class="col-12">
                         <p>After choosing the page I identify a total of 27 entities which was been mentionated in the wikipedia-page. Every entity has been linked to their authority control, where was applicable. The main authority control used was VIAF </p>
@@ -50,7 +50,7 @@
                             <li>Bibliographic sources</li>
                             <li>Locations</li>
                         </ul>
-                        <p>The table has been generate by using a XSLT to HTML transformation using javascript. In this way if we add entities to the XML/TEI file they will automatically been added to this table.</p>
+                        <p>The table has been generate by using a XSLT to HTML transformation using javascript. In this way if we add entities to the XML/TEI file they will automatically been added to this table. (Note: it's a table dynamically generated and use XSLTProcessor so if it's not working, please check the browser console for errors.)</p>
                     </div>
                 </div>
                 <div class="row">
@@ -60,9 +60,9 @@
             </section>
         </section>
         <section class="container-fluid mt-4" id="knowledge_organization">
-            <h2>Knowledge organization: elaborate models</h2>
+            <h2 class="mb-4 pb-2 fw-bold text-uppercase">Knowledge organization: elaborate models</h2>
             <section class="container-fluid mt-3" id="theoretical_model">
-                <h3>Theoretical Model</h3>
+                <h3 class="mb-4 pb-2 fw-bold text-uppercase" style="color: #cc0000;">Theoretical Model</h3>
                 <p>After identifying the key entities and their relationships, I developed a theoretical model to represent the knowledge structure of Dylan Dog citations. This model aims to capture the semantic connections between different types of entities. And to show connections which weren't explicitly mentioned in the original text.</p>
                 <p>The model is composed of three main components: the main entities, their attributes, and the external resources (URIs) used to link them to authoritative sources or catalogues. In particular, the autoritative sources used are: VIAF and OPAC SBN. Wikidata has been used to conciliate and a semantic disambiguation for entities which are not bibliographic. For the location has been used Geonames as authoritative source.</p>
                 <p>The graph was created using yED software and  it was included a zoom javascript plugin to enable interactive exploration and make it more readble. On the left you can find a legend which explain the symbols used in the graph.</p>
@@ -72,7 +72,7 @@
                     <div class="row">
                         <div class="col-lg-9 mb-4">
                             <div class="border rounded shadow-sm" style="height: 75vh; width: 100%;">
-                                <iframe src="zoom-page.html" style="width: 100%; height: 100%; border: none; border-radius: inherit;"></iframe>
+                                <iframe src="./html/zoom-page.html" style="width: 100%; height: 100%; border: none; border-radius: inherit;"></iframe>
                             </div>
                         </div>
                         <div class="col-lg-3">
@@ -91,8 +91,268 @@
                 </div>
             </section>
             <section class="container-fluid mt-3" id="conceptual_model">
-                <h3>Conceptual Model</h3>
-                <p>After realising the theoretical model, I developed a conceptual model to</p>
+                <h3 class="mb-4 pb-2 fw-bold text-uppercase">Conceptual Model</h3>
+                <p>After realising the theoretical model, I developed a conceptual model to create a formal representation of the theoretical model. I choose to reuse exiting ontologies where possible and create a personal ontology to fill the gaps with existing ones.</p>
+                <p>The conceptual model is based on the following ontologies:</p>
+                <div class="row">
+                    <div class="col-12" id="project_ontologies">
+                        <h4 class="mb-4 pb-2 fw-bold text-uppercase" style="color: #cc0000;">
+                            Project Ontologies:
+                        </h4>
+
+                        <!-- DDOntology -->
+                        <div class="row g-4">
+                            <div class="col-12 col-md-6 col-xl-3">
+                                <div class="card h-100 border-dark border-2 rounded-0 shadow-sm">
+                                    <div class="card-body d-flex flex-column">
+                                        <div class="mb-3">
+                                            <p>Prefix: <span class="badge rounded-pill bg-dark text-white border border-dark">DD</span></p>
+                                        </div>
+                                        <h4 class="card-title h5 fw-bold">DDOntology</h4>
+                                        <p class="card-text flex-grow-1">
+                                            <strong>Why I chose it:</strong> The custom ontology I created to fill the gaps left by existing ontologies. It defines specific classes and properties for Dylan Dog citations, ensuring that the dataset accurately reflects the unique aspects of the domain.
+                                        </p>
+                                        <p>URI:
+                                            <code class="d-block p-2 text-dark bg-light border border-dark font-monospace small" style="word-break: break-all;">
+                                                https://alessandro-rocchi.github.io/project_InformationScienceandCH/ontology/DDOntology#
+                                            </code>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- FRBRoo -->
+                            <div class="col-12 col-md-6 col-xl-3">
+                                <div class="card h-100 border-dark border-2 rounded-0 shadow-sm">
+                                    <div class="card-body d-flex flex-column">
+                                        <div class="mb-3">
+                                            <p>Prefix: <span class="badge rounded-pill text-white border border-dark" style="background-color: #cc0000;">FRBRoo</span></p>
+                                        </div>
+                                        <h4 class="card-title h5 fw-bold">FRBR object-oriented</h4>
+                                        <p class="card-text flex-grow-1">
+                                            <strong>Why I chose it:</strong> Crucial for modeling the complex bibliographic hierarchy. I used it to logically separate the conceptual work from its physical expressions and publications (e.g., monographs vs. series).
+                                        </p>
+                                        <p>URI:
+                                            <code class="d-block p-2 text-dark bg-light border border-dark font-monospace small" style="word-break: break-all;">
+                                                    http://iflastandards.info/ns/fr/frbr/frbroo/
+                                            </code>
+                                        </p>
+                                        <a href="https://www.cidoc-crm.org/frbroo/" target="_blank" class="btn btn-dark rounded-0 fw-bold w-100">
+                                            Official Docs
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- FOAF -->
+                            <div class="col-12 col-md-6 col-xl-3">
+                                <div class="card h-100 border-dark border-2 rounded-0 shadow-sm">
+                                    <div class="card-body d-flex flex-column">
+                                        <div class="mb-3">
+                                            <p>Prefix: <span class="badge rounded-pill text-white border border-dark" style="background-color: #cc0000;">FOAF</span></p>
+                                        </div>
+                                        <h4 class="card-title h5 fw-bold">Friend of a Friend</h4>
+                                        <p class="card-text flex-grow-1">
+                                            <strong>Why I chose it:</strong> The absolute standard for describing people. I employed it to model authors and actors, and to create links between physical entities and their visual depictions.
+                                        </p>
+                                        <p>URI:
+                                            <code class="d-block p-2 text-dark bg-light border border-dark font-monospace small" style="word-break: break-all;">
+                                                http://xmlns.com/foaf/0.1/
+                                            </code>
+                                        </p>
+                                         <a href="http://xmlns.com/foaf/spec/" target="_blank" class="btn btn-dark rounded-0 fw-bold w-100">
+                                            Official Docs
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Schema.org  -->
+                            <div class="col-12 col-md-6 col-xl-3">
+                                <div class="card h-100 border-dark border-2 rounded-0 shadow-sm">
+                                    <div class="card-body d-flex flex-column">
+                                        <div class="mb-3">
+                                            <p>Prefix: <span class="badge rounded-pill text-white border border-dark" style="background-color: #cc0000;">Schema.org</span></p>
+                                        </div>
+                                        <h4 class="card-title h5 fw-bold">Schema.org</h4>
+                                        <p class="card-text flex-grow-1">
+                                            <strong>Why I chose it:</strong> A universal vocabulary supported by major search engines. Useful for mapping basic cross-sectional properties, such as work titles, publication dates, and structural relations.
+                                        </p>
+                                        <p>URI:        
+                                            <code class="d-block p-2 text-dark bg-light border border-dark font-monospace small" style="word-break: break-all;">
+                                                http://schema.org/
+                                            </code>
+                                        </p>
+                                        <a href="https://schema.org/" target="_blank" class="btn btn-dark rounded-0 fw-bold w-100">
+                                            Official Docs
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                             <!-- Dublin Core Terms -->
+                            <div class="col-12 col-md-6 col-xl-3">
+                                <div class="card h-100 border-dark border-2 rounded-0 shadow-sm">
+                                    <div class="card-body d-flex flex-column">
+                                        <div class="mb-3">
+                                            <p>Prefix: <span class="badge rounded-pill text-white border border-dark" style="background-color: #cc0000;">dcterms</span></p>
+                                        </div>
+                                        <h4 class="card-title h5 fw-bold">Dublin Core Terms</h4>
+                                        <p class="card-text flex-grow-1">
+                                            <strong>Why I chose it:</strong> The universal standard for basic metadata. It provides highly interoperable properties for fundamental descriptive elements like titles, dates, and creators of the comic books.
+                                        </p>
+                                        <p>URI:        
+                                            <code class="d-block p-2 text-dark bg-light border border-dark font-monospace small" style="word-break: break-all;">
+                                                http://purl.org/dc/terms/
+                                            </code>
+                                        </p>
+                                        <a href="https://dublincore.org/specifications/dublin-core/dcmi-terms/" target="_blank" class="btn btn-dark rounded-0 fw-bold w-100">
+                                            Official Docs
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Comic Book Ontology -->
+                            <div class="col-12 col-md-6 col-xl-3">
+                                <div class="card h-100 border-dark border-2 rounded-0 shadow-sm">
+                                    <div class="card-body d-flex flex-column">
+                                        <div class="mb-3">
+                                            <p>Prefix: <span class="badge rounded-pill text-white border border-dark" style="background-color: #cc0000;">cbo</span></p>
+                                        </div>
+                                        <h4 class="card-title h5 fw-bold">Comic Book Ontology</h4>
+                                        <p class="card-text flex-grow-1">
+                                            <strong>Why I chose it:</strong> The most specific and semantic vocabulary for the comic book domain. It allowed me to accurately define complex publishing concepts like issue numbers and comic series.
+                                        </p>
+                                        <p>URI:        
+                                            <code class="d-block p-2 text-dark bg-light border border-dark font-monospace small" style="word-break: break-all;">
+                                                http://comicmeta.org/cbo
+                                            </code>
+                                        </p>
+                                        <a href="https://comicmeta.org/" target="_blank" class="btn btn-dark rounded-0 fw-bold w-100">
+                                            Official Docs
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- DBpedia Ontology -->
+                            <div class="col-12 col-md-6 col-xl-3">
+                                <div class="card h-100 border-dark border-2 rounded-0 shadow-sm">
+                                    <div class="card-body d-flex flex-column">
+                                        <div class="mb-3">
+                                            <p>Prefix: <span class="badge rounded-pill text-white border border-dark" style="background-color: #cc0000;">dbo</span></p>
+                                        </div>
+                                        <h4 class="card-title h5 fw-bold">DBpedia Ontology</h4>
+                                        <p class="card-text flex-grow-1">
+                                            <strong>Why I chose it:</strong> Extracted directly from Wikipedia, it serves as a massive Linked Open Data hub. Useful for cross-referencing real-world entities (authors, places) to enrich the dataset.
+                                        </p>
+                                        <p>URI:
+                                            <code class="d-block p-2 text-dark bg-light border border-dark font-monospace small" style="word-break: break-all;">
+                                                http://dbpedia.org/ontology/
+                                            </code>
+                                        </p>
+                                        <a href="https://www.dbpedia.org/resources/ontology/" target="_blank" class="btn btn-dark rounded-0 fw-bold w-100">
+                                            Official Docs
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- RDF Schema -->
+                            <div class="col-12 col-md-6 col-xl-3">
+                                <div class="card h-100 border-dark border-2 rounded-0 shadow-sm">
+                                    <div class="card-body d-flex flex-column">
+                                        <div class="mb-3">
+                                            <p>Prefix: <span class="badge rounded-pill text-white border border-dark" style="background-color: #cc0000;">rdfs</span></p>
+                                        </div>
+                                        <h4 class="card-title h5 fw-bold">RDF Schema</h4>
+                                        <p class="card-text flex-grow-1">
+                                            <strong>Why I chose it:</strong> It provides the structural building blocks for the ontology. Essential for defining class hierarchies (subclasses) and adding human-readable labels to our custom entities.
+                                        </p>
+                                        <p>URI:
+                                            <code class="d-block p-2 text-dark bg-light border border-dark font-monospace small" style="word-break: break-all;">
+                                                http://www.w3.org/2000/01/rdf-schema#
+                                            </code>
+                                        </p>
+                                        <a href="https://www.w3.org/TR/rdf-schema/" target="_blank" class="btn btn-dark rounded-0 fw-bold w-100">
+                                            Official Docs
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- CIDOC CRM -->
+                            <div class="col-12 col-md-6 col-xl-3">
+                                <div class="card h-100 border-dark border-2 rounded-0 shadow-sm">
+                                    <div class="card-body d-flex flex-column">
+                                        <div class="mb-3">
+                                            <p>Prefix: <span class="badge rounded-pill bg-dark text-white border border-dark">crm</span></p>
+                                        </div>
+                                        <h4 class="card-title h5 fw-bold">CIDOC CRM</h4>
+                                        <p class="card-text flex-grow-1">
+                                            <strong>Why I chose it:</strong> The reference model for cultural heritage. It is perfect for describing historical events, physical creation processes, and the lifecycle of cultural artifacts over time.
+                                        </p>
+                                        <p>URI:
+                                            <code class="d-block p-2 text-dark bg-light border border-dark font-monospace small" style="word-break: break-all;">
+                                                http://cidoc-crm.org/cidoc-crm/
+                                            </code>
+                                        </p>
+                                        <a href="https://www.cidoc-crm.org/" target="_blank" class="btn btn-dark rounded-0 fw-bold w-100">
+                                            Official Docs
+                                        </a>  
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- RDF Syntax -->
+                            <div class="col-12 col-md-6 col-xl-3">
+                                <div class="card h-100 border-dark border-2 rounded-0 shadow-sm">
+                                    <div class="card-body d-flex flex-column">
+                                        <div class="mb-3">
+                                            <p>Prefix: <span class="badge rounded-pill text-white border border-dark" style="background-color: #cc0000;">rdf</span></p>
+                                        </div>
+                                        <h4 class="card-title h5 fw-bold">RDF Syntax</h4>
+                                        <p class="card-text flex-grow-1">
+                                            <strong>Why I chose it:</strong> The foundational data model for the Semantic Web. It provides the core syntax required to define resources and structure information as a directed graph.
+                                        </p>
+                                        <p>URI:
+                                            <code class="d-block p-2 text-dark bg-light border border-dark font-monospace small" style="word-break: break-all;">
+                                                http://www.w3.org/1999/02/22-rdf-syntax-ns#
+                                            </code>
+                                        </p>
+                                        <a href="https://www.w3.org/RDF/" target="_blank" class="btn btn-dark rounded-0 fw-bold w-100">
+                                            Official Docs
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Web Ontology Language -->
+                            <div class="col-12 col-md-6 col-xl-3">
+                                <div class="card h-100 border-dark border-2 rounded-0 shadow-sm">
+                                    <div class="card-body d-flex flex-column">
+                                        <div class="mb-3">
+                                            <p>Prefix: <span class="badge rounded-pill text-white border border-dark" style="background-color: #cc0000;">owl</span></p>
+                                        </div>
+                                        <h4 class="card-title h5 fw-bold">Web Ontology Language</h4>
+                                        <p class="card-text flex-grow-1">
+                                            <strong>Why I chose it:</strong> It adds advanced computational logic. Crucial for defining identity alignments across different datasets and setting strict cardinality restrictions for the Reasoner.
+                                        </p>
+                                        <p>URI:
+                                            <code class="d-block p-2 text-dark bg-light border border-dark font-monospace small" style="word-break: break-all;">
+                                                http://www.w3.org/2002/07/owl#
+                                            </code>
+                                        </p>
+                                        <a href="https://www.w3.org/OWL/" target="_blank" class="btn btn-dark rounded-0 fw-bold w-100">
+                                            Official Docs
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </section>
         </section>
     </body>

@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', init);
 
 function transformXML() {
       // Load the XML file
-      const xmlFile = "dylanDog_TEI.xml";
+      const xmlFile = "./xml/dylanDog_TEI.xml";
       const xhr = new XMLHttpRequest();
       xhr.open("GET", xmlFile, true);
       xhr.onreadystatechange = function () {
@@ -15,7 +15,7 @@ function transformXML() {
           const xml = xhr.responseXML;
 
           // Load the XSLT file
-          const xslFile = "dd_entities_XSLT.xslt";
+          const xslFile = "./xslt/dd_entities_XSLT.xslt";
           const xhrXSLT = new XMLHttpRequest();
           xhrXSLT.open("GET", xslFile, true);
           xhrXSLT.onreadystatechange = function () {
