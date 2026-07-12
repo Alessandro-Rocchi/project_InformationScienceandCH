@@ -7,7 +7,7 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix foaf: <http://xmlns.com/foaf/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix frbroo: <http://iflastandards.info/ns/fr/frbr/frbroo/> .
 @prefix schema: <http://schema.org/> .
@@ -135,16 +135,16 @@ crm:P89_falls_within rdf:type owl:ObjectProperty ;
 
 
 ###  http://xmlns.com/foaf/0.1/depiction
-foaf:depiction rdf:type owl:ObjectProperty ;
-               rdfs:domain crm:E21_Person ;
-               rdfs:range foaf:Image .
+<http://xmlns.com/foaf/0.1/depiction> rdf:type owl:ObjectProperty ;
+                                      rdfs:domain crm:E21_Person ;
+                                      rdfs:range <http://xmlns.com/foaf/0.1/Image> .
 
 
 ###  http://xmlns.com/foaf/0.1/knows
-foaf:knows rdf:type owl:ObjectProperty ;
-           rdfs:domain cbo:Character ;
-           rdfs:range cbo:Character ;
-           rdfs:isDefinedBy foaf: .
+<http://xmlns.com/foaf/0.1/knows> rdf:type owl:ObjectProperty ;
+                                  rdfs:domain cbo:Character ;
+                                  rdfs:range cbo:Character ;
+                                  rdfs:isDefinedBy <http://xmlns.com/foaf/0.1/> .
 
 
 ###  https://alessandro-rocchi.github.io/project_InformationScienceandCH/ontology/DDOntology#appearanceInspiredBy
@@ -277,7 +277,7 @@ crm:E21_Person rdf:type owl:Class .
 
 
 ###  http://xmlns.com/foaf/0.1/Image
-foaf:Image rdf:type owl:Class .
+<http://xmlns.com/foaf/0.1/Image> rdf:type owl:Class .
 
 
 ###  https://alessandro-rocchi.github.io/project_InformationScienceandCH/ontology/DDOntology#Albo
