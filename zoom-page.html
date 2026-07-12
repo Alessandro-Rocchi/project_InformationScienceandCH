@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Immagine Interattiva</title>
+    <style>
+        body, html { 
+            margin: 0; 
+            padding: 0; 
+            height: 100%; 
+            overflow: hidden; 
+            background-color: transparent; /* Sfondo trasparente, prenderà il colore del tuo sito */
+            font-family: sans-serif;
+        }
+        #container { 
+            width: 100%; 
+            height: 100%; 
+            display: flex; 
+            justify-content: center; /* Centra in orizzontale */
+            align-items: center;     /* Centra in verticale */
+        }
+        #immagine-zoom { 
+            /* L'immagine si rimpicciolisce se necessario, ma non supera mai la grandezza dell'iframe */
+            max-width: 100%; 
+            max-height: 100%; 
+            cursor: grab;
+            display: block;
+        }
+        #immagine-zoom:active {
+            cursor: grabbing;
+        }
+        
+        /* Stile dei pulsanti in sovrimpressione */
+        #controlli {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            display: flex;
+            gap: 10px;
+            z-index: 10;
+        }
+        button {
+            background-color: #ffffff;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            padding: 8px 16px;
+            font-size: 16px;
+            cursor: pointer;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        button:hover {
+            background-color: #e9ecef;
+        }
+    </style>
+    <script src="https://unpkg.com/@panzoom/panzoom@4.5.1/dist/panzoom.min.js"></script>
+</head>
+<body>
+
+    <div id="controlli">
+        <button id="zoom-in"><b>+</b></button>
+        <button id="zoom-out"><b>-</b></button>
+        <button id="reset">Reset</button>
+    </div>
+
+    <div id="container">
+        <img id="immagine-zoom" src="images/DDConceptualModelExam.png" alt="Dettaglio">
+    </div>
+
+    <script>
+        const elemento = document.getElementById('immagine-zoom');
+        
+        function avviaZoom() {
+            // Configurazione base e solida
+            const panzoom = Panzoom(elemento, {
+                maxScale: 3.5, 
+                minScale: 1, 
+                step: 0.3,
+            });
+
+            // Inizializza eventi
+            elemento.parentElement.addEventListener('wheel', panzoom.zoomWithWheel);
+            document.getElementById('zoom-in').addEventListener('click', panzoom.zoomIn);
+            document.getElementById('zoom-out').addEventListener('click', panzoom.zoomOut);
+            document.getElementById('reset').addEventListener('click', panzoom.reset);
+        }
+
+        // Avvio sicuro
+        if (elemento.complete) {
+            avviaZoom();
+        } else {
+            elemento.addEventListener('load', avviaZoom);
+        }
+        
+    </script>
+
+</body>
+</html>

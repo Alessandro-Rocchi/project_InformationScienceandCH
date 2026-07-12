@@ -6,7 +6,7 @@ wiki_it = wikipediaapi.Wikipedia(
     extract_format=wikipediaapi.ExtractFormat.WIKI
 )
 
-nome_pagina = "Dylan Dog (fumetto)"
+nome_pagina = "Dylan Dog"
 print(f"Scaricando la pagina '{nome_pagina}'...")
 pagina = wiki_it.page(nome_pagina)
 

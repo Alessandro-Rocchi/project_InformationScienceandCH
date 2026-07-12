@@ -1,0 +1,684 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://vault.tei-c.org/P5/current/xml/tei/custom/schema/relaxng/tei_all.rng" schematypens="http://relaxng.org/ns/structure/1.0" type="application/xml"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Dylan Dog (Personaggio) Wikipedia Page TEI Encoding</title>
+                <author>Tiziano Sclavi</author>
+                <respStmt>
+                    <resp>annotated by</resp>
+                    <persName>Alessandro Rocchi</persName>
+                </respStmt>
+            </titleStmt>
+            <publicationStmt>
+                <publisher>University of Bologna</publisher>
+                <pubPlace>Bologna, Italy</pubPlace>
+                <date when="2026-07">2026</date>
+                <availability>
+                    <licence target="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY</licence>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                 <bibl xml:id="dd_wikipedia_page">
+                    <title level="a">Dylan Dog</title>
+                    <publisher>Wikimedia Foundation</publisher>
+                    <ptr target="https://it.wikipedia.org/wiki/Dylan_Dog"/>
+                </bibl>
+                <listBibl type="cited_source_in_page">
+                    <bibl xml:id="dd_comic_series" type="comic_Series" sameAs="http://www.wikidata.org/entity/Q12098">
+                        <title level="s">Dylan Dog</title>
+                        <author ref="#t_sclavi"/>
+                        <publisher ref="#sb_editore"/>
+                        <idno type="SBN">http://id.sbn.it/opera/PIA0027617</idno>
+                        <idno type="SBN">http://id.sbn.it/bid/CFI0070485</idno>
+                    </bibl>
+                    <bibl xml:id="dog_book" type="book" sameAs="http://id.sbn.it/bid/TO00392471">
+                        <title level="m" xml:lang="it">Dog figlio di</title>
+                        <title level="m" xml:lang="en">The Erection Set</title>
+                        <author ref="#m_spillane"/>
+                        <date type="pubYear" when="1973">1973</date>
+                    </bibl>
+                    <bibl xml:id="pascal_book" type="book" sameAs="http://id.sbn.it/opera/CFI0138942">
+                        <title level="m" xml:lang="it">Il fu Mattia Pascal</title>
+                        <title level="m" xml:lang="en">The Late Mattia Pascal</title>
+                        <author ref="#l_pirandello"/>
+                    </bibl>
+                    <bibl xml:id="dd_nr1" type="comic_issue" sameAs="http://id.sbn.it/bid/RAV1384287">
+                        <title level="s" ref="#dd_comic_series">Dylan Dog: </title>
+                        <title type="comic_issue" level="m" xml:lang="it">L'Alba dei Morti Viventi</title>
+                        <title type="comic_issue" level="m" xml:lang="en">Dawn of the Living Dead</title>
+                        <respStmt>
+                            <resp>writer</resp>
+                            <persName ref="#t_sclavi"/>
+                        </respStmt>
+                        <respStmt>
+                            <resp>artist</resp>
+                            <persName ref="#a_stano"/>
+                        </respStmt>
+                        <respStmt>
+                            <resp>coverArtist</resp>
+                            <persName ref="#c_villa"/>
+                        </respStmt>
+                        <date type="pubDate" when="1986-10-01">01/10/1986</date>
+                        <biblScope unit="albo">1</biblScope>
+                    </bibl>
+                    <bibl xml:id="dd_nr3" type="comic_issue" sameAs="http://id.sbn.it/bid/RAV1387262">
+                        <title level="s" ref="#dd_comic_series">Dylan Dog: </title>
+                        <title  level="m">Le Notti della Luna Piena</title>
+                        <respStmt>
+                            <resp>writer</resp>
+                            <persName ref="#t_sclavi"/>
+                        </respStmt>
+                        <respStmt>
+                            <resp>coverArtist</resp>
+                            <persName ref="#c_villa"/>
+                        </respStmt>
+                        <date type="pubDate" when="1986-11-01">01/11/1986</date>
+                        <biblScope unit="albo">3</biblScope>
+                    </bibl>
+                    <bibl xml:id="dd_nr67" type="comic_issue" sameAs="http://id.sbn.it/bid/RAV1428241">
+                        <title level="s" ref="#dd_comic_series">Dylan Dog: </title>
+                        <title level="m">L'Uomo che Visse Due Volte</title>
+                        <respStmt>
+                            <resp>writer</resp>
+                            <persName ref="#t_sclavi"/>
+                        </respStmt>
+                        <respStmt>
+                            <resp>coverArtist</resp>
+                            <persName ref="#a_stano"/>
+                        </respStmt>
+                        <date type="pubDate" when="1992-04-01">01/04/1992</date>
+                        <biblScope unit="albo">67</biblScope>
+                    </bibl>
+                    <bibl xml:id="dawn_of_the_dead" type="film" sameAs="http://www.wikidata.org/entity/Q219155">
+                        <title level="m" xml:lang="en">Dawn of the Dead</title>
+                        <title level="m" xml:lang="it">Zombi</title>
+                        <respStmt>
+                            <resp>director</resp>
+                            <persName ref="#g_romero"/>
+                        </respStmt>
+                        <date type="releaseDate" when="1978">1978</date>
+                    </bibl>
+                    <bibl xml:id="suspiria" type="film" sameAs="http://www.wikidata.org/entity/Q546900">
+                        <title level="m">Suspiria</title>
+                        <respStmt>
+                            <resp>director</resp>
+                            <persName ref="#d_argento"/>
+                        </respStmt>
+                        <date type="releaseDate" when="1977">1977</date>
+                    </bibl>
+                    <bibl xml:id="american_werewolf_london" type="film" sameAs="http://www.wikidata.org/entity/Q467290">
+                        <title level="m" xml:lang="en">An American Werewolf in London</title>
+                        <title level="m" xml:lang="it">Un Lupo Mannaro Americano a Londra</title>
+                        <respStmt>
+                            <resp>director</resp>
+                            <persName ref="#j_landis"/>
+                        </respStmt>
+                        <date type="releaseDate" when="1981-09-21">1981</date>
+                    </bibl>
+                    <bibl xml:id="dellamorte_film" type="film" sameAs="http://id.sbn.it/opera/CAG0751357">
+                        <title level="m">Dellamorte DellAmore</title>
+                        <date type="releaseDate" when="1994">1994</date>
+                        <respStmt>
+                            <resp>Actor</resp>
+                            <persName ref="#r_everett"/>
+                        </respStmt>
+                    </bibl>
+                    <bibl xml:id="dellamorte_book" type="book" sameAs="http://id.sbn.it/opera/LIG0219392">
+                        <title level="m">Dellamorte DellAmore</title>
+                        <author ref="#t_sclavi"/>
+                        <date type="releaseDate" when="1991">1991</date>
+                    </bibl>
+                </listBibl>
+                <listRelation>
+                    <relation active="#d_dog" name="rdf:type" passive="cbo:Character"/>
+                    <relation active="#d_dog" name="rdf:type" passive="dbo:FictionalCharacter"/>
+                    <relation active="#groucho" name="rdf:type" passive="cbo:Character"/>
+                    <relation active="#t_sclavi" name="rdf:type" passive="crm:E21_Person"/>
+                    <relation active="#a_stano" name="rdf:type" passive="crm:E21_Person"/>
+                    <relation active="#c_villa" name="rdf:type" passive="crm:E21_Person"/>
+                    <relation active="#r_everett" name="rdf:type" passive="crm:E21_Person"/>
+                    <relation active="#g_marx" name="rdf:type" passive="crm:E21_Person"/>
+                    <relation active="#dm_thomas" name="rdf:type" passive="crm:E21_Person"/>
+                    <relation active="#m_spillane" name="rdf:type" passive="crm:E21_Person"/>
+                    <relation active="#g_romero" name="rdf:type" passive="crm:E21_Person"/>
+                    <relation active="#j_landis" name="rdf:type" passive="crm:E21_Person"/>
+                    <relation active="#d_argento" name="rdf:type" passive="crm:E21_Person"/>
+                    <relation active="#l_pirandello" name="rdf:type" passive="crm:E21_Person"/>
+                    <relation active="#w_craven" name="rdf:type" passive="crm:E21_Person"/>
+                    <relation active="#sb_editore" name="rdf:type" passive="crm:E74_Group"/>
+                    <relation active="#dd_comic_series" name="rdf:type" passive="cbo:Series"/>
+                    <relation active="#craven_road_7" name="rdf:type" passive="cbo:Location"/>
+                    <relation active="#london" name="rdf:type" passive="cbo:Location"/>
+                    <relation active="#dd_nr1" name="rdf:type" passive="dd:Albo"/>
+                    <relation active="#dd_nr3" name="rdf:type" passive="dd:Albo"/>
+                    <relation active="#dd_nr67" name="rdf:type" passive="dd:Albo"/>
+                    <relation active="#dawn_of_the_dead" name="rdf:type" passive="dbo:Film"/>
+                    <relation active="#suspiria" name="rdf:type" passive="dbo:Film"/>
+                    <relation active="#american_werewolf_london" name="rdf:type" passive="dbo:Film"/>
+                    <relation active="#dellamorte_film" name="rdf:type" passive="dbo:Film"/>
+                    <relation active="#dellamorte_book" name="rdf:type" passive="frbroo:F1_Work"/>
+                    <relation active="#dog_book" name="rdf:type" passive="frbroo:F3_Manifestation_Product_Type"/>
+                    <relation active="#pascal_book" name="rdf:type" passive="frbroo:F1_Work"/>
+                    <relation active="#f_dellamorte" name="rdf:type" passive="dbo:FictionalCharacter"/>
+                    <relation active="#dd_kelly" name="rdf:type" passive="dbo:FictionalCharacter"/>
+                    <relation active="#photo_r_everett" name="rdf:type" passive="foaf:Image"/>
+                    <relation active="#d_dog" name="cbo:character" passive="#dd_comic_series"/>
+                    <relation active="#d_dog" name="dcterms:creator" passive="#t_sclavi"/>
+                    <relation active="#d_dog" name="dcterms:creator" passive="#a_stano"/>
+                    <relation active="#d_dog" name="dcterms:creator" passive="#c_villa"/>
+                    <relation active="#d_dog" name="dd:apparenceInspiredBy" passive="#r_everett"/>
+                    <relation active="#d_dog" name="dd:givenNameInspiredBy" passive="#dd_kelly"/>
+                    <relation active="#d_dog" name="dd:familyNameInspiredBy" passive="#dm_thomas"/>
+                    <relation active="#d_dog" name="foaf:knows" passive="#groucho"/>
+                    <relation active="#d_dog" name="schema:homeLocation" passive="#craven_road_7"/>
+                    <relation active="#groucho" name="dd:isaTributeTo" passive="#g_marx"/>
+                    <relation active="#craven_road_7" name="crm:P89_falls_within" passive="#london"/>
+                    <relation active="#craven_road_7" name="dd:isNameaTributeTo" passive="#w_craven"/>
+                    <relation active="#dd_comic_series" name="cbo:creator" passive="#t_sclavi"/>
+                    <relation active="#dd_comic_series" name="schema:contentLocation" passive="#london"/>
+                    <relation active="#dd_comic_series" name="dcterms:publisher" passive="#sb_editore"/>
+                    <relation active="#dd_comic_series" name="dcterms:hasPart" passive="#dd_nr1"/>
+                    <relation active="#dd_comic_series" name="dcterms:hasPart" passive="#dd_nr3"/>
+                    <relation active="#dd_comic_series" name="dcterms:hasPart" passive="#dd_nr67"/>
+                    <relation active="#dd_nr1" name="dcterms:references" passive="#american_werewolf_london"/>
+                    <relation active="#dd_nr1" name="dcterms:references" passive="#dawn_of_the_dead"/>
+                    <relation active="#dd_nr1" name="cbo:writer" passive="#t_sclavi"/>
+                    <relation active="#dd_nr1" name="cbo:artist" passive="#a_stano"/>
+                    <relation active="#dd_nr1" name="cbo:coverArtist" passive="#c_villa"/>
+                    <relation active="#dd_nr3" name="dcterms:references" passive="#suspiria"/>
+                    <relation active="#dd_nr3" name="cbo:writer" passive="#t_sclavi"/>
+                    <relation active="#dd_nr3" name="cbo:coverArtist" passive="#c_villa"/>
+                    <relation active="#dd_nr67" name="dcterms:references" passive="#pascal_book"/>
+                    <relation active="#dd_nr67" name="cbo:writer" passive="#t_sclavi"/>
+                    <relation active="#dd_nr67" name="cbo:coverArtist" passive="#a_stano"/>
+                    <relation active="#dawn_of_the_dead" name="dbo:director" passive="#g_romero"/>
+                    <relation active="#suspiria" name="dbo:director" passive="#d_argento"/>
+                    <relation active="#american_werewolf_london" name="dbo:director" passive="#j_landis"/>
+                    <relation active="#dellamorte_film" name="dcterms:references" passive="#dellamorte_book"/>
+                    <relation active="#dellamorte_film" name="dbo:starring" passive="#r_everett"/>
+                    <relation active="#f_dellamorte" name="schema:character" passive="#dellamorte_film"/>
+                    <relation active="#f_dellamorte" name="schema:character" passive="#dellamorte_book"/>
+                    <relation active="#f_dellamorte" name="schema:creator" passive="#t_sclavi"/>
+                    <relation active="#f_dellamorte" name="dbo:portrayer" passive="#r_everett"/>
+                    <relation active="#pascal_book" name="crm:P14_carried_out_by" passive="#l_pirandello"/>
+                    <relation active="#dellamorte_book" name="crm:P14_carried_out_by" passive="#t_sclavi"/>
+                    <relation active="#dog_book" name="crm:P14_carried_out_by" passive="#m_spillane"/>
+                    <relation active="#dd_kelly" name="schema:creator" passive="#m_spillane"/>
+                    <relation active="#dd_kelly" name="schema:character" passive="#dog_book"/>
+                    <relation active="#r_everett" name="foaf:depiction" passive="#photo_r_everett"/>
+                </listRelation>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <particDesc>
+                <listPerson type="real">
+                    <person xml:id="t_sclavi" sameAs="http://viaf.org/viaf/34475770" role="author">
+                        <persName>
+                            <surname>Sclavi</surname>
+                            <forename type="first">Tiziano</forename>
+                        </persName>
+                    </person>
+                    <person xml:id="a_stano" sameAs="http://viaf.org/viaf/71466214" role="artist">
+                        <persName>
+                            <surname>Stano</surname>
+                            <forename type="first">Angelo</forename>
+                        </persName>
+                    </person>
+                     <person xml:id="c_villa" sameAs="http://viaf.org/viaf/90305811" role="artist">
+                        <persName>
+                            <surname>Villa</surname>
+                            <forename type="first">Claudio</forename>
+                        </persName>
+                    </person>
+                    <person xml:id="r_everett" sameAs="http://viaf.org/viaf/85439687" role="actor">
+                        <persName>
+                            <surname>Everett</surname>
+                            <forename type="first">Rupert</forename>
+                        </persName>
+                    </person>
+                    <person xml:id="g_marx" sameAs="http://viaf.org/viaf/120720626" role="actor">
+                        <persName>
+                            <surname>Marx</surname>
+                            <forename type="middle">Henry</forename>
+                            <forename type="first">Julius</forename>
+                        </persName>
+                        <persName type="pseudonym">
+                            <surname>Marx</surname>
+                            <forename type="first">Groucho</forename>
+                        </persName>
+                    </person>
+                    <person xml:id="dm_thomas" sameAs="http://viaf.org/viaf/73860698" role="author">
+                        <persName>
+                            <surname>Thomas</surname>
+                            <forename type="middle">Marlais</forename>
+                            <forename type="first">Dylan</forename>
+                        </persName>
+                    </person>
+                    <person xml:id="m_spillane" sameAs="http://viaf.org/viaf/12315338" role="author">
+                        <persName>
+                            <surname>Spillane</surname>
+                            <forename type="middle">Morrison</forename>
+                            <forename type="first">Frank</forename>
+                        </persName>
+                        <persName type="pseudonym">
+                            <surname>Spillane</surname>
+                            <forename type="first">Mickey</forename>
+                        </persName>
+                    </person>
+                    <person xml:id="g_romero" sameAs="http://viaf.org/viaf/64016615" role="director">
+                        <persName>
+                            <surname>Romero</surname>
+                            <forename type="middle">Andrew</forename>
+                            <forename type="first">George</forename>
+                        </persName>
+                    </person>
+                    <person xml:id="j_landis" sameAs="http://viaf.org/viaf/79164545" role="director">
+                        <persName>
+                            <surname>Landis</surname>
+                            <forename type="first">John</forename>
+                        </persName>
+                    </person>
+                    <person xml:id="d_argento" sameAs="http://viaf.org/viaf/100276085" role="director">
+                        <persName>
+                            <surname>Argento</surname>
+                            <forename type="first">Dario</forename>
+                        </persName>
+                    </person>
+                    <person xml:id="l_pirandello" sameAs="http://viaf.org/viaf/64010465" role="author">
+                        <persName>
+                            <surname>Pirandello</surname>
+                            <forename type="first">Luigi</forename>
+                        </persName>
+                    </person>
+                    <person xml:id="w_craven" sameAs="http://viaf.org/viaf/84239961" role="director">
+                        <persName>
+                            <surname>Craven</surname>
+                            <forename type="middle">Earl</forename>
+                            <forename type="first">Wesley</forename>
+                        </persName>
+                        <persName type="pseudonym">
+                            <surname>Craven</surname>
+                            <forename type="first">Wes</forename>
+                        </persName>
+                    </person>
+                </listPerson>
+                <listPerson type="fictional">
+                    <person xml:id="d_dog" sameAs="http://www.wikidata.org/entity/Q1774370" role="comic_character">
+                        <persName>
+                            <surname>Dog</surname>
+                            <forename type="first">Dylan</forename>
+                        </persName>
+                    </person>
+                    <person xml:id="groucho" role="comic_character" sameAs="http://www.wikidata.org/entity/Q1774370">
+                        <persName>
+                            <forename type="first">Groucho</forename>
+                        </persName>
+                    </person><person xml:id="dd_kelly" role="book_character" sameAs="http://www.wikidata.org/entity/Q140518450">
+                        <persName>
+                            <surname>Kelly</surname>
+                            <addName>"Dog"</addName>
+                            <forename type="first">Dogeron</forename>
+                        </persName>
+                    </person>
+                    <person xml:id="f_dellamorte" role="book_character">
+                        <persName>
+                            <surname>Dellamorte</surname>
+                            <forename type="first">Francesco</forename>
+                        </persName>
+                    </person>
+                </listPerson>
+                <listOrg>
+                    <org xml:id="sb_editore" sameAs="http://viaf.org/viaf/182167411" type="publisher">
+                        <orgName>Sergio Bonelli Editore</orgName>
+                        <country>Italy</country>
+                    </org>
+                </listOrg>
+            </particDesc>
+            <settingDesc>
+                <listPlace>
+                    <place xml:id="london" sameAs="http://sws.geonames.org/2643743">
+                        <placeName>London</placeName>
+                    </place>
+                    <place xml:id="craven_road_7" sameAs="http://www.wikidata.org/entity/Q70688315">
+                        <placeName>Craven Road 7</placeName>
+                    </place>
+                </listPlace>
+            </settingDesc>
+        </profileDesc>
+        <encodingDesc>
+            <listPrefixDef>
+                <prefixDef ident="dcterms" matchPattern="([A-Za-z0-9_-]+)" replacementPattern="http://purl.org/dc/terms/$1">
+                    <p>Dublin Core Terms Vocabulary</p>
+                </prefixDef>
+                <prefixDef ident="cbo" matchPattern="([A-Za-z0-9_-]+)" replacementPattern="http://comicmeta.org/cbo/$1">
+                    <p>Comic Book Ontology</p>
+                </prefixDef>
+                <prefixDef ident="frbroo" matchPattern="([A-Za-z0-9_-]+)" replacementPattern="http://iflastandards.info/ns/fr/frbr/frbroo/$1">
+                    <p>FRBRoo Vocabulary for Bibliographic Modeling</p>
+                </prefixDef>
+                <prefixDef ident="schema" matchPattern="([A-Za-z0-9_-]+)" replacementPattern="http://schema.org/$1">
+                    <p>Schema.org Vocabulary</p>
+                </prefixDef>
+                <prefixDef ident="dbo" matchPattern="([A-Za-z0-9_-]+)" replacementPattern="http://dbpedia.org/ontology/$1">
+                    <p>DBpedia Vocabulary</p>
+                </prefixDef>
+                <prefixDef ident="dd" matchPattern="([A-Za-z0-9_-]+)" replacementPattern="https://alessandro-rocchi.github.io/project_InformationScienceandCH/ontology/DDOntology#$1">
+                    <p>Domain Ontology for the Dylan Dog project</p>
+                </prefixDef>
+                <prefixDef ident="rdfs" matchPattern="([A-Za-z0-9_-]+)" replacementPattern="http://www.w3.org/2000/01/rdf-schema#$1">
+                    <p>RDF Schema Vocabulary</p>
+                </prefixDef>
+                <prefixDef ident="crm" matchPattern="([A-Za-z0-9_-]+)" replacementPattern="http://www.cidoc-crm.org/cidoc-crm/$1">
+                    <p>CIDOC CRM Conceptual Vocabulary</p>
+                </prefixDef>
+                <prefixDef ident="skos" matchPattern="([A-Za-z0-9_-]+)" replacementPattern="http://www.w3.org/2004/02/skos/core#$1">
+                    <p>SKOS Vocabulary (Simple Knowledge Organization System)</p>
+                </prefixDef>
+                <prefixDef ident="foaf" matchPattern="([A-Za-z0-9_-]+)" replacementPattern="http://xmlns.com/foaf/0.1/$1">
+                    <p>FOAF Vocabulary (Friend of a Friend)</p>
+                </prefixDef>
+                <prefixDef ident="rdf" matchPattern="([A-Za-z0-9_-]+)" replacementPattern="http://www.w3.org/1999/02/22-rdf-syntax-ns#$1">
+                    <p>RDF base Vocabulary</p>
+                </prefixDef>
+                <prefixDef ident="owl" matchPattern="([A-Za-z0-9_-]+)" replacementPattern="http://www.w3.org/2002/07/owl#$1">
+                    <p>OWL Vocabulary (Web Ontology Language)</p>
+                </prefixDef>
+            </listPrefixDef>
+        </encodingDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div type="section" xml:id="intro">
+                <p><persName ref="#d_dog"><emph>Dylan Dog</emph></persName> è un personaggio dei fumetti creato da <persName ref="#t_sclavi">Tiziano Sclavi</persName> ed elaborato graficamente dai fumettisti <persName ref="#c_villa">Claudio Villa</persName> e <persName ref="#a_stano">Angelo Stano</persName>, protagonista dell'omonima serie <title ref="#dd_comic_series">Dylan Dog</title> di genere horror edita dal 1986 dalla Daim Press, che poi divenne la <orgName ref="#sb_editore">Sergio Bonelli Editore</orgName>. La serie ha raggiunto presto un successo tale da renderlo uno dei fumetti italiani più venduti, oggetto di numerose ristampe e considerato un cult del fumetto italiano. Gli albi della serie a fumetti sono tradotti e pubblicati anche all'estero. Al personaggio è ispirato un film omonimo del 2010.</p>
+            </div>
+            
+            <div type="section" xml:id="genesi">
+                <head>Genesi del personaggio</head>
+                <p>La gestazione del personaggio iniziò nel 1985 quando Sergio Bonelli, proprietario della casa editrice, e Decio Canzio, suo direttore generale, decisero di tornare a occuparsi di fumetti tradizionali dopo la chiusura dell'esperienza dei fumetti d'autore della "Bonelli-Dargaud". <persName ref="#t_sclavi">Sclavi</persName> propose quindi un fumetto horror, provvisoriamente chiamato "<persName ref="#d_dog">Dylan Dog</persName>". Il nome derivava da <persName ref="#dm_thomas">Dylan Thomas</persName>, mentre il cognome dal titolo di un libro di <persName ref="#m_spillane">Mickey Spillane</persName> che <persName ref="#t_sclavi">Sclavi</persName> vide in una libreria (<title ref="#dog_book">Dog figlio di</title>) ed era il nome provvisorio che dava ai suoi personaggi in fase di creazione per poi cambiarlo una volta completato; l'aveva usato anche come titolo di una breve storia della fine degli anni settanta disegnata da Lorenzo Mattotti.</p>
+                <p>Nella prima bozza la nuova serie horror della <orgName ref="#sb_editore">Bonelli</orgName> avrebbe dovuto essere ambientata in America, ispirata al genere hard boiled e <persName ref="#d_dog">Dylan</persName> avrebbe dovuto essere un detective solitario, senza spalla comica. Si decise di ambientarlo a <placeName ref="#london">Londra</placeName> discutendone con Bonelli perché in America, a New York, c'era già Martin Mystère e poi l'Inghilterra sembrava più adatta per l'horror per via delle sue antiche tradizioni. Per non rendere la serie troppo incentrata sulle indagini si decise di inserire una spalla comica. La serie venne quindi ambientata nella <placeName ref="#london">Londra</placeName> contemporanea e con protagonista un giovane investigatore "dell'incubo" (l'idea ha un precedente in John Silence, personaggio dello scrittore inglese Algernon Blackwood) dall'età di una trentina d'anni e, per scelta di <persName ref="#t_sclavi">Sclavi</persName>, con le fattezze ispirate a quelle dell'attore <persName ref="#r_everett">Rupert Everett</persName>. L'assistente di <persName ref="#d_dog">Dog</persName> viene chiamato semplicemente <persName ref="#groucho">Groucho</persName> ed è sosia dell'attore <persName ref="#g_marx">Groucho Marx</persName>, oltre ad avere la caratteristica di fare continuamente battute o raccontare barzellette in qualsiasi situazione.</p>
+                <figure xml:id="photo_r_everett">
+                    <graphic url="images/500px-Everett_Rupert.jpg"/>
+                    <head>Rupert Everett at the Mostra del cinema di Venezia of 1985</head>
+                    <figDesc>
+                        Di Gorup de Besanez - Opera propria, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=32835418
+                    </figDesc>
+                </figure>
+                <p>Graficamente il personaggio fu creato da <persName ref="#c_villa">Claudio Villa</persName> e <persName ref="#t_sclavi">Sclavi</persName> in proposito racconta: A fine settembre del 1986 uscì in edicola il primo numero di <title ref="#dd_nr1">Dylan Dog</title> ma l'esordio non fu dei migliori tanto che, citando le parole di Decio Canzio, all'epoca direttore responsabile della testata: Infatti nel giro di pochi anni <persName ref="#d_dog">Dylan Dog</persName> diventa un best seller che porta <persName ref="#t_sclavi">Sclavi</persName> nel 1990 a vincere il premio Yellow Kid come miglior autore. Il 1991 è probabilmente il momento di maggior successo per la serie che, con il n. 69 "Caccia alle streghe", arriva a superare Tex per numero di copie vendute.</p>
+            </div>
+
+            <div type="section" xml:id="caratterizzazione">
+                <head>Caratterizzazione del personaggio</head>
+                    <list type="unordered">
+                        <item><persName ref="#d_dog">Dylan Dog</persName> veste sempre nello stesso modo, camicia rossa sotto una giacca nera, jeans e scarpe Clarks indipendentemente dal tempo ("per non rovinarsi il look", come afferma spesso il personaggio); inoltre l'ombrello è per lui «un'invenzione inutile. Specialmente quando non piove». L'abbigliamento nasce da una sua personale elaborazione del lutto per la morte di Lillie Connolly. Nel volume fuori serie <title ref="#dd_comic_series">Dylan Dog</title> &amp; Martin Mystère Ultima fermata: l'incubo!, Martin Mystere ne attribuisce invece la ragione alla volontà di non dimenticare una vecchia fidanzata, Alison Dowell, ma successivamente nelle rubriche della serie mensile tutto questo venne smentito. Molto spesso la ripetitività delle sue mise è canzonata da Bloch e <persName ref="#groucho">Groucho</persName> che sono soliti ipotizzare che «o ha 12 completi uguali o ha davvero un ottimo deodorante!».</item>
+                        <item><persName ref="#d_dog">Dylan</persName> ha tra i 33 e i 35 anni, la sua altezza è di 185 cm e il suo peso è di 78 kg.</item>
+                        <item><persName ref="#d_dog">Dylan Dog</persName> è astemio dopo aver avuto un passato da alcolista (nel n. 2 della serie regolare lo si vede bere una birra che nella successiva riedizione della storia nella collana Grande ristampa viene ridisegnata e trasformata in aranciata, lo stesso avviene nel n. 3, mentre nelle successive ristampe, ha in mano il suo clarinetto, mentre nell'albo n. 81 gli viene offerto un bicchiere di whisky, che accetta), si autodefinisce alcolista anonimo. In molti albi inoltre si definisce o viene definito da <persName ref="#groucho">Groucho</persName> «un astemio che si dimentica spesso di astemiarsi».</item>
+                        <item>Non fuma ed è vegetariano.</item>
+                        <item>Soffre di diverse fobie: oltre ad essere claustrofobico è estremamente aerofobico e soffre di vertigini; nei pochi viaggi all'estero utilizza sempre la sua automobile o una nave (pur soffrendo di mal di mare). In alcuni albi, copre tali fobie con battute ciniche. È generalmente ipocondriaco.</item>
+                        <item><persName ref="#d_dog">Dylan</persName> nutre scarso interesse per molti aspetti della vita moderna. Non ama i telefoni cellulari (in riferimento ai numeri moderni, successivi alla sua invenzione) e per tenere il proprio diario si affida a penna d'oca e calamaio. Fondamentalmente è un cinico, ma molto romantico, probabilmente il primo aspetto è una facciata per coprire il secondo.</item>
+                        <item>Ama molto la lettura, in particolare la poesia, la musica dalla classica all'heavy metal. Ama oltretutto il cinema in particolare i film horror, ma non disdegna le commedie con una particolare attenzione a Woody Allen.</item>
+                        <item>Nonostante sia perennemente in bolletta, non nutre particolare interesse verso il denaro, talvolta investigando senza farsi pagare. La sua tariffa da investigatore privato era originariamente di 50 sterline al giorno più le spese, ma è aumentata a 100 sterline a partire dall'albo n. 145 della serie mensile. Dal n. 444 il suo onorario passa a 200 sterline al giorno. Nel n. 146 fa un'eccezione, facendosi pagare 1.000 sterline al giorno per lavorare per il ricco Darknight. Spesso riceve tra le 1.000 e le 5.000 sterline di anticipo.</item>
+                        <item>Essendo egli per primo fondamentalmente scettico nei confronti dei casi che si trova a dover affrontare, non è raro vederlo consigliare ai suoi clienti delle visite psicologiche o psichiatriche prima di ammettere l'esistenza del paranormale.</item>
+                        <item>Molto spesso, quando i clienti sono donne, <persName ref="#d_dog">Dylan Dog</persName> se ne innamora e spesso ha una relazione con loro. Considerato da molti un "farfallone", <persName ref="#d_dog">Dylan</persName> è infatti un donnaiolo, ma mai solo per sesso, si innamora seriamente, ma non riesce a far durare le relazioni poiché troppo amante della vita da scapolo.</item>
+                        <item>A suo dire il metodo d'indagine consiste nel partire da ipotesi razionali e «dopo aver scartato tutte le ipotesi possibili, quello che resta è il mio mestiere: l'incubo». <persName ref="#d_dog">Dylan</persName> è un abile detective formatosi a Scotland Yard agli ordini dell'ispettore Bloch e non crede nelle coincidenze.</item>
+                        <item>Da sempre cerca di completare un modellino di galeone da costruire che spesso viene distrutto e concentrandosi davanti al quale spesso riceve epifanie riguardo ai casi che lo coinvolgono. In realtà, il galeone ha la forma del vascello inglese del Settecento HMS Victory dell'ammiraglio Nelson. Il modellino (destinato a non essere mai finito e a cui si legano molte vicende riguardanti il passato del personaggio) venne acquistato dopo la morte di Lillie Connolly nel negozio Safarà. Viene terminato nel numero 100 della serie scatenando una serie di eventi che porteranno il nostro eroe ad incontrare i suoi genitori e porre fine a tutti i suoi incubi. A dir la verità, nella storia fuori collana Orrore Nero il galeone viene finito da Joey, ragazzino amico di <persName ref="#d_dog">Dylan</persName>, ma in questo caso non avviene nulla molto probabilmente perché l'indagatore glielo fa subito smontare e perché è solo <persName ref="#d_dog">Dylan</persName> ad avere una connessione con il galeone. È da evidenziare che il modellino di galeone che sta costruendo <persName ref="#d_dog">Dylan</persName> è identico allo stesso dove 300 anni fa si imbarcarono i suoi genitori. Come rilevato nel numero 100, quando <persName ref="#d_dog">Dylan</persName> completerà il modellino, i ricordi assopiti del suo passato dimenticato riaffioreranno rammentando così le sue origini e di chi siano i suoi veri genitori. Tutto questo lo porterà finalmente a concludere l'indagine su se stesso, liberandolo per sempre dagli incubi e di poter finalmente iniziare una nuova vita facendo sogni.</item>
+                        <item>Il maggiolone cabriolet di colore bianco targato "DYD 666", al quale <persName ref="#d_dog">Dylan</persName> è affezionato, gli viene consegnato come pagamento per aver risolto il suo primo caso (uno zerbino stregato assillava i proprietari di un'abitazione). Nonostante in alcune storie finisca completamente distrutto ritorna sempre integro nell'avventura successiva. Nel volume fuori serie <title ref="#dd_comic_series">Dylan Dog</title> &amp; Martin Mystère Ultima fermata: l'incubo! viene detto, in contrasto con quanto raccontato nella serie regolare, che già nel 1978 <persName ref="#d_dog">Dylan</persName> avesse questa auto.</item>
+                        <item>Nel tempo libero suona il clarinetto. Ciò è ispirato alla passione per il violino di Sherlock Holmes. <persName ref="#d_dog">Dylan</persName> è solito cimentarsi ne Il trillo del diavolo di Tartini. Nel n. 1 della serie regolare, il clarinetto viene fatto esplodere nella sua custodia munita di bomba, e <persName ref="#groucho">Groucho</persName> ne regala uno nuovo a <persName ref="#d_dog">Dylan</persName> nel n. 2. Morgana glielo riporta nel n. 25 e quindi di fatto dovrebbe avere due clarinetti anche se non compaiono mai insieme.</item>
+                        <item>Ha una vecchia pistola trovata insieme a Marina Kimball in una grotta a Moonlight quando era ancora un ragazzino e che tuttavia non porta quasi mai con sé e spesso affidata a <persName ref="#groucho">Groucho</persName>, il quale ha il compito di lanciargliela ogni volta che ne ha bisogno (il primo lancio in assoluto viene effettuato proprio da Marina). È una pistola modello Bodeo Mod. 1889 di tipo B. Essa va distrutta nel n. 101 ma è poi riparata da Moore, il titolare di un negozio di armi.</item>
+                        <item>Quando riceve i clienti nel suo studio è solito ascoltarli seduto con una gamba appoggiata su un bracciolo, le mani giunte all'altezza del viso e i gomiti appoggiati l'uno su un bracciolo e l'altro sul ginocchio della gamba opposta. Sembra essere una citazione, o piuttosto una parodia, della postura adottata da Sherlock Holmes.</item>
+                        <item>La sensazione che qualcosa non torni quando si trova impegnato in qualche caso viene dal personaggio definita come il suo «quinto senso e mezzo».</item>
+                        <item>Ha un'esclamazione tipica e ricorrente («Giuda ballerino!») presente già dal primo albo e mai persa nel corso degli anni e usata anche in un flashback sulla propria adolescenza, nel n. 74. <persName ref="#t_sclavi">Sclavi</persName> raccontò che apparteneva a un suo amico, il giornalista Gianluigi Gonano, il quale la usava come traduzione dell'espressione anglosassone Jumpin' Jehoshaphat (in italiano: "Giosafatte Salterino", espressione che verrà poi usata da Daryl Zed, personaggio fittizio alter ego di <persName ref="#d_dog">Dylan Dog</persName> nell'albo n. 69 Caccia alle streghe).</item>
+                        <item><persName ref="#d_dog">Dylan</persName> è diventato padrino nel n. 195 Uno strano cliente dopo avere salvato Sara e Steve: genitori del defunto figlio Tom divenuto un fantasma che aveva chiesto aiuto a <persName ref="#d_dog">Dylan</persName> per salvarli. Un anno dopo Sara e Steve aspettano un nuovo bambino chiedendo a <persName ref="#d_dog">Dylan</persName> divenuto loro grande amico di essere il suo padrino.</item>
+                        <item>Nel 22º Color Fest, <persName ref="#d_dog">Dylan</persName> scopre di avere avuto un figlio da Marina Kimball, quando ebbero la loro prima relazione amorosa dentro alla grotta.</item>
+                        <item><persName ref="#d_dog">Dylan</persName>, quando aveva quattro anni, non aveva molti amici reali, creandosene così molti immaginari; alcuni presentatisi nell'albo 363 Cose perdute: Nalyd riflesso di <persName ref="#d_dog">Dylan</persName> in uno specchio, l'orsacchiotto parlante Bister Beer, il bambino ombra Kub.</item>
+                        <item>Nel numero 371 Arriva il Dampyr, la vampira Lagertha rivela che <persName ref="#d_dog">Dylan</persName> è molto conosciuto nelle congreghe di mostri sparse per il mondo. Alcuni mostri considerano <persName ref="#d_dog">Dylan Dog</persName> come un tipo divertente, per altri un proprio simile, facendo intuire che alcuni mostri nutrono un certo rispetto per l'indagatore dell'incubo.</item>
+                        <item>Nel numero 202 Il settimo girone, si scopre che il filo della vita di <persName ref="#d_dog">Dylan Dog</persName> è quello più lavorato e usato come passatempo dalle Parche: Cloto si diverte di più a filare il filo di <persName ref="#d_dog">Dylan Dog</persName> rispetto agli altri, ricamandolo di continuo, Lachesi continua a rigirarselo fra le mani trattandolo con estrema cura e Atropo ammette apertamente che quando giungerà il momento di reciderlo con le sue cesoie non ne sarà affatto contenta e che la cosa la rattristerà molto, lasciando intendere che preferirebbe evitarlo.</item>
+                        <item>Nel numero 266 Gli artigli del drago viene rilevato che <persName ref="#d_dog">Dylan</persName> ha vari amici cinesi a Chinatown in Inghilterra, per averli aiutati con i permessi di soggiorno quando ancora era un poliziotto di Scotland Yard; fra questi spicca il proprietario di un ristorante, Shuyuan, grande amico di <persName ref="#d_dog">Dylan</persName>, per cui nutre un grande rispetto.</item>
+                        <item>Nel numero 372 Bianco e Nero, <persName ref="#d_dog">Dylan</persName> finisce nel mondo dell'Uomo Nero, che gli chiede aiuto perché suo figlio ha problemi adolescenziali a seguire le sue orme. Qui l'Uomo Nero dice a <persName ref="#d_dog">Dylan</persName> che in futuro avrà dei figli e che si presenterà a casa sua per terrorizzarli.</item>
+                        <item>Nel numero 261 Saluti da Moonlight, si scopre che <persName ref="#d_dog">Dylan Dog</persName> non può invecchiare grazie ai principi in cui crede.</item>
+                        <item>Nel numero 442 Frammenti si viene a sapere che <persName ref="#d_dog">Dylan Dog</persName> ha lasciato la polizia da circa dieci anni.</item>
+                        <item>Nel Color Fest 14 lo spirito di una sirena prende dimora nell'ufficio di <persName ref="#d_dog">Dylan Dog</persName>.</item>
+                        <item>Nel numero 145. <persName ref="#d_dog">Dylan Dog</persName> si prende cura di un cane che dimora a Gram Road 66: una casa nobiliare, diroccata e fatiscente. Alla fine Archibald si rivelerà essere un cerbero e salverà la vita a <persName ref="#d_dog">Dylan</persName>. L'indagatore dell'incubo deciderà infine di lasciarlo dove si trova, avendo compreso che l'abitazione abbandonata è casa sua.</item>
+                </list>
+            </div>
+
+            <div type="section" xml:id="ambientazioni">
+                <head>Ambientazioni ricorrenti</head>
+                <p>L'ufficio e l'abitazione del personaggio sono poste al n. 7 di <placeName ref="#craven_road_7">Craven Road</placeName> a <placeName ref="#london">Londra</placeName> (il nome è un omaggio al regista <persName ref="#w_craven">Wes Craven</persName>), hanno un campanello che urla invece di suonare e un singolare quanto tetro arredamento composto da modelli di mostri a grandezza naturale; su una parete dello studio è inoltre appeso il poster del Rocky Horror Picture Show. Nel n. 300 si scopre tra l’altro che la casa è la stessa dove, 300 anni fa, <persName ref="#d_dog">Dylan</persName> neonato partì assieme ai genitori con il vascello alla ricerca dell'immortalità.</p>
+                <p>Il negozio Safarà (dall'arabo: سافر [sāfara] viaggiare), gestito da un sinistro personaggio di nome Hamlin. Nonostante ricorra in molti albi e vi abbia comprato diversi oggetti, <persName ref="#d_dog">Dylan</persName> non ricorda mai di esserci stato; non di rado infatti, quando <persName ref="#d_dog">Dylan</persName> ne esce dopo aver fatto acquisti, l'intero negozio scompare lasciando al suo posto un muro di mattoni.</p>
+                <p>Moonlight è una località marittima inglese, dove <persName ref="#d_dog">Dylan</persName> adolescente trascorse la sua prima vacanza da solo. Qui conobbe il suo primo amore (Marina Kimball), trovò quella che sarebbe stata la sua pistola, decise che "da grande" avrebbe fatto l'indagatore dell'incubo, dichiarò che la sua auto sarebbe stata il Maggiolone cabriolet e per la prima volta entrò in contatto con il galeone. <persName ref="#d_dog">Dylan Dog</persName> tornerà a Moonlight altre due volte: quando dopo circa venti anni accompagna a casa il fantasma di Marina e successivamente in occasione di un'indagine.</p>
+                <p>Inverary è una città immaginaria nella campagna londinese, dove i giorni si susseguono sempre uguali all'infinito, costringendo i cittadini a vivere in una zona tra la vita e la morte creata dal dottor Hicks, la cosiddetta zona del crepuscolo, e a rivivere per sempre lo stesso giorno. Compare nella "Trilogia del Crepuscolo" costituita dagli albi n. 7 La zona del crepuscolo, n. 57 Ritorno al crepuscolo e n. 238 Gli eredi del Crepuscolo.</p>
+            </div>
+
+            <div type="section" xml:id="biografia">
+                <head>Biografia del personaggio</head>
+                <p>La vita del personaggio viene raccontata nel corso della serie attraverso particolari del suo passato che vengono svelati in particolare nei seguenti numeri: n. 1 (<title ref="#dd_nr1">L'alba dei morti viventi</title>), n. 7 (La zona del crepuscolo), n. 25 (Morgana), n. 43 (Storia di Nessuno), n. 74 (Il lungo addio), n. 100 (La storia di <persName ref="#d_dog">Dylan Dog</persName>), n. 121 (Finché morte non vi separi), n. 151 (Il lago nel cielo), n. 200 (Il numero duecento), n. 241 (Xabaras!), n. 242 (In nome del padre), n. 300 (Ritratto di famiglia) e nel volume fuori serie <title ref="#dd_comic_series">Dylan Dog</title> &amp; Martin Mystère Ultima fermata: l'incubo!. <persName ref="#t_sclavi">Tiziano Sclavi</persName> ha però ammesso di non aver amato il fatto di essere stato costretto a raccontare dettagliatamente passato e origini del suo personaggio, ma di averlo dovuto fare su richiesta dell'editore; l'autore avrebbe infatti voluto lasciare le origini di <persName ref="#d_dog">Dylan Dog</persName> avvolte nel mistero e, in un certo senso, nel n. 100 in cui vengono svelate le origini antiche del personaggio, ha lasciato intendere che possa essersi trattato solo di un sogno fatto da <persName ref="#groucho">Groucho</persName>.</p>
+
+                <div type="subsection">
+                    <head>Infanzia e adolescenza</head>
+                    <p>Nel 1686 un galeone inglese naviga capitanato da <persName ref="#d_dog">Dylan</persName>, uno scienziato e alchimista londinese, alla ricerca dell'ingrediente mancante per il siero dell'immortalità. A differenza dei viaggi precedenti, in questo è accompagnato dalla moglie Morgana e dal figlio Dylan jr, per evitare che il piccolo soffra eccessivamente della mancanza del padre. Il bambino, tra l'altro, ha già cominciato a sviluppare, a causa di ciò, una sorta di complesso di Edipo. Grazie alla cattura di un mollusco, <persName ref="#d_dog">Dylan</persName> riesce a completare il siero insieme all'antidoto per evitare la trasformazione in zombi. Morgana sperimenta il siero per prima per far sì che suo marito possa eventualmente intervenire se non dovesse funzionare. Il siero e l'antidoto sembrano fare effetto e allora Dylan sr. si inietta il siero ma non l'antidoto a causa dell'ammutinamento dell'equipaggio che uccide il capitano che, proprio a causa al siero, risorge sotto forma di zombi e massacra l'equipaggio. Morgana riesce a iniettare l'antidoto al marito ma è ormai troppo tardi e l'uomo recupera solo in parte la sua coscienza. Nel frattempo, i marinai risorgono come zombi. Interviene il mollusco marino che si rivela essere un demone acquatico (che si scoprirà poi essere una delle incarnazioni del gatto magico Cagliostro) che punisce le ambizioni dello scienziato sdoppiandolo: una parte viene condannata a vivere per 666 anni in esilio su un asteroide mentre l'altra diventa un'incarnazione del demone Abraxas e rimane sulla Terra. Con il nome di Xabaras (anagramma di Abraxas), riesce a contrastare la rivolta degli zombi e a ricondurre il galeone a <placeName ref="#london">Londra</placeName> dove affonda, abbandonando poi Morgana e il figlio per poter dedicarsi alle sue ricerche. La donna, oramai immortale, viene imprigionata e messa a dormire in eterno in una bara di vetro dentro il galeone, mentre il bambino viene affidato a un orfanotrofio. Qui il piccolo <persName ref="#d_dog">Dylan</persName> riceve la visita dell'entità marina che aveva sdoppiato il padre e lo porta avanti nel tempo nello stesso orfanotrofio ma intorno al 1956. Qui viene adottato dalla famiglia Dog, il giovane <persName ref="#d_dog">Dylan</persName> e la moglie, giunti sul posto per condurre un'inchiesta su possibili maltrattamenti inflitti ai bambini. Xabaras, pentitosi di aver abbandonato il figlio, si reca all'orfanotrofio per riprenderselo, ma scopre che è misteriosamente scomparso. Tali sono il desiderio e la necessità di ritrovarlo che Cagliostro decide di trasportare anche lui nella <placeName ref="#london">Londra</placeName> del XX secolo.</p>
+                    <p>Il piccolo <persName ref="#d_dog">Dylan</persName>, però, ora adottato dalla famiglia Dog, ha rimosso dai ricordi Xabaras, che cerca senza successo di rintracciare il figlio all'unico indirizzo possibile, quello del nonno adottivo di <persName ref="#d_dog">Dylan</persName>, il quale, notando qualcosa di malvagio in Xabaras, mette in guardia il figlio, che rimane lontano da <placeName ref="#london">Londra</placeName>, a Crossgate, dove <persName ref="#d_dog">Dylan</persName> cresce ignaro dell'esistenza del vero padre. Da bambino ha una cotta per una sua compagna di scuola, Spring Shorend, e intorno ai sedici anni trascorre la sua prima vacanza da solo a Moonlight, dove conosce il suo primo amore, Marina Kimball. In tale occasione, trova la pistola modello Bodeo mod. 1889 che diverrà la sua arma. Il giovane <persName ref="#d_dog">Dylan</persName> viene messo al corrente dal suo padre adottivo dell'esistenza di Xabaras, che per loro è solo un pazzo che crede di essere il vero padre di <persName ref="#d_dog">Dylan</persName>.</p>
+                </div>
+
+                <div type="subsection">
+                    <head>La vita a Londra: primo periodo</head>
+                    <p>Verso i venti anni si trasferisce a <placeName ref="#london">Londra</placeName> per diventare agente di Scotland Yard e nel 1978 conosce Martin Mystère e si innamora di Alison Dowell. La ragazza è anche sacerdotessa di una setta satanica che tenterà di uccidere <persName ref="#d_dog">Dylan</persName>. Martin lo salva causando però la morte di Alison.</p>
+                    <p>A Scotland Yard è agli ordini dell'ispettore Bloch, il quale lo prende particolarmente a cuore. <persName ref="#d_dog">Dylan</persName> incontra <persName ref="#groucho">Groucho</persName> e si innamora di Lillie Connolly, militante dell'IRA che poi viene arrestata come terrorista. Durante il processo <persName ref="#d_dog">Dylan</persName> testimonia a difesa di Lillie a causa dei trattamenti subiti in carcere. Lillie viene condannata a morte ma morirà a seguito di uno sciopero della fame. Per elaborare il lutto, <persName ref="#d_dog">Dylan</persName> si vestirà sempre come in occasione del primo e dell'ultimo incontro con Lillie: giacca nera, camicia rossa, jeans Levi's e scarpe Clarks (peraltro già in passato si era vestito così, come ad esempio all'epoca della sua storia con Marina, oppure nel 1978 quando conobbe Martin Mystère). La morte di Lillie getta <persName ref="#d_dog">Dylan</persName> nello sconforto, al punto di fargli lasciare Scotland Yard (mantenendo però illecitamente il suo tesserino) e diventando un alcolista. <persName ref="#d_dog">Dylan</persName> riesce grazie a Bloch a ottenere la licenza di investigatore privato, stabilendosi in un appartamento affittato al n. 7 di <placeName ref="#craven_road_7">Craven Road</placeName>. Durante la sua prima indagine incontra nuovamente <persName ref="#groucho">Groucho</persName> e lo prende come assistente. Per il primo caso risolto riceve come pagamento il Maggiolone. <persName ref="#groucho">Groucho</persName> gli regalerà in seguito il clarinetto, il diario con la penna d'oca e il campanello urlante, acquistandoli presso il negozio di antiquariato Safarà. Presso lo stesso negozio <persName ref="#d_dog">Dylan</persName> aveva già acquistato il modellino di galeone. Il figlio di Bloch, Virgil, compie una rapina finendo ucciso. L'episodio finisce per rinforzare l'amore paterno di Bloch nei confronti di <persName ref="#d_dog">Dylan</persName> contribuendo a liberare definitivamente <persName ref="#d_dog">Dylan</persName> dall'alcolismo.</p>
+                </div>
+
+                <div type="subsection">
+                    <head>La vita a Londra dal 1986 in poi</head>
+                    <p>Dal 1986, anno di esordio della serie a fumetti, il personaggio si dedica definitivamente alla professione di "indagatore dell'incubo". Il personaggio, così come i suoi comprimari, non invecchia e la serie di avventure prosegue senza mutamenti di età dei protagonisti. Nel primo numero della serie <persName ref="#d_dog">Dylan</persName> si scontra per la prima volta con Xabaras senza sapere che è suo padre. Per il ventennale della serie, nel 2006, si consuma la resa dei conti fra i due e <persName ref="#d_dog">Dylan</persName> scopre di essere suo figlio e di essere nato nel XVII secolo. Nel frattempo Xabaras, convinto di aver perfezionato il siero dell'immortalità, lo sperimenta su sé stesso, ma il siero si rivela imperfetto in quanto dona sì l'immortalità ma la vita eterna è vuota, priva di sentimenti e di sensazioni. Xabaras, resosi conto che questo è il suo definitivo fallimento, si suicida. Il gatto Cagliostro cancella dalla memoria di <persName ref="#d_dog">Dylan</persName> quanto accaduto facendolo tornare alla sua vita di indagatore, mentre il corpo di Xabaras viene trasferito in un'altra dimensione, dalla quale tornerà solo quando sarà il momento di ricongiungersi con l'altra metà e saranno trascorsi i 666 anni di esilio. Allora la metà in esilio tornerà sulla Terra, <persName ref="#d_dog">Dylan</persName> finirà il modellino di galeone e ciò gli riporterà alla mente tutte le vicende passate. La famiglia si ritroverà nei sotterranei di <placeName ref="#london">Londra</placeName> sul galeone con Morgana risvegliata dal lungo sonno nella sua bara di vetro e le due parti del padre che si riuniranno. <persName ref="#d_dog">Dylan</persName> abbandonerà definitivamente la professione di indagatore dell'incubo e il suo appartamento di <placeName ref="#craven_road_7">Craven Road</placeName> per andare a vivere forse con <persName ref="#groucho">Groucho</persName> una nuova vita finalmente libera dal mistero dei suoi genitori potendo d'ora in poi avere solo sogni e mai più incubi.</p>
+                </div>
+
+                <div type="subsection">
+                    <head>Fase 2 e il ciclo della meteora</head>
+                    <p>Nel 2014 avvengono significativi cambiamenti nella vita dell'indagatore dell'incubo (causa dell'operazione di rilancio editoriale del personaggio voluta da <persName ref="#t_sclavi">Sclavi</persName> e affidata a Roberto Recchioni e definita "Fase 2"): il primo fra tutti è il pensionamento dell'ispettore Bloch e il suo trasferimento in una campagna inglese, che fa perdere a <persName ref="#d_dog">Dylan</persName> un importante aiuto nella polizia, visto che il suo successore, l'ispettore Carpenter, lo considera un ciarlatano e fa tutto ciò che è in suo potere per mettergli i bastoni tra le ruote. L'unica ad essere un po' più aperta nei confronti di <persName ref="#d_dog">Dylan</persName> è la sergente Rania Rakim, per il quale l'uomo comincia a maturare dei sentimenti, salvandosi la vita reciprocamente in più di un'occasione e aiutandosi a vicenda.</p>
+                    <p><persName ref="#d_dog">Dylan</persName> inoltre è costretto ad aprirsi di più alla tecnologia, prendendo uno smartphone chiamato Ghost 9000, utilizzato perlopiù da <persName ref="#groucho">Groucho</persName> (con cui instaura un rapporto molto simile al flirt), a causa anche del nuovo antagonista introdotto: l'industriale John Ghost, un uomo apatico, senza alcun scrupolo e a capo di un'agenzia tecnologica, la Ghost Enterprise, andando nettamente in contrasto con <persName ref="#d_dog">Dylan</persName>, da sempre contrario o riluttante nei confronti delle nuove tecnologie, e contro il quale nulla può, a causa della sua posizione di potere nel mondo, e per le sue assurde e indecifrabili macchinazioni che lo fanno stare sempre un passo avanti. Più avanti nella serie Ghost diventa la mente occulta dietro gli orrori e le situazioni che <persName ref="#d_dog">Dylan</persName> si trova ad affrontare, facendo addirittura distruggere Moonlight, per via di uno "snodo ferroviario per il multiverso" in cui c'è il galeone fantasma salpato centinaia di anni prima con a bordo Xabaras, Morgana ed il piccolo <persName ref="#d_dog">Dylan Dog</persName> che continua a mostrarsi all'uomo, rivelando che John Ghost vuole <persName ref="#d_dog">Dylan</persName> vivo a tutti i costi per un suo futuro "sacrificio". Nonostante tutto, Ghost non riuscirà a distruggere il galeone fantasma, ma solo a rallentarlo, dimostrando che anche lui ha dei limiti, nonostante le sue risorse. Riuscirà comunque a guadagnare quel tempo sufficiente per attuare il suo piano contro <persName ref="#d_dog">Dylan</persName>.</p>
+                    <p>Questo sacrificio diverrà più chiaro nel "Ciclo della meteora", ovvero l'ultimo ciclo di avventure di <persName ref="#d_dog">Dylan Dog</persName>, che si trova ad affrontare situazioni legate nientedimeno che all'Apocalisse: dopo essere stato trasformato in un simbolo deviato dai media di John Ghost, <persName ref="#d_dog">Dylan</persName> scopre da questi che una meteora si sta avvicinando minacciosamente alla Terra e che dopo un anno sarà completamente distrutta, a meno che <persName ref="#d_dog">Dylan</persName> non diventi simbolo di speranza per il mondo e accetti un ultimo sacrificio per salvare il mondo. Affrontando la follia umana scaturita durante la fine del mondo ed eliminando gli ultimi nemici rimasti in vita, la storia terminerà con John Ghost che offre a <persName ref="#d_dog">Dylan Dog</persName> una via di uscita per salvare <placeName ref="#london">Londra</placeName> e probabilmente la razza umana tutta dalla meteora: per salvare il mondo, bisognerà mutarlo profondamente dalle sue radici. Per questo motivo l'industriale rivela all'indagatore che è stato lui, con la sua influenza, a fare andare in pensione Bloch e a mettere Tyron al suo posto, così come <persName ref="#groucho">Groucho</persName> è diventato un suo informatore, e di avere contribuito a manipolare e modificare molte altre cose avvenute nei numeri precedenti. John Ghost voleva eliminare tutte le cose ritenute superflue affinché <persName ref="#d_dog">Dylan</persName> fosse pronto. L'ultima prova per completare l'opera di John contempla che <persName ref="#d_dog">Dylan Dog</persName>, scapolo impenitente e nuovo simbolo della speranza, si sposi, venendo però abbandonato all'altare dalla sposa in mondovisione. <persName ref="#d_dog">Dylan</persName> così accetterà di "sposare" simbolicamente l'unica persona che gli è sempre stata accanto e lo ha aiutato fino alla fine: <persName ref="#groucho">Groucho</persName>. Dopo un "matrimonio" celebrato con amici cari e officiato da Ghost, <persName ref="#d_dog">Dylan</persName> capirà che non doveva sacrificarsi lui, ma la persona a lui più cara, quando <persName ref="#groucho">Groucho</persName> morirà per mano di uno dei suoi nemici sopravvissuti. John rivela infine che il momento cruciale di <persName ref="#d_dog">Dylan</persName> per cambiare tutto e riconfigurare l'universo è infine giunto, consegnando una pistola all'indagatore dell'incubo, chiedendo infine che gli spari: solo così tutto potrà essere cambiato. <persName ref="#d_dog">Dylan</persName> tuttavia rifiuta e non intende fare quest'ultima cosa. Ciò fa infuriare tremendamente John Ghost che esclama furibondo che <persName ref="#d_dog">Dylan</persName> ha rovinato tutto. Con sorpresa però <persName ref="#d_dog">Dylan</persName> cambia idea e spara un colpo alle spalle di John Ghost ferendolo mortalmente e vendicandosi di tutte le sue macchinazioni. John si accascia ai piedi della sua segretaria affermando che era questo ciò che voleva da <persName ref="#d_dog">Dylan Dog</persName> prima che arrivasse la fine. <persName ref="#d_dog">Dylan</persName> e i suoi amici e alleati si tengono per mano e affrontano la fine, non prima che <persName ref="#d_dog">Dylan</persName> se ne esca con la frase: «Ci vediamo dall'altra parte».</p>
+                    <p>Termina così l'universo principale di <persName ref="#d_dog">Dylan Dog</persName>, dando inizio ai primi eventi che porteranno a una nuova riconfigurazione cosmica.</p>
+                    <p>Nel numero 400 un <persName ref="#d_dog">Dylan</persName> senza memoria viaggia a bordo di un veliero identico al suo modellino, con il suo tuttofare <persName ref="#groucho">Groucho</persName> anch'egli affetto da amnesia, viaggiando per isole che sono ciò che rimane del mondo e affrontando mostri e creature simili a ciò che aveva affrontato finora, in una metanarrazione che termina con l'incontro/scontro con il "vero" padre di <persName ref="#d_dog">Dylan</persName>, <persName ref="#t_sclavi">Tiziano Sclavi</persName>, in una serie di sequenze che ricordano Cuore di tenebra di Joseph Conrad e Apocalypse Now di Francis Ford Coppola e che culminano nella morte e nella trasformazione di <persName ref="#t_sclavi">Sclavi</persName> in una stella, ma al tempo stesso, porta tutto a una nuova riconfigurazione cosmica. L'universo si rinnova e ritrova il proprio equilibrio. Le ultime due pagine mostrano un <persName ref="#d_dog">Dylan</persName> trasandato pronto a ricominciare la sua professione di Indagatore dell'Incubo con un nuovo assistente al suo fianco.</p>
+                </div>
+            </div>
+
+            <div type="section" xml:id="ciclo_666">
+                <head>Dylan Dog 666</head>
+                <div type="subsection">
+                    <head>Biografia e caratteristiche del personaggio</head>
+                    <p>Nel numero 401 viene mostrato il nuovo universo nato dopo la saga della meteora; qui il protagonista ha una folta barba e baffi, e assieme al suo look classico quando esce indossa un'enorme livrea scura; è molto più aperto alla tecnologia in quanto ha uno smartphone e un tablet e, a differenza dell'originale, è un assiduo bevitore e fumatore occasionale.</p>
+                    <p>Vengono inoltre modificati i rapporti tra i personaggi: <persName ref="#d_dog">Dylan Dog</persName> diventa figlio adottivo di Bloch, passato da ispettore a sovrintendente, ed è inoltre l'ex marito della sergente Rania Rakim, la quale ha tradito e poi lasciato <persName ref="#d_dog">Dylan</persName> per intraprendere una relazione con l'ispettore Tyron Carpenter. È inoltre presente una nuova spalla, Gnaghi, personaggio ideato da <persName ref="#t_sclavi">Sclavi</persName> per il romanzo <title ref="#dellamorte_book">Dellamorte Dellamore</title> (nel cui omonimo film il protagonista è interpretato da <persName ref="#r_everett">Rupert Everett</persName>, sulle cui fattezze sono ricalcate quelle di <persName ref="#d_dog">Dylan Dog</persName>) che si esprime solo con il verso «Gna» (che <persName ref="#d_dog">Dylan</persName> traduce in frasi di senso compiuto, capendo cosa voglia dire) e che viene qui ripreso in sostituzione di <persName ref="#groucho">Groucho</persName>, morto nell'albo n. 400.</p>
+                    <p>È proprio con la storia di <persName ref="#f_dellamorte">Francesco Dellamorte</persName> che si intreccia il nuovo passato di <persName ref="#d_dog">Dylan Dog</persName>, come spiegato nel n. 401 L'alba nera e nel 402 Il tramonto rosso: abbandonato e cresciuto in un orfanotrofio, dove tra l'altro gli era stato dato il nome, <persName ref="#d_dog">Dylan</persName> ha passato la giovinezza a fare il teppista e il ladruncolo con una banda (i Bloody Hell, apparsi già nell'universo originale nel numero 364 Gli anni selvaggi), fino a che Bloch, all'epoca ispettore e che ogni tanto lo pizzicava, decise di adottarlo, sebbene lui continuasse a combinare guai. Dopo un non precisato evento, <persName ref="#d_dog">Dylan</persName> mise la testa a posto e seguì le orme del padre putativo entrando in polizia. A Scotland Yard conobbe Tyron Carpenter e Rania Rakim, con la quale intrecciò una relazione e che sposò (sebbene lei lo tradisse con Carpenter). Dopo circa due settimane di matrimonio <persName ref="#d_dog">Dylan</persName> conobbe la terrorista Lillie Connolly, della quale si innamorò e che frequentò, fino a che lei non fu arrestata e morì in carcere per le sue idee.</p>
+                    <p>L'evento sconvolse profondamente <persName ref="#d_dog">Dylan</persName>, che per un periodo pensò addirittura al suicidio, decidendo poi di abbandonare la polizia e Rania e di adattarsi alla morte, andando a lavorare come becchino nel cimitero di Undead, vicino a Inverness, Scozia, dove conobbe Gnaghi, sperando di condurre un'esistenza tranquilla.</p>
+                    <p>Poco tempo dopo, però, il cimitero di Undead fu colpito da un'epidemia di Ritornanti, ossia morti che dopo sette giorni dalla sepoltura si risvegliavano e si tramutavano in zombi, potendo morire di nuovo solo se colpiti con una pallottola in testa o se gli veniva spaccato il cervello in altri modi, costringendo <persName ref="#d_dog">Dylan</persName> e Gnaghi a ri-ucciderli e ri-seppellirli. Fu durante una delle notti di "pulizia" del cimitero che <persName ref="#d_dog">Dylan</persName> ebbe una visione della Morte, la quale volle "assumerlo" per indagare sulla piaga dei non-morti e su altri orrori che si sarebbero verificati a <placeName ref="#london">Londra</placeName>, suggerendo anche il futuro appellativo di Indagatore dell'Incubo all'uomo. Questi accettò, a patto che, come compenso, potesse ottenere di passare un giorno con la sua amata Lillie. Dopo varie contrattazioni, la Morte gli concesse di passare la notte stessa con la donna, siglando così il loro accordo e facendo passare a <persName ref="#d_dog">Dylan</persName> un'ultima notte di passione con Lillie. Dopodiché <persName ref="#d_dog">Dylan</persName> partì per <placeName ref="#london">Londra</placeName> con Gnaghi, per iniziare la sua nuova professione di detective del paranormale, grazie alla licenza concessagli da Bloch.</p>
+                </div>
+
+                <div type="subsection">
+                    <head>Un nuovo inizio</head>
+                    <p>Nel primo episodio, il n. 401 (riadattamento di <title ref="#dd_nr1">L'alba dei morti viventi</title>, primo numero della serie) <persName ref="#d_dog">Dylan</persName> assieme a Gnaghi indaga, per conto di Sybil Browning, sulla morte del defunto marito di lei, John, il quale era tornato in preda forti dolori a casa dopo un viaggio di lavoro e con un morso sul petto, morendo e resucitando poco dopo, costringendo la donna a riucciderlo e finendo per essere accusata di uxoricidio. <persName ref="#d_dog">Dylan</persName>, a causa dei suoi trascorsi con i ritornanti, si reca con la donna e Gnaghi all'obitorio della polizia sul suo classico Maggiolone bianco, scoprendo con orrore che la piaga si è diffusa anche lì, facendo resuscitare tutti i morti presenti. Sul posto giungono anche Carpenter e Rania a indagare per conto di Bloch, loro superiore, scoprendo la presenza di <persName ref="#d_dog">Dylan</persName> e dei non-morti. Seppur all'inizio scettici, i due sono costretti ad aiutare il loro ex-collega ad affrontare gli zombi e eliminarli, mentre Xabaras, la nemesi di <persName ref="#d_dog">Dylan</persName>, appare e dà fuoco all'edificio. Seppure con l'obitorio in fiamme, <persName ref="#d_dog">Dylan</persName> e il suo gruppo riescono a fuggire e impedire che la piaga si diffonda in città sparando agli ultimi zombi rimasti.</p>
+                    <p>Dopo essere stati trattenuti e poi rilasciati in mancanza di prove, <persName ref="#d_dog">Dylan</persName>, Sybil e Gnaghi si recano ad Undead dopo aver scoperto che John si era recato lì per lavoro prima di contrarre la malattia, giungendo troppo tardi, in quanto ormai tutti i cittadini sono morti viventi. Scappando, il trio si rifugia nel cimitero, ora sicuro dopo l'operato di <persName ref="#d_dog">Dylan</persName> e, nella vecchia casa, l'Indagatore dell'incubo scopre che qualcuno c'era stato ultimamente, trovando poi una botola che porta alle catacombe e ad un lago sotterraneo dove nel mezzo c'è un enorme galeone, in una scena identica al numero 100. Qui vengono accolti da Nessuno, un uomo che lavora per conto di Xabaras e li porta al suo cospetto sulla nave. Il dottore rivela di essere a conoscenza del fatto che quello in cui si trova è un universo alternativo, spiegando a <persName ref="#d_dog">Dylan</persName> come esistano infinite versioni di loro due in conflitto, e che ogni volta i due arrivano alla resa dei conti, come in questo caso. Grazie alla sua conoscenza degli altri universi e degli eventi, anticipa le mosse di <persName ref="#d_dog">Dylan</persName> e lo rende inoffensivo assieme ai suoi amici, spiegandogli come il suo intento sia creare degli esseri eterni ma privi di individualità, essendo disgustato dal mondo moderno, ma viene sconfitto di nuovo dallo stesso trucco della valigetta esplosiva dove <persName ref="#d_dog">Dylan</persName> conservava il clarinetto, aperto però da Nessuno, che ha riacquisito coscienza ribellandosi al suo signore. Il galeone esplode ma <persName ref="#d_dog">Dylan</persName> e i suoi sopravvivono, non prima che l'eco della voce di Xabaras intimi all'indagatore che si rivedranno ancora. Ritornati a <placeName ref="#london">Londra</placeName>, Sybil scopre di essere infetta e, dopo essersi trasformata, viene uccisa da <persName ref="#d_dog">Dylan</persName>, il quale comunica a Gnaghi che l'incubo è appena iniziato.</p>
+                </div>
+                
+                <div type="subsection">
+                    <head>Post 666</head>
+                    <p>A seguito degli avvenimenti del ciclo 666, <persName ref="#d_dog">Dylan</persName> ritorna al suo look classico, decidendo di tagliarsi barba e baffi e smettendo di bere e fumare. Inoltre, a seguito della morte di Gnaghi, decide di assumere <persName ref="#groucho">Groucho</persName>, appena conosciuto, come suo assistente. In questo periodo l'indagatore ha continui scontri con la sua ex moglie, il sergente Rania Rakim, e con l'ispettore Carpenter. Ha inoltre soventi attriti con suo padre, il sovrintendente Bloch.</p>
+                </div>
+
+                <div type="subsection">
+                    <head>Il rilancio del 2022-2023</head>
+                    <p>Con la trilogia iniziata con l'albo n. 435 e proseguita coi successivi due, la serie torna allo status quo precedente al numero 337, di conseguenza la biografia del personaggio e dei suoi comprimari ritorna quella pre Fase 2. In questo trittico Rania e Carpenter vengono uccisi, John Ghost sparisce nel nulla, Bloch torna ispettore. <persName ref="#d_dog">Dylan Dog</persName> per uno sfasamento spazio temporale non ricorderà nulla di questi avvenimenti, come non li avesse mai vissuti. L'unica variazione rispetto al passato è la modifica dell'ambientazione delle storie, inserita nell'era moderna.</p>
+                </div>
+            </div>
+
+            <div type="section" xml:id="comprimari">
+                <head>Comprimari</head>
+                <list type="unordered">
+                    <item><label><persName ref="#groucho">Groucho</persName></label> è l'assistente di <persName ref="#d_dog">Dylan</persName> tuttofare con le sembianze di <persName ref="#g_marx">Groucho Marx</persName> che spesso apre la porta ai potenziali clienti sommergendoli di freddure e barzellette. intervenendo a sproposito, irritando i potenziali clienti e corteggiando ogni bella ragazza che gli capita a tiro anche se gli va quasi sempre male a differenza di <persName ref="#d_dog">Dylan</persName> («Ma cosa gli fai tu alle donne per farle cadere tutte ai tuoi piedi? Lo sgambetto?»). Esordisce nel primo numero della serie una pagina prima del protagonista.. Si incontrano mentre <persName ref="#d_dog">Dylan</persName> in servizio è alle prese con dei disordini causati da militanti dell'IRA mentre <persName ref="#groucho">Groucho</persName> si aggira nelle vicinanze noncurante degli scontri e declamando battute Il suo vero nome è forse Julius Zaccaria. Spesso il suo unico compito è lanciare a <persName ref="#d_dog">Dylan</persName> la pistola che tiene in consegna.</item>
+                    <item><label>L'ispettore Bloch</label> (il cui aspetto fisico è una citazione dell'attore di gialli Robert Morley e il cui cognome è probabilmente un omaggio allo scrittore Robert Bloch) è l'ispettore capo di Scotland Yard a un passo dalla pensione; ex-superiore di <persName ref="#d_dog">Dylan</persName> quando era in servizio, gli è molto affezionato e più di una volta lo ha tirato fuori dai guai e dalla prigione. Il loro rapporto ha suscitato la gelosia del figlio tossicodipendente che morirà durante una rapina. Dispiaciuto delle dimissioni di <persName ref="#d_dog">Dylan</persName> dalla polizia, nonostante tenda a parlare con ironia della sua professione di "Indagatore dell'Incubo", lo aiuta quando possibile. È estremamente sensibile alla vista del sangue per cui assume antiemetici e teme che il soprintendente gli impedisca di andare prima o poi in pensione. Il suo nome di battesimo completo è Sherlock H. (Holmes) Bloch, come viene svelato nel 2014 sul numero 340 della serie inedita.</item>
+                    <item><label>Lord H. G. Wells</label>, pari d'Inghilterra e omonimo dell'autore de La guerra dei mondi, è un eccentrico inventore che aiuta spesso <persName ref="#d_dog">Dylan</persName> nelle sue indagini. Il suo aspetto fisico è una citazione dell'attore David Niven. <persName ref="#groucho">Groucho</persName> non lo sopporta perché viene ritenuto da lui il maggiordomo di <persName ref="#d_dog">Dylan</persName>. È spesso in compagnia di qualche prostituta d'alto bordo che il nobiluomo giustifica come una ragazza alla quale dà ripetizioni private.</item>
+                    <item><label>Morgana:</label> è la madre del personaggio, del quale ha però perso memoria. Esordisce nell'albo n. 25 Morgana ma, anche se non riconoscibile, la donna compare nell'albo n°1 tra gli zombie vittima di Xabaras.<persName ref="#d_dog">Dylan</persName> scopre che è in realtà sua madre nel n. 100. Appare nuovamente nel numero 300 (Ritratto di famiglia). Ritorna nel n. 361 (Mater Dolorosa), in cui difende il piccolo <persName ref="#d_dog">Dylan</persName> da Mater Morbi. Fa anche una apparizione nel numero 400, E ora, l'apocalisse!.</item>
+                    <item><label>La Morte</label>, rappresentata come uno scheletro con un vecchio saio, in più episodi interagisce direttamente con <persName ref="#d_dog">Dylan</persName>, come nel n. 88 nel quale egli stringe un patto con lei per salvare Bree Daniels. Viene spesso rappresentata come una semplice impiegata che fa il suo lavoro. Nel n. 123 afferma di non poter guidare i camion, avendo solo la patente B; nello stesso albo afferma anche che la sua musica preferita è il jazz. Nell'albo n. 300 è accompagnata da sua "sorella", la Vita, che era già apparsa nel numero 161 Il sorriso dell'oscura signora. Nel numero 338 si prende una sorta di vacanza dalla sua attività per fare compagnia all'ispettore Bloch che, andato in pensione, ha tentato di anticipare la sua dipartita, e riscopre così i piccoli piaceri della vita come guardare un film o andare a pesca.</item>
+                    <item><label>Madame Maria Trelkovski</label> è un'anziana sensitiva, il cui nome rimanda al cognome del protagonista de L'inquilino del terzo piano di Roman Polański. Aiuta spesso <persName ref="#d_dog">Dylan</persName> nelle sue indagini ed è considerata la sensitiva più esperta di <placeName ref="#london">Londra</placeName>.</item>
+                    <item><label>Abel Cedric Jenkins</label> è un agente di Scotland Yard che prende ogni cosa alla lettera facendo esasperare l'ispettore Bloch che periodicamente lo rispedisce a dirigere il traffico.</item>
+                    <item><label>Botolo</label> è un cane meticcio randagio (anche se in un episodio ironicamente viene definito un levriero afgano), che <persName ref="#d_dog">Dylan</persName> salva da un accalappiacani. Successivamente il cane salverà la vita a lui e i due si scambieranno questi favori a vicenda diverse volte.</item>
+                    <item><label>Tyron Carpenter</label>, integerrimo ispettore di polizia di Scotland Yard, successore di Bloch. Carpenter non nutre alcuna simpatia per <persName ref="#d_dog">Dylan Dog</persName>, considerandolo solamente un ciarlatano e sequestrandogli il tesserino da poliziotto che non aveva mai restituito.</item>
+                    <item>Il personaggio ha avuto numerose relazioni sentimentali, seppure di breve durata, ma alcune di queste con personaggi femminili ricorrenti:
+                        <list type="unordered">
+                            <item><label>Rania Rakim:</label> sergente di Scotland Yard, è la prima fidanzata di <persName ref="#d_dog">Dylan</persName> e la prima donna che lo ha fatto innamorare. Dopo un periodo di convivenza, Rania tradisce <persName ref="#d_dog">Dylan</persName> con l'ispettore Carpenter e lo lascia. In seguito i due si rincontrano e si riappacificano, ma Rania viene uccisa da John Ghost.</item>
+                            <item><label>Lillie Connolly:</label> è una terrorista dell'IRA che resasi colpevole di attentati a <placeName ref="#london">Londra</placeName> viene condannata a morte e prima dell'esecuzione si sposa con <persName ref="#d_dog">Dylan</persName>. In realtà Lillie non è mai stata condannata e la sua morte è avvenuta a causa dello sciopero della fame. Gli avvenimenti descritti nella storia (la condanna a morte e il matrimonio) sono frutto dei sogni di <persName ref="#d_dog">Dylan</persName> vittima della depressione e dell'alcool.</item>
+                            <item><label>Bree Daniels:</label> prostituta che chiama <persName ref="#d_dog">Dylan</persName> storpiando il suo nome in "Dailan". <persName ref="#d_dog">Dylan</persName> le chiede di sposarlo ma lei rifiuta in quanto troppo legata alla sua vita e al suo mondo. Successivamente i due si rivedono quando lei è malata terminale di AIDS e a nulla serve un patto di <persName ref="#d_dog">Dylan</persName> con la Morte per salvarla. In punto di morte lo saluterà chiamandolo di nuovo "Dailan".</item>
+                            <item><label>Marina Kimball:</label> conosciuta durante una vacanza al mare nel paese di Moonlight quando era adolescente è il primo amore di <persName ref="#d_dog">Dylan</persName>. Dopo circa venti anni lei bussa alla sua porta chiedendogli di riaccompagnarla a casa e durante il viaggio entrambi ricordano la propria adolescenza. Arrivati a destinazione <persName ref="#d_dog">Dylan</persName> si rende conto di esserne ancora innamorato ma è costretto ad abbandonarla perché Marina in realtà è morta e ciò che l'aveva condotto lì era solo il suo fantasma che in punto di morte aveva desiderato di rivederlo.</item>
+                            <item><label>Alison Dowell:</label> è la seconda fidanzata di <persName ref="#d_dog">Dylan</persName>, conosciuta quando aveva 23 anni ed era ancora un poliziotto di Scotland Yard. Muore in circostanze drammatiche e <persName ref="#d_dog">Dylan</persName> ritiene Martin Mystère responsabile della sua morte. <persName ref="#d_dog">Dylan</persName> dopo 12 anni dichiarerà di aver adottato il proprio look in perenne ricordo di lei.</item>
+                            <item><label>Kim:</label> è una strega che vive a New York con il gatto Cagliostro, poi si trasferisce in Inghilterra per un breve periodo dove viene uccisa dall'Anticristo ma viene riportata in vita, non più strega, dall'amore per <persName ref="#d_dog">Dylan</persName>. Cagliostro la deve abbandonare perché può appartenere solo a una strega. Muore di vecchiaia a causa di un sortilegio che la fa invecchiare di tre anni al giorno ad opera del consiglio delle streghe. L'ambientazione a New York, il nome del gatto (Cagliostro) e della strega (Kim) sono riferimenti a una famosa commedia del 1958, Una strega in paradiso, con Kim Novak, James Stewart e Jack Lemmon.</item>
+                            <item><label>Anna Never:</label> aspirante attrice di origine polacca il cui vero nome è Anna Neverodkiewicz, molto ingenua e perennemente con la testa fra le nuvole.</item>
+                            <item><label>Rachel Murray:</label> <persName ref="#d_dog">Dylan</persName> la conosce in un'azienda di componenti per automobili copertura per una fabbrica di androidi per metà umani. <persName ref="#d_dog">Dylan</persName> decide di portare Rachel, anch'essa un androide, via con lui ma purtroppo lei viene uccisa. Distrutto dal dolore, <persName ref="#d_dog">Dylan</persName> decide di rivolgersi al padre della ragazza per farla rinascere ancora ma cancellando il ricordo di lui dalla mente di lei per darle una vita più tranquilla. Il ricordo di <persName ref="#d_dog">Dylan</persName> dentro Rachel non scompare del tutto e dopo migliaia di secoli, quando il mondo è in rovina tranne la città degli androidi, il padre di Rachel per rendere felice sua figlia crea un robot perfettamente identico a <persName ref="#d_dog">Dylan</persName>.</item>
+                        </list>
+                    </item>
+                </list>
+            </div>
+
+            <div type="section" xml:id="crossover">
+                <head>Crossover</head>
+                <p>Nella sua storia editoriale <persName ref="#d_dog">Dylan Dog</persName> è stato protagonista di diversi crossover e team-up che hanno coinvolto personaggi di altre serie fumettistiche, <orgName ref="#sb_editore">Bonelli</orgName> e non. Ad esempio nel numero 12 del <title ref="#dd_comic_series">Dylan Dog</title> Color Fest sono presenti quattro storie, ognuna comprensiva di altrettanti team-up, ovvero con Mister No, Martin Mystère, Nathan Never e Napoleone. Fra i vari personaggi incontrati nel corso degli anni si ricordano:</p>
+                <list type="unordered">
+                    <item><label>Martin Mystere:</label> Il primo team-up tra <persName ref="#d_dog">Dylan Dog</persName> e Martin Mystere si è sviluppato tra il 1990 e il 1992, anni nei quali i due personaggi (definiti eterni amici/nemici) hanno vissuto avventure in comune pubblicate in due volumi: Dylan Dog &amp; Martin Mystere # 1 Ultima fermata: l'incubo! e Dylan Dog &amp; Martin Mystere # 2 La fine del mondo. Sono seguite diverse ristampe.</item>
+                    <item><label>Dampyr:</label> Il crossover tra <persName ref="#d_dog">Dylan Dog</persName> e Dampyr è iniziato il 28 Luglio 2017 con la pubblicazione della storia Arriva il Dampyr sulla serie regolare di <title ref="#dd_comic_series">Dylan Dog</title> nel numero 371. Il numero è stato stampato con doppia copertina: questo permetteva di affiancare i due albi ed ottenere un unico disegno. La storia si è poi conclusa col numero 209 della serie regolare di Dampyr intitolata L'indagatore dell'Incubo. Anche questo albo è stato pubblicato con doppia copertina.</item>
+                    <item><label>Morgan Lost:</label> è stata pubblicata fra il 2018 e il 2020 una miniserie di sei albi con Morgan Lost, altro personaggio edito da <orgName ref="#sb_editore">Bonelli</orgName>.</item>
+                    <item><label>Batman:</label> Il crossover tra Batman e <title ref="#dd_comic_series">Dylan Dog</title> avviene all'interno di una collaborazione tra la <orgName ref="#sb_editore">Sergio Bonelli Editore</orgName> e la statunitense DC Comics, che ha compreso anche altri due team-up (Nathan Never con la Justice League, Zagor e Flash). Gli albi pubblicati sono cinque in tutto, di cui il primo (Relazioni pericolose) con doppia copertina. L'albo è stato annunciato il 24/10/2019 dalla <orgName ref="#sb_editore">Sergio Bonelli Editore</orgName> e presentato al Lucca Comics in due versioni: Heroes, con Batman e <persName ref="#d_dog">Dylan Dog</persName> in copertina, e Villains, con i nemici dei due protagonisti in copertina. Allo stesso Lucca Comics 2019 viene annunciata una miniserie, originariamente prevista per il 2020 ma poi pubblicata nel 2023 . Dopo la pubblicazione del Numero 0, Dylan Dog / Batman, uscito il 14/12/2019 e che raccoglie quattro storie (Relazioni Pericolose, Il Joker, La nuova alba dei morti viventi, La vendetta in cinque punti di Joker!), nel 2023 viene pubblicata una miniserie in tre episodi (L'ombra del Pipistrello, All'inferno e ritorno, L'incubo di Gotham).</item>
+                </list>
+            </div>
+
+            <div type="section" xml:id="influenza_culturale">
+                <head>Influenza culturale</head>
+                <list type="unordered">
+                    <item>L'ufficio e l'abitazione del personaggio sono ubicate al n. 7 di <placeName ref="#craven_road_7">Craven Road</placeName> a <placeName ref="#london">Londra</placeName>, strada realmente esistente nella zona di Westminster dove al n. 7 sorgeva un bar, il "Bruno's Snack Bar" (citato anche nello speciale Dov'è finito Dylan Dog?, anche se cambia il nome da "Bruno's" in "Bruto's"), che nel 2013 venne rinominato "Cafe Dylan Dog.</item>
+                    <item>Il personaggio è stato padrino dell'evento organizzato per celebrare il decennale della l'associazione Save the Dogs, una associazione nata in Italia per far fronte al problema del randagismo in Romania.</item>
+                    <item>Il personaggio è stato testimonial di campagne contro l'abbandono degli animali.</item>
+                    <item>Per il trentennale dell'esordio in edicola della serie il 26 settembre 2016 il primo documentario ufficiale sul personaggio Dylan Dog - 30 anni di incubi, di Marcello Rossi e Luca Ruocco e co-prodotto dalla <orgName ref="#sb_editore">Sergio Bonelli Editore</orgName>, è stato proiettato in anteprima allo Space Cinema Odeon in occasione del Dylan Dog Horror Day e trasmesso in televisione il 7 ottobre 2016 sul canale televisivo Studio Universal.</item>
+                    <item>Nel 2012 viene reso disponibile gratuitamente su YouTube Il cane russo, film indipendente diretto da Paolo Congi e Claudio Fratticci liberamente ispirato a Incubus, storia breve di <persName ref="#d_dog">Dylan Dog</persName> contenuta nell'albo n. 77 "L'ultimo uomo sulla terra";</item>
+                    <item>Nel 2014 è disponibile gratuitamente sempre su YouTube Vittima degli eventi, mediometraggio prodotto da Luca Vecchi e Claudio Di Biagio. Quest'ultimo è anche regista del film. Il personaggio di <persName ref="#d_dog">Dylan Dog</persName> è interpretato da Valerio Di Benedetto, mentre il ruolo <persName ref="#groucho">Groucho</persName> è interpretato da Luca Vecchi. Tra gli attori famosi spiccano Alessandro Haber nel ruolo dell'Ispettore Bloch, Milena Vukotic nel ruolo di Madame Trelkowsky, e Massimo Bonetti nel ruolo di Hamlin.</item>
+                    <item>Il videoclip della canzone Il grande incubo, contenuta nell'album La donna il sogno &amp; il grande incubo degli 883, è ispirato allo stile del fumetto così come la copertina dell'album stesso; anche la più celebre Ti sento vivere, del medesimo album, prende ispirazione dal n. 74 di <persName ref="#d_dog">Dylan Dog</persName> (Il lungo addio).</item>
+                    <item><persName ref="#d_dog">Dylan Dog</persName> viene citato inoltre nelle canzoni Vai bello e La spirale ovale degli Articolo 31, Nudo di donna, tratta dall'album Io sono qui (1995) di Claudio Baglioni. Dopo dieci anni di vita editoriale del personaggio, <persName ref="#c_villa">Claudio Villa</persName> (disegnatore che ha elaborato le fattezze di <persName ref="#d_dog">Dylan Dog</persName> e fan di Baglioni) disegna sul testo di una canzone dello stesso Baglioni, dichiaratosi fan del personaggio, Le vie dei colori una storia apparsa su un settimanale di musica, sempre nel 1995. Viene inoltre citato nella canzone Fammi sentire la voce di Fabrizio Moro del 2007.</item>
+                    <item>Altra menzione è nel singolo del 2006 dei Bolero dal titolo Dylan Dog e successivamente nel 2012 nell'album Dylan Dog ed altre storie.</item>
+                    <item>Nell'album Demon ariser (1999) dei Sabotage viene citata una storia di <title ref="#dd_comic_series"> Dylan Dog </title> (Il cervello di Killex) nel brano Doctor Killex.</item>
+                    <item><persName ref="#d_dog">Dylan Dog</persName> è citato, insieme a Topolino e Pippo, da Federico Salvatore nella sua canzone satirica Azz....</item>
+                    <item>È comparso due volte sulla copertina del settimanale SportWeek e una di questa è stata il n. 800 della testata.</item>
+                    <item>Nel 1999 è stato presentato al Teatro Filarmonico di Verona l'opera balletto Dylan Dog: musica di Marco Tutino, coreografia di David Parker, regia di Giorgio Gallione.</item>
+                </list>
+            </div>
+
+            <div type="section" xml:id="citazioni_ispirazioni">
+                <head>Citazioni e fonti di ispirazione</head>
+                <p>Nelle storie del personaggio sono presenti citazioni più o meno palesi di altre opere a fumetti, letterarie o cinematografiche. Già nel primo numero si trovano riferimenti a film horror anni settanta-ottanta come La notte dei morti viventi e <title ref="#dawn_of_the_dead">Zombi</title> di <persName ref="#g_romero">Romero</persName> e <title ref="#american_werewolf_london">Un lupo mannaro americano a Londra</title> di <persName ref="#j_landis">Landis</persName>. Inoltre l'aspetto stesso del protagonista è dichiaratamente ispirato all'attore <persName ref="#r_everett">Rupert Everett</persName> e la frase con la quale si presenta alla prima cliente («Mi chiamo Dog, Dylan Dog») è un ironico riferimento a James Bond. Alcune storie poi traggono spunto da un luogo o una situazione celebre per poi sviluppare una trama differente, come per esempio nel n. 3 (<title ref="#dd_nr3">Le notti della luna piena</title>) in cui ambientazione e alcuni personaggi sono citazioni di <title ref="#suspiria">Suspiria</title> di <persName ref="#d_argento">Dario Argento</persName>. Omaggi al cinema di <persName ref="#d_argento">Argento</persName> compaiono anche nel n. 5 (Gli uccisori), dove il regista compare in primo piano tra la folla, o nel n. 26 (Dopo mezzanotte) dove un punk passa a <persName ref="#d_dog">Dylan</persName> una lattina di Coca-Cola piena di cocaina da sniffare dalla cannuccia, proprio come facevano i punk di Dèmoni. Psyco di Alfred Hitchcock è citato nel n. 20 (Dal profondo) con il Bates Motel e nel n. 243 (L'assassino è tra noi) con la sequenza dell'omicidio sotto la doccia. Altre esplicite citazioni compaiono nel n. 33 (Jekyll!), dove si richiama Lo strano caso del dottor Jekyll e del signor Hyde e che, insieme alla poesia Il Corvo di Poe, è fonte di ispirazione per una trama originale. Negli albi n. 64 e n. 65 ci sono chiare citazioni dal famoso telefilm I segreti di Twin Peaks. Nel n. 62 (I vampiri) luoghi, personaggi e nomi all'inizio della storia sono una citazione di <title ref="#dawn_of_the_dead">Zombi</title> di <persName ref="#g_romero">Romero</persName>, ma poi la trama se ne discosta in maniera originale. Anche il n. 67 (<title ref="#dd_nr67">L'uomo che visse due volte</title>), nonostante il titolo possa richiamare il film di Hitchcock, è in realtà un omaggio a <title ref="#pascal_book">Il fu Mattia Pascal</title> di <persName ref="#l_pirandello">Luigi Pirandello</persName>, in quanto il cliente di turno si chiama Matthew Pascal e il suo alter ego è Adrian Mehis. Nel n. 40 (Accadde domani) <persName ref="#groucho">Groucho</persName>, venuto in possesso di un giornale che riportava le notizie del giorno dopo (riprendendo la trama del film Avvenne domani), telefona al suo allibratore che mostra le fattezze di Chico Marx e il nome di uno dei cavalli su cui <persName ref="#groucho">Groucho</persName> scommette è Duck soap, altro film dei Fratelli Marx.</p>
+                <p>Anche la musica è fonte di ispirazione: sono presenti citazioni a Fabrizio De André nel n. 270 Il re delle mosche, dove c'è una palese riferimento alla canzone Un chimico, nel n. 250 Ascensore per l'inferno viene citata Sogno numero 2; inoltre nel n. 19 Memorie dall'invisibile, in cui una vecchia nana termina la sua frase con le ultime parole di Un giudice sulla reale statura di Dio e in cui <persName ref="#d_dog">Dylan</persName> dona gli ultimi versi di Giugno '73 a una sua fidanzata. Nel n. 31 il dottore cita Un medico.</p>
+            </div>
+
+            <div type="section" xml:id="altri_media">
+                <head>Altri media</head>
+
+                <div type="subsection">
+                    <head>Cinema</head>
+                    <list type="unordered">
+                        <item>L'attore <persName ref="#r_everett">Rupert Everett</persName>, ispirazione per le fattezze del personaggio, divenne poi protagonista del film <title ref="#dellamorte_film">Dellamorte Dellamore</title> (1994) diretto da Michele Soavi, nel ruolo di <persName ref="#f_dellamorte">Francesco Dellamorte</persName>, personaggio ideato da <persName ref="#t_sclavi">Sclavi</persName> per il romanzo <title ref="#dellamorte_book">omonimo</title> e antesignano di <persName ref="#d_dog">Dylan Dog</persName>, fatto evidenziato nella promozione della pellicola.</item>
+                        <item><title ref="#dd_comic_series">Dylan Dog</title> - Il film (Dylan Dog: Dead of Night, 2010, regia di Kevin Munroe): lungometraggio ispirato al fumetto, dal quale tuttavia si discosta notevolmente. Nonostante i diritti per l'adattamento siano stati regolarmente acquistati, la <orgName ref="#sb_editore">Sergio Bonelli Editore</orgName> ha ignorato il film nelle proprie pubblicazioni, non contribuendo alla sua promozione.</item>
+                    </list>
+                </div>
+
+                <div type="subsection">
+                    <head>Radio</head>
+                    <list type="unordered">
+                        <item>Nel 2002 Rai Radio 2 ha trasmesso un radiofumetto in 20 episodi di 12 minuti ciascuno, basati sul personaggio di <persName ref="#d_dog">Dylan Dog</persName>, per la regia di Armando Traverso e con musiche di Luigi Seviroli, tratti da albi della serie originale, in cui la voce di <persName ref="#d_dog">Dylan Dog</persName> è stata interpretata da Francesco Prando e quella di <persName ref="#groucho">Groucho</persName> da Mino Caprio.</item>
+                        <item>Nel 2004 la stessa radio ha trasmesso altri 10 episodi, suddividendo così le storie di Necropolis e L'uccisore di streghe, tratte da due albi sceneggiati da Paola Barbato e Pasquale Ruju.</item>
+                        <item>Nel 2016 su Radio 24 è stata trasmessa una nuova serie di riduzioni radiofoniche delle storie del personaggio, con voci però del tutto differenti da quelle della precedente trasposizione di Rai Radio 2, per la regia di Gaetano Cappa, con la voce di <persName ref="#d_dog">Dylan Dog</persName> interpretata da Alberto Onofrietti e quella di <persName ref="#groucho">Gorucho</persName> da Gualtiero Scola.</item>
+                    </list>
+                </div>
+
+                <div type="subsection">
+                    <head>Videogiochi</head>
+                    <list type="unordered">
+                        <item>Nel maggio 1988 la Systems Editoriale pubblicò i primi videogiochi su <persName ref="#d_dog">Dylan Dog</persName> per Commodore 64, un'avventura testuale dal titolo <title ref="#dd_nr3">Le notti della luna piena</title> e uno sparatutto realizzato con Shoot'Em-Up Construction Kit, <persName ref="#d_dog">Dylan Dog</persName> e il castello delle illusioni.</item>
+                        <item>Tra il 1991 e il 1993 Simulmondo pubblicò 19 titoli per computer MS-DOS, Amiga e Commodore 64. Gli uccisori e Attraverso lo specchio furono venduti nei negozi, mentre gli altri diciassette furono una serie pubblicata in edicola, quasi allo stesso ritmo degli albi a fumetti: La regina delle tenebre, Ritorno al crepuscolo, Storia di Nessuno, Ombre, La mummia, Maelstrom, Gente che scompare, La clessidra di pietra, Il Male, I vampiri, Il marchio rosso, Il lungo addio, I killers venuti dal buio, Il bosco degli assassini, Inferni, Fantasmi e Il cimitero dimenticato.</item>
+                        <item>Nel 1999 la Rizzoli New Media insieme alla genovese NewMediaRound pubblicarono un videogioco per Windows dal titolo <persName ref="#d_dog">Dylan Dog</persName> Horror Luna Park; il soggetto era di <persName ref="#t_sclavi">Tiziano Sclavi</persName> e il videogioco è stato sviluppato dalla software house genovese Bedroom Studio Entertainment. Il gioco è un'avventura grafica con alcune fasi arcade in cui <persName ref="#d_dog">Dylan</persName> si ritrova imprigionato in un proprio incubo.</item>
+                    </list>
+                </div>
+
+                <div type="subsection">
+                    <head>Televisione</head>
+                    <list type="unordered">
+                        <item>Nel 2018 viene annunciata la serie TV live action di <persName ref="#d_dog">Dylan Dog</persName>, primo progetto della Bonelli Entertainment, nuova divisione della <orgName ref="#sb_editore">Sergio Bonelli Editore</orgName>. Il progetto sarà girato in lingua inglese e sarà parte di un universo condiviso con gli altri progetti televisivi e cinematografici curati dalla Bonelli Entertainment. Per Bonelli Entertainment, è stato annunciato che i produttori esecutivi saranno Vincenzo Sarno e Giovanni Cova (QMI), con la supervisione di Michele Masiero e Simone Airoldi, mentre per Atomic Monster, la società di James Wan, i produttori esecutivi saranno James Wan stesso e Michael Clear, con la supervisione di Rob Hackett.</item>
+                    </list>
+                </div>
+
+                <div type="subsection">
+                    <head>Musica</head>
+                    <list type="unordered">
+                        <item>Nel 1992 l'etichetta musicale RCA mette in vendita una raccolta dal titolo Dylan Dog Rock &amp; Horror contenente brani musicali di gruppi rock oltre al Trillo del diavolo di Tartini.</item>
+                    </list>       
+                </div>
+
+                <div type="subsection">
+                    <head>Giochi</head>
+                    <list type="unordered">
+                        <item>Nel 1991 la fiorentina Das Production ha edito il gioco di ruolo Il gioco di ruolo di Dylan Dog, ideato da Roberto Chiavini, Alessandro Ivanoff, Michele Gianni, Jacopo Garuglieri e Fabrizio Biasiolo, cui hanno fatto seguito diversi supplementi di avventura (Alta società di Roberto Chiavini e Jacopo Garuglieri, Mia è la vendetta di Roberto Chiavini, Attraverso le linee di Alessandro Ivanoff, Old Souls di Jacopo Garuglieri e Stefania D'Alterio, Labirinti di Paura di autori vari, Richiamo dall'inferno di Michele Gianni). Correlato al gioco in questione è anche il supplemento dedicato a Martin Mystère, comprendente regole aggiornate e una lunga avventura (di Roberto Chiavini).</item>
+                        <item>Nel 1994 la Clementoni pubblicò il gioco da tavolo Dylan Dog - Il gioco dell'incubo, per 3-6 giocatori.</item>
+                    </list>
+                </div>
+
+                <div type="subsection">
+                    <head>Altro</head>
+                    <list type="unordered">
+                        <item>Nel 1990 De Agostini Ragazzi pubblica l'agenda del 1991 dedicata al personaggio contenente disegni tratti dalla serie a fumetti.</item>
+                        <item>Il cortometraggio Taxi di Marco e Riccardo Di Gerlando è ispirato a una storia contenuta nell'Albo Gigante n. 2 di <title ref="#dd_comic_series">Dylan Dog</title>.</item>
+                    </list>
+                </div>
+
+                <div type="subsection">
+                    <head>Fan film</head>
+                    <p>Dal 1991 in poi si contano almeno una dozzina di trasposizioni cinematografiche di <title ref="#dd_comic_series">Dylan Dog</title> realizzate da amatori.</p>
+                    <list type="unordered">
+                        <item>Dylan Dog: L'inizio (2011) e Dylan Dog - Il Trillo del Diavolo (2012), due mediometraggi prodotto dalla Grage Pictures di Roberto D'Antona.</item>
+                        <item>Dylan Dog - La morte puttana (2012), un lungometraggio girato da Denis Frison.</item>
+                        <item>Il soggetto del film indipendente Il cane russo (2013), diretto da Paolo Congi e Claudio Fratticci, è liberamento ispirato a Incubus (breve storia di <title ref="#dd_comic_series">Dylan Dog</title> contenuta nell'albo n. 77 L'ultimo uomo sulla terra).</item>
+                        <item>Il mediometraggio indipendente Vittima degli eventi (2014) è un adattamento non ufficiale del fumetto.</item>
+                        <item>Dylan - Dream of the Living Dead (2017) è l'episodio pilota di serie indipendente, omaggio al fumetto e parodia dell'omonimo film di Kevin Munroe.</item>
+                    </list>
+                </div>
+
+                <div type="subsection">
+                    <head>Parodie</head>
+                    <list type="unordered">
+                        <item>"Dilan Blob" pubblicata nella collana contenitore edita dalla Big Comics nel 1995 che propone parodie di personaggi famosi del fumetto; per la stessa casa editrice esce anche "Dilan Bob - La notte degli orti viventi", con disegni di Andrea Cuneo.</item>
+                        <item>Bob Dylan Hot Dog, pubblicata sulla rivista di fumetti Animal Comic nel 1990/91 edita dalla Acme.</item>
+                        <item>Dylan Top, pubblicata sul n. 3094 del settimanale Topolino nel 2015 dal titolo Dylan Top - L'alba dei topi invadenti, parodia disneyana di <persName ref="d_dog">Dylan Dog</persName> scritta da Roberto Recchioni e Tito Faraci e disegnata da Paolo Mottura. La trama riprende quella del primo numero di <title ref="#dd_comic_series">Dylan Dog</title>, <title ref="#dd_nr1">L'alba dei morti viventi</title>. Lo stesso albo è uscito anche con una copertina differente che riprende quella del primo albo di <title ref="#dd_comic_series">Dylan Dog</title> stampata su cartone semi-rigido per riprendere lo stile tipico degli albi editi dalla <orgName ref="#sb_editore">Sergio Bonelli Editore</orgName>. Nella parodia <title ref="#dd_comic_series">Dylan Dog</title> diventa l'indagatore da incubo Dylan Top ed è interpretato da Topolino; il personaggio dell'assistente <persName ref="#groucho">Groucho</persName> è interpretato da Pippo, quello dell'ispettore Bloch dal commissario Basettoni, quello dell'agente Jenkins dall'ispettore Manetta, mentre Xabaras diventa John Black, interpretato da Macchia Nera; Sybil e John Browning, protagonisti della prima avventura di <title ref="#dd_comic_series">Dylan Dog</title>, sono Minni e Topesio.</item>
+                    </list>
+                </div>
+            </div>
+
+            <div type="section" xml:id="premi_riconoscimenti">
+                <head>Premi e riconoscimenti</head>
+                <list type="unordered">
+                    <item>"Trent'anni di Indagatore dell'Incubo": mostra dal 18 novembre al 13 dicembre 2016 presso Pinacoteca Albertina di Torino, organizzata da Sottodiciotto Film Festival &amp; Campus.</item>
+                    <item>Incontro dedicato ai trent'anni del personaggio al Festival e Fiera del Fumetto il 25 settembre 2016 presso il Teatro Rendano a Cosenza con Bruno Brindisi e Luca Raimondo.</item>
+                </list>
+            </div>
+
+            <div type="section" xml:id="bibliografia">
+                <head>Bibliografia</head>
+                <list type="unordered">
+                    <item><persName ref="#t_sclavi">Tiziano Sclavi</persName>, <persName ref="#a_stano">Angelo Stano</persName>, <title ref="#dd_nr1">L'alba dei morti viventi</title>, <title ref="#dd_comic_series">Dylan Dog</title> n. 1, Milano, <orgName ref="#sb_editore">Sergio Bonelli Editore</orgName>, ottobre 1986.</item>
+                    <item><persName ref="#t_sclavi">Tiziano Sclavi</persName>, Giuseppe Montanari; Ernesto Grassani, La zona del crepuscolo, <title ref="#dd_comic_series">Dylan Dog</title> n. 7, Milano, <orgName ref="#sb_editore">Sergio Bonelli Editore</orgName>, aprile 1987.</item>
+                    <item><persName ref="#t_sclavi">Tiziano Sclavi</persName>, <persName ref="#a_stano">Angelo Stano</persName>, Morgana, <title ref="#dd_comic_series">Dylan Dog</title> n. 25, Milano, <orgName ref="#sb_editore">Sergio Bonelli Editore</orgName>, ottobre 1988.</item>
+                    <item><persName ref="#t_sclavi">Tiziano Sclavi</persName>, <persName ref="#a_stano">Angelo Stano</persName>, Storia di nessuno, <title ref="#dd_comic_series">Dylan Dog</title> n. 43, Milano, <orgName ref="#sb_editore">Sergio Bonelli Editore</orgName>, aprile 1990.</item>
+                    <item><persName ref="#t_sclavi">Tiziano Sclavi</persName>, Mauro Marcheselli; Carlo Ambrosini, Il lungo addio, <title ref="#dd_comic_series">Dylan Dog</title> n. 74, Milano, <orgName ref="#sb_editore">Sergio Bonelli Editore</orgName>, novembre 1992.</item>
+                    <item><persName ref="#t_sclavi">Tiziano Sclavi</persName>, <persName ref="#a_stano">Angelo Stano</persName>, La storia di Dylan Dog, <title ref="#dd_comic_series">Dylan Dog</title> n. 100, Milano, <orgName ref="#sb_editore">Sergio Bonelli Editore</orgName>, gennaio 1995.</item>
+                    <item><persName ref="#t_sclavi">Tiziano Sclavi</persName>, Mauro Marcheselli; Bruno Brindisi, Finché morte non vi separi, <title ref="#dd_comic_series">Dylan Dog</title> n. 121, Milano, <orgName ref="#sb_editore">Sergio Bonelli Editore</orgName>, ottobre 1996.</item>
+                    <item><persName ref="#t_sclavi">Tiziano Sclavi</persName>, Cristina e Pippo Neri; Bruno Brindisi, Il lago nel cielo, <title ref="#dd_comic_series">Dylan Dog</title> n. 151, Milano, <orgName ref="#sb_editore">Sergio Bonelli Editore</orgName>, aprile 1999.</item>
+                    <item><persName ref="#t_sclavi">Tiziano Sclavi</persName>, Bruno Brindisi, Il numero duecento, <title ref="#dd_comic_series">Dylan Dog</title> n. 200, Milano, <orgName ref="#sb_editore">Sergio Bonelli Editore</orgName>, maggio 2003.</item>
+                    <item><persName ref="#t_sclavi">Tiziano Sclavi</persName>, Paola Barbato; Bruno Brindisi, Xabaras!, <title ref="#dd_comic_series">Dylan Dog</title> n. 241, Milano, <orgName ref="#sb_editore">Sergio Bonelli Editore</orgName>, ottobre 2006.</item>
+                    <item><persName ref="#t_sclavi">Tiziano Sclavi</persName>, Paola Barbato; Bruno Brindisi, In nome del padre, <title ref="#dd_comic_series">Dylan Dog</title> n. 242, Milano, <orgName ref="#sb_editore">Sergio Bonelli Editore</orgName>, novembre 2006.</item>
+                    <item><persName ref="#t_sclavi">Tiziano Sclavi</persName>, Pasquale Ruju; <persName ref="#a_stano">Angelo Stano</persName>, Ritratto di famiglia, <title ref="#dd_comic_series">Dylan Dog</title> n. 300, Milano, <orgName ref="#sb_editore">Sergio Bonelli Editore</orgName>, settembre 2011.</item>
+                </list>
+            </div>
+        </body>
+    </text>
+</TEI>

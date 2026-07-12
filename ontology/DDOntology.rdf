@@ -135,7 +135,7 @@
     <!-- http://iflastandards.info/ns/fr/frbr/frbroo/R24_created -->
 
     <owl:ObjectProperty rdf:about="http://iflastandards.info/ns/fr/frbr/frbroo/R24_created">
-        <rdfs:domain rdf:resource="http://iflastandards.info/ns/fr/frbr/frbroo/F3_Manifestation"/>
+        <rdfs:domain rdf:resource="http://iflastandards.info/ns/fr/frbr/frbroo/F3_Manifestation_Product_Type"/>
         <rdfs:range rdf:resource="http://iflastandards.info/ns/fr/frbr/frbroo/F30_Publication_Event"/>
     </owl:ObjectProperty>
     
@@ -153,7 +153,7 @@
     <!-- http://iflastandards.info/ns/fr/frbr/frbroo/R4_embodies -->
 
     <owl:ObjectProperty rdf:about="http://iflastandards.info/ns/fr/frbr/frbroo/R4_embodies">
-        <rdfs:domain rdf:resource="http://iflastandards.info/ns/fr/frbr/frbroo/F3_Manifestation"/>
+        <rdfs:domain rdf:resource="http://iflastandards.info/ns/fr/frbr/frbroo/F3_Manifestation_Product_Type"/>
         <rdfs:range rdf:resource="http://iflastandards.info/ns/fr/frbr/frbroo/F2_Expression"/>
     </owl:ObjectProperty>
     
@@ -215,6 +215,15 @@
     <!-- http://www.w3.org/ns/prov#wasInfluencedBy -->
 
     <owl:ObjectProperty rdf:about="http://www.w3.org/ns/prov#wasInfluencedBy"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/depiction -->
+
+    <owl:ObjectProperty rdf:about="http://xmlns.com/foaf/0.1/depiction">
+        <rdfs:domain rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E21_Person"/>
+        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Image"/>
+    </owl:ObjectProperty>
     
 
 
@@ -316,29 +325,20 @@
     
 
 
-    <!-- http://comicmeta.org/cbo/publicationDate -->
-
-    <owl:DatatypeProperty rdf:about="http://comicmeta.org/cbo/publicationDate">
-        <rdfs:domain rdf:resource="https://alessandro-rocchi.github.io/project_InformationScienceandCH/ontology/DDOntology#Albo"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-    </owl:DatatypeProperty>
-    
-
-
     <!-- http://purl.org/dc/terms/date -->
 
     <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/date">
-        <rdfs:domain rdf:resource="http://dbpedia.org/ontology/Film"/>
+        <rdfs:domain rdf:resource="http://schema.org/CreativeWork"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://purl.org/dc/terms/issued -->
+    <!-- http://purl.org/dc/terms/title -->
 
-    <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/issued">
-        <rdfs:domain rdf:resource="http://iflastandards.info/ns/fr/frbr/frbroo/F3_Manifestation"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/title">
+        <rdfs:domain rdf:resource="http://schema.org/CreativeWork"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
     </owl:DatatypeProperty>
     
 
@@ -398,7 +398,9 @@
 
     <!-- http://iflastandards.info/ns/fr/frbr/frbroo/F1_Work -->
 
-    <owl:Class rdf:about="http://iflastandards.info/ns/fr/frbr/frbroo/F1_Work"/>
+    <owl:Class rdf:about="http://iflastandards.info/ns/fr/frbr/frbroo/F1_Work">
+        <rdfs:subClassOf rdf:resource="http://schema.org/CreativeWork"/>
+    </owl:Class>
     
 
 
@@ -420,9 +422,9 @@
     
 
 
-    <!-- http://iflastandards.info/ns/fr/frbr/frbroo/F3_Manifestation -->
+    <!-- http://iflastandards.info/ns/fr/frbr/frbroo/F3_Manifestation_Product_Type -->
 
-    <owl:Class rdf:about="http://iflastandards.info/ns/fr/frbr/frbroo/F3_Manifestation"/>
+    <owl:Class rdf:about="http://iflastandards.info/ns/fr/frbr/frbroo/F3_Manifestation_Product_Type"/>
     
 
 
@@ -435,6 +437,12 @@
     <!-- http://www.cidoc-crm.org/cidoc-crm/E21_Person -->
 
     <owl:Class rdf:about="http://www.cidoc-crm.org/cidoc-crm/E21_Person"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/Image -->
+
+    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Image"/>
     
 
 
