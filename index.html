@@ -34,8 +34,8 @@
                 </div>
                 <div class="row">
                     <div class="col-12">
-                        <p>The first step in this process is to identify and extract relevant information from the Wikipedia page and other sources. I choose to focus on the italian wikipedia page <a href="https://it.wikipedia.org/wiki/Dylan_Dog" target="_blank">Dylan Dog</a>, which refers to the fictional character created by Tiziano sclavi.</p>
-                        <p>This page was choosen instead of the one related to the comic series because it provides a more focused view on the character and an exaustive section for citations and references.</p>
+                        <p>The first step in this process is to identify and extract relevant information from the Wikipedia page. I chose to focus on the Italian Wikipedia page <a href="https://it.wikipedia.org/wiki/Dylan_Dog" target="_blank">Dylan Dog</a>, which refers to the fictional character created by Tiziano Sclavi.</p>
+                        <p>This page was chosen instead of the one related to the comic series because it provides a more focused view on the character and an exaustive section for citations and references.</p>
                     </div>
                 </div>
             </section>
@@ -43,15 +43,15 @@
                 <h3 class="mb-4 pb-2 fw-bold text-uppercase">Entities</h3>
                 <div class="row">
                     <div class="col-12">
-                        <p>After choosing the page I identify a total of 27 entities which was been mentionated in the wikipedia-page. Every entity has been linked to their authority control, where was applicable. The main authority control used was VIAF </p>
-                        <p>You can find all the entities regrouped in a table and divided in categories:</p>
+                        <p>After choosing the page, I identified a total of 27 entities that were mentioned in the Italian Wikipedia page. Every entity has been linked to their authority control where applicable. The main authority control used was VIAF </p>
+                        <p>You can find all the entities organized in a table and divided into the following categories:</p>
                         <ul>
                             <li>Persons (Real or Fictional)</li>
                             <li>Organizations</li>
                             <li>Bibliographic sources</li>
                             <li>Locations</li>
                         </ul>
-                        <p>The table has been generate by using a XSLT to HTML transformation using javascript. In this way if we add entities to the XML/TEI file they will automatically been added to this table. (Note: it's a table dynamically generated and use XSLTProcessor so if it's not working, please check the browser console for errors.)</p>
+                        <p>The table has been generated using an XSLT to HTML transformation using JavaScript. In this way, if we add entities to the XML/TEI file, they will automatically be added to this table. (Note: the table is dynamically generated using XSLTProcessor so if it's not working please check the browser console for errors.)</p>
                     </div>
                 </div>
                 <div class="row">
@@ -64,9 +64,9 @@
             <h2 class="mb-4 pb-2 fw-bold text-uppercase">Knowledge organization: elaborate models</h2>
             <section class="container mt-3" id="theoretical_model">
                 <h3 class="mb-4 pb-2 fw-bold text-uppercase" style="color: #cc0000;">Theoretical Model</h3>
-                <p>After identifying the key entities and their relationships, I developed a theoretical model to represent the knowledge structure of Dylan Dog citations. This model aims to capture the semantic connections between different types of entities. And to show connections which weren't explicitly mentioned in the original text.</p>
-                <p>The model is composed of three main components: the main entities, their attributes, and the external resources (URIs) used to link them to authoritative sources or catalogues. In particular, the autoritative sources used are: VIAF and OPAC SBN. Wikidata has been used to conciliate and a semantic disambiguation for entities which are not bibliographic. For the location has been used Geonames as authoritative source.</p>
-                <p>The graph was created using yED software and  it was included a zoom javascript plugin to enable interactive exploration and make it more readble. On the left you can find a legend which explain the symbols used in the graph.</p>
+                <p>After identifying the key entities and their relationships, I developed a theoretical model to represent the knowledge structure of Dylan Dog citations. This model aims to capture the semantic connections between different types of entities, and to show connections which weren't explicitly mentioned in the original text.</p>
+                <p>The model is composed of three main components: the main entities, their attributes, and the external resources (URIs) used to link them to authoritative sources or catalogues. In particular, the autoritative sources used are: VIAF and OPAC SBN. Wikidata has been used as a semantic disambiguation for entities which are not bibliographic. For the location Geonames has been used as the authoritative source.</p>
+                <p>The graph was created using yED software and a zoom JavaScript plugin was included to enable it's interactive exploration and to make it more readable. On the right you can find a legend explaining the symbols used in the graph.</p>
             </section>
             <section class="container mt-3" id="theoretical_model_zoom">
                 <div class="container mt-4">
@@ -93,7 +93,7 @@
             </section>
             <section class="container mt-3" id="conceptual_model">
                 <h3 class="mb-4 pb-2 fw-bold text-uppercase">Conceptual Model</h3>
-                <p>After realising the theoretical model, I developed a conceptual model to create a formal representation of the theoretical model. I choose to reuse exiting ontologies where possible and create a personal ontology to fill the gaps with existing ones.</p>
+                <p>After making the theoretical model, I developed a conceptual model to offer a formal representation of the initial theoretical model. I chose to reuse existing ontologies where possible and create a personal ontology to fill the gaps left by existing ones.</p>
                 <p>The conceptual model is based on the following ontologies:</p>
                 <div class="row">
                     <div class="col-12" id="project_ontologies">
@@ -382,7 +382,7 @@
                 </div>
                 <div class="row">
                     <div class="col-12">
-                        <p>I modeled the ontology I created using Protégé in order to achieve a valid, robust result and to take full advantage of the program's features. This allowed me to achieve a consistent and accurate result.</p>
+                        <p>I modeled my personal ontology using Protégé in order to achieve a valid, robust result and to take full advantage of the program's features. This allowed me to achieve a consistent and accurate result.</p>
                         <a class="btn btn-dark" href="https://github.com/Alessandro-Rocchi/project_InformationScienceandCH/blob/66b59b8acb53cc717a55c2c704e663e7c1493350/ontology/DDOntology.ttl" role="button" target="_blank">View the Ontology file! 🌐</a>
                     </div>
                 </div>
@@ -447,9 +447,9 @@
                 <div class="row">
                     <div class="col-12">
                         <h3 class="mb-4 pb-2 fw-bold text-uppercase">Why creating a new class instead of using an existing one?</h3>
-                        <p>In my project I created a the class <code>dd:Albo</code> instead of using the existing <code>cbo:Issue</code> because in the italian comic industry, the term "albo" refers to a specific type of publication that has unique characteristics not covered by "issue" concept which is more related to the american comic industry. In particular an Albo in italy is a monthly publication that contains a self-contained story. Sometimes the story includes some references to a horizontal plot, but this is not required.</p>
-                        <p>On the other hand, an American “issue” refers to a specific installment in a series that will later be compiled into a single volume to form a complete story. In fact, in the U.S., there is the concept of a “run” that is, a series of installments that must be read in order to fully appreciate the entire plot. In contrast, in the traditional Italian comic book scene (with a few exceptions), this concept does not exist, and the Albi are self-contained.</p>
-                        <p>So to describe better my domain I created the new class <code>dd:Albo</code> which is a specialized entity to represent the unique characteristics of Italian comic publications. I decide to make it a subclass of the existing <code>cbo:Issue</code> class because it shares some common properties with the existing class, but it also has distinct characteristics that warrant its own classification.</p>
+                        <p>In my project I created the class <code>dd:Albo</code> instead of using the existing <code>cbo:Issue</code> because in the Italian comic industry the term "albo" refers to a specific type of publication that has unique characteristics not covered by the "issue" concept which is more related to the American comic industry. In particular an "albo" in Italy is a monthly publication that contains a self-contained story. Sometimes the story includes some references to a horizontal plot, but this is not mandatory.</p>
+                        <p>On the other hand, an American “issue” refers to a specific installment in a series that will later be compiled into a single volume to form a complete story. In fact, in the U.S., there is the concept of a “run”: a series of installments that must be read in order to fully appreciate the entire plot. In contrast, in the traditional Italian comic book scene (with a few exceptions), this concept does not exist, and the "albi" are self-contained.</p>
+                        <p>So, to better describe my domain I created the new class <code>dd:Albo</code> which is a specialized entity meant to represent the unique characteristics of Italian comic publications. I decided to make it a subclass of the existing <code>cbo:Issue</code> class because it shares some common properties with the existing class, but it also has distinct characteristics that warrant its own classification.</p>
                     </div>
                 </div>
                 <div class="row">
