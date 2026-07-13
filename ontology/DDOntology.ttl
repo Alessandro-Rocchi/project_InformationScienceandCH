@@ -15,7 +15,8 @@
 @base <https://alessandro-rocchi.github.io/project_InformationScienceandCH/ontology/DDOntology#> .
 
 <https://alessandro-rocchi.github.io/project_InformationScienceandCH/ontology/DDOntology#> rdf:type owl:Ontology ;
-                                                                                            rdfs:comment "created by: Alessandro Rocchi" ;
+                                                                                            rdfs:comment "This ontology was created for the exam of Information Science and Cultural Heritage." ,
+                                                                                                         "created by: Alessandro Rocchi" ;
                                                                                             rdfs:label "Dylan Dog Ontology"@en .
 
 #################################################################
@@ -33,143 +34,167 @@ xsd:date rdf:type rdfs:Datatype .
 ###  http://comicmeta.org/cbo/artist
 cbo:artist rdf:type owl:ObjectProperty ;
            rdfs:domain dd:Albo ;
-           rdfs:range crm:E21_Person .
+           rdfs:range crm:E21_Person ;
+           rdfs:isDefinedBy cbo: .
 
 
 ###  http://comicmeta.org/cbo/character
 cbo:character rdf:type owl:ObjectProperty ;
               rdfs:domain cbo:Character ;
-              rdfs:range cbo:Series .
+              rdfs:range cbo:Series ;
+              rdfs:isDefinedBy cbo: .
 
 
 ###  http://comicmeta.org/cbo/coverArtist
 cbo:coverArtist rdf:type owl:ObjectProperty ;
                 rdfs:domain dd:Albo ;
-                rdfs:range crm:E21_Person .
+                rdfs:range crm:E21_Person ;
+                rdfs:isDefinedBy cbo: .
 
 
 ###  http://comicmeta.org/cbo/creator
 cbo:creator rdf:type owl:ObjectProperty ;
             rdfs:domain cbo:Series ;
-            rdfs:range crm:E21_Person .
+            rdfs:range crm:E21_Person ;
+            rdfs:isDefinedBy cbo: .
 
 
 ###  http://comicmeta.org/cbo/writer
 cbo:writer rdf:type owl:ObjectProperty ;
            rdfs:domain dd:Albo ;
-           rdfs:range crm:E21_Person .
+           rdfs:range crm:E21_Person ;
+           rdfs:isDefinedBy cbo: .
 
 
 ###  http://dbpedia.org/ontology/director
 dbo:director rdf:type owl:ObjectProperty ;
              rdfs:domain dbo:Film ;
-             rdfs:range crm:E21_Person .
+             rdfs:range crm:E21_Person ;
+             rdfs:isDefinedBy dbo: .
 
 
 ###  http://dbpedia.org/ontology/portrayer
 dbo:portrayer rdf:type owl:ObjectProperty ;
               rdfs:domain dbo:FictionalCharacter ;
-              rdfs:range crm:E21_Person .
+              rdfs:range crm:E21_Person ;
+              rdfs:isDefinedBy dbo: .
 
 
 ###  http://dbpedia.org/ontology/starring
 dbo:starring rdf:type owl:ObjectProperty ;
              rdfs:domain dbo:Film ;
-             rdfs:range crm:E21_Person .
+             rdfs:range crm:E21_Person ;
+             rdfs:isDefinedBy dbo: .
 
 
 ###  http://iflastandards.info/ns/fr/frbr/frbroo/R17_created
 frbroo:R17_created rdf:type owl:ObjectProperty ;
                    rdfs:domain frbroo:F28_Expression_Creation ;
-                   rdfs:range frbroo:F2_Expression .
+                   rdfs:range frbroo:F2_Expression ;
+                   rdfs:isDefinedBy frbroo: .
 
 
 ###  http://iflastandards.info/ns/fr/frbr/frbroo/R24_created
 frbroo:R24_created rdf:type owl:ObjectProperty ;
                    rdfs:domain frbroo:F3_Manifestation_Product_Type ;
-                   rdfs:range frbroo:F30_Publication_Event .
+                   rdfs:range frbroo:F30_Publication_Event ;
+                   rdfs:isDefinedBy frbroo: .
 
 
 ###  http://iflastandards.info/ns/fr/frbr/frbroo/R3_is_realised_in
 frbroo:R3_is_realised_in rdf:type owl:ObjectProperty ;
                          rdfs:domain frbroo:F1_Work ;
-                         rdfs:range frbroo:F2_Expression .
+                         rdfs:range frbroo:F2_Expression ;
+                         rdfs:isDefinedBy frbroo: .
 
 
 ###  http://iflastandards.info/ns/fr/frbr/frbroo/R4_embodies
 frbroo:R4_embodies rdf:type owl:ObjectProperty ;
                    rdfs:domain frbroo:F3_Manifestation_Product_Type ;
-                   rdfs:range frbroo:F2_Expression .
+                   rdfs:range frbroo:F2_Expression ;
+                   rdfs:isDefinedBy frbroo: .
 
 
 ###  http://purl.org/dc/terms/creator
 dcterms:creator rdf:type owl:ObjectProperty ;
                 rdfs:domain cbo:Character ;
-                rdfs:range crm:E21_Person .
+                rdfs:range crm:E21_Person ;
+                rdfs:isDefinedBy dcterms: .
 
 
 ###  http://purl.org/dc/terms/hasPart
 dcterms:hasPart rdf:type owl:ObjectProperty ;
                 rdfs:domain cbo:Series ;
-                rdfs:range dd:Albo .
+                rdfs:range dd:Albo ;
+                rdfs:isDefinedBy dcterms: .
 
 
 ###  http://purl.org/dc/terms/publisher
 dcterms:publisher rdf:type owl:ObjectProperty ;
                   rdfs:domain cbo:Series ;
-                  rdfs:range crm:E74_Group .
+                  rdfs:range crm:E74_Group ;
+                  rdfs:isDefinedBy dcterms: .
 
 
 ###  http://purl.org/dc/terms/references
 dcterms:references rdf:type owl:ObjectProperty ;
                    rdfs:domain dd:Albo ;
-                   rdfs:range schema:CreativeWork .
+                   rdfs:range schema:CreativeWork ;
+                   rdfs:isDefinedBy dcterms: .
 
 
 ###  http://schema.org/character
 schema:character rdf:type owl:ObjectProperty ;
                  rdfs:domain dbo:FictionalCharacter ;
-                 rdfs:range schema:CreativeWork .
+                 rdfs:range schema:CreativeWork ;
+                 rdfs:isDefinedBy schema: .
 
 
 ###  http://schema.org/contentLocation
 schema:contentLocation rdf:type owl:ObjectProperty ;
                        rdfs:domain schema:CreativeWork ;
-                       rdfs:range cbo:Location .
+                       rdfs:range cbo:Location ;
+                       rdfs:isDefinedBy schema:character .
 
 
 ###  http://schema.org/creator
 schema:creator rdf:type owl:ObjectProperty ;
                rdfs:domain dbo:FictionalCharacter ;
-               rdfs:range crm:E21_Person .
+               rdfs:range crm:E21_Person ;
+               rdfs:isDefinedBy schema:character .
 
 
 ###  http://schema.org/homeLocation
 schema:homeLocation rdf:type owl:ObjectProperty ;
                     rdfs:domain cbo:Character ;
-                    rdfs:range cbo:Location .
+                    rdfs:range cbo:Location ;
+                    rdfs:isDefinedBy schema:character .
 
 
 ###  http://www.cidoc-crm.org/cidoc-crm/P14_carried_out_by
 crm:P14_carried_out_by rdf:type owl:ObjectProperty ;
                        rdfs:domain frbroo:F28_Expression_Creation ;
-                       rdfs:range crm:E21_Person .
+                       rdfs:range crm:E21_Person ;
+                       rdfs:isDefinedBy crm: .
 
 
 ###  http://www.cidoc-crm.org/cidoc-crm/P89_falls_within
 crm:P89_falls_within rdf:type owl:ObjectProperty ;
                      rdfs:domain cbo:Location ;
-                     rdfs:range cbo:Location .
+                     rdfs:range cbo:Location ;
+                     rdfs:isDefinedBy crm: .
 
 
 ###  http://www.w3.org/ns/prov#wasInfluencedBy
-<http://www.w3.org/ns/prov#wasInfluencedBy> rdf:type owl:ObjectProperty .
+<http://www.w3.org/ns/prov#wasInfluencedBy> rdf:type owl:ObjectProperty ;
+                                            rdfs:isDefinedBy <https://www.w3.org/TR/prov-o/> .
 
 
 ###  http://xmlns.com/foaf/0.1/depiction
 foaf:depiction rdf:type owl:ObjectProperty ;
                rdfs:domain crm:E21_Person ;
-               rdfs:range foaf:Image .
+               rdfs:range foaf:Image ;
+               rdfs:isDefinedBy foaf: .
 
 
 ###  http://xmlns.com/foaf/0.1/knows
@@ -183,47 +208,61 @@ foaf:knows rdf:type owl:ObjectProperty ;
 dd:appearanceInspiredBy rdf:type owl:ObjectProperty ;
                         rdfs:subPropertyOf dd:isInspiredBy ;
                         rdfs:domain cbo:Character ;
-                        rdfs:range crm:E21_Person .
+                        rdfs:range crm:E21_Person ;
+                        rdfs:comment "Specifies that the physical appearance and visual traits of a fictional character were modeled after a real person or another entity." ;
+                        rdfs:isDefinedBy <https://alessandro-rocchi.github.io/project_InformationScienceandCH/ontology/DDOntology#> .
 
 
 ###  https://alessandro-rocchi.github.io/project_InformationScienceandCH/ontology/DDOntology#familyNameInspiredBy
 dd:familyNameInspiredBy rdf:type owl:ObjectProperty ;
                         rdfs:subPropertyOf dd:isInspiredBy ;
                         rdfs:domain cbo:Character ;
-                        rdfs:range crm:E21_Person .
+                        rdfs:range crm:E21_Person ;
+                        rdfs:comment "Specifies that the family name (or surname) of a fictional character was chosen as a citation or tribute to the name of another person or entity." ;
+                        rdfs:isDefinedBy <https://alessandro-rocchi.github.io/project_InformationScienceandCH/ontology/DDOntology#> .
 
 
 ###  https://alessandro-rocchi.github.io/project_InformationScienceandCH/ontology/DDOntology#givenNameInspiredBy
 dd:givenNameInspiredBy rdf:type owl:ObjectProperty ;
                        rdfs:subPropertyOf dd:isInspiredBy ;
                        rdfs:domain cbo:Character ;
-                       rdfs:range crm:E21_Person .
+                       rdfs:range crm:E21_Person ;
+                       rdfs:comment "Specifies that the given name assigned to a character represents an authorial tribute or a direct derivation from another entity." ;
+                       rdfs:isDefinedBy <https://alessandro-rocchi.github.io/project_InformationScienceandCH/ontology/DDOntology#> .
 
 
 ###  https://alessandro-rocchi.github.io/project_InformationScienceandCH/ontology/DDOntology#inspiredByFictional
 dd:inspiredByFictional rdf:type owl:ObjectProperty ;
                        rdfs:subPropertyOf dd:isInspiredBy ;
                        rdfs:domain dbo:FictionalCharacter ;
-                       rdfs:range dbo:FictionalCharacter .
+                       rdfs:range dbo:FictionalCharacter ;
+                       rdfs:comment "Specifies that the fictional character was created inspired by another fictional character." ;
+                       rdfs:isDefinedBy <https://alessandro-rocchi.github.io/project_InformationScienceandCH/ontology/DDOntology#> .
 
 
 ###  https://alessandro-rocchi.github.io/project_InformationScienceandCH/ontology/DDOntology#isATributeTo
 dd:isATributeTo rdf:type owl:ObjectProperty ;
                 rdfs:subPropertyOf owl:topObjectProperty ;
                 rdfs:domain cbo:Character ;
-                rdfs:range crm:E21_Person .
+                rdfs:range crm:E21_Person ;
+                rdfs:comment "General property indicating that an entity (such as a character) was created or included in the work as a direct homage or tribute to a real person or another entity." ;
+                rdfs:isDefinedBy <https://alessandro-rocchi.github.io/project_InformationScienceandCH/ontology/DDOntology#> .
 
 
 ###  https://alessandro-rocchi.github.io/project_InformationScienceandCH/ontology/DDOntology#isInspiredBy
 dd:isInspiredBy rdf:type owl:ObjectProperty ;
-                rdfs:subPropertyOf <http://www.w3.org/ns/prov#wasInfluencedBy> .
+                rdfs:subPropertyOf <http://www.w3.org/ns/prov#wasInfluencedBy> ;
+                rdfs:comment "General property indicating a relationship of artistic, cultural, or conceptual inspiration. It is defined as a sub-property of prov:wasInfluencedBy to ensure the traceability of creative derivation." ;
+                rdfs:isDefinedBy <https://alessandro-rocchi.github.io/project_InformationScienceandCH/ontology/DDOntology#> .
 
 
 ###  https://alessandro-rocchi.github.io/project_InformationScienceandCH/ontology/DDOntology#isNameATributeTo
 dd:isNameATributeTo rdf:type owl:ObjectProperty ;
                     rdfs:subPropertyOf dd:isATributeTo ;
                     rdfs:domain cbo:Location ;
-                    rdfs:range crm:E21_Person .
+                    rdfs:range crm:E21_Person ;
+                    rdfs:comment "Specifies that the name assigned to an entity (e.g., a location or a street) represents an intentional authorial homage to a famous person or character." ;
+                    rdfs:isDefinedBy <https://alessandro-rocchi.github.io/project_InformationScienceandCH/ontology/DDOntology#> .
 
 
 #################################################################
@@ -253,72 +292,89 @@ dcterms:title rdf:type owl:DatatypeProperty ;
 #################################################################
 
 ###  http://comicmeta.org/cbo/Character
-cbo:Character rdf:type owl:Class .
+cbo:Character rdf:type owl:Class ;
+              rdfs:isDefinedBy cbo: .
 
 
 ###  http://comicmeta.org/cbo/Issue
 cbo:Issue rdf:type owl:Class ;
-          rdfs:subClassOf schema:CreativeWork .
+          rdfs:subClassOf schema:CreativeWork ;
+          rdfs:isDefinedBy cbo: .
 
 
 ###  http://comicmeta.org/cbo/Location
-cbo:Location rdf:type owl:Class .
+cbo:Location rdf:type owl:Class ;
+             rdfs:isDefinedBy cbo: .
 
 
 ###  http://comicmeta.org/cbo/Series
 cbo:Series rdf:type owl:Class ;
-           rdfs:subClassOf schema:CreativeWork .
+           rdfs:subClassOf schema:CreativeWork ;
+           rdfs:isDefinedBy cbo: .
 
 
 ###  http://dbpedia.org/ontology/FictionalCharacter
-dbo:FictionalCharacter rdf:type owl:Class .
+dbo:FictionalCharacter rdf:type owl:Class ;
+                       rdfs:isDefinedBy dbo: .
 
 
 ###  http://dbpedia.org/ontology/Film
 dbo:Film rdf:type owl:Class ;
-         rdfs:subClassOf schema:CreativeWork .
+         rdfs:subClassOf schema:CreativeWork ;
+         rdfs:isDefinedBy dbo: .
 
 
 ###  http://iflastandards.info/ns/fr/frbr/frbroo/F1_Work
 frbroo:F1_Work rdf:type owl:Class ;
-               rdfs:subClassOf schema:CreativeWork .
+               rdfs:subClassOf schema:CreativeWork ;
+               rdfs:isDefinedBy frbroo: .
 
 
 ###  http://iflastandards.info/ns/fr/frbr/frbroo/F28_Expression_Creation
-frbroo:F28_Expression_Creation rdf:type owl:Class .
+frbroo:F28_Expression_Creation rdf:type owl:Class ;
+                               rdfs:isDefinedBy frbroo: .
 
 
 ###  http://iflastandards.info/ns/fr/frbr/frbroo/F2_Expression
-frbroo:F2_Expression rdf:type owl:Class .
+frbroo:F2_Expression rdf:type owl:Class ;
+                     rdfs:isDefinedBy "http://iflastandards.info/ns/fr/frbr/frbroo/" .
 
 
 ###  http://iflastandards.info/ns/fr/frbr/frbroo/F30_Publication_Event
-frbroo:F30_Publication_Event rdf:type owl:Class .
+frbroo:F30_Publication_Event rdf:type owl:Class ;
+                             rdfs:isDefinedBy frbroo: .
 
 
 ###  http://iflastandards.info/ns/fr/frbr/frbroo/F3_Manifestation_Product_Type
-frbroo:F3_Manifestation_Product_Type rdf:type owl:Class .
+frbroo:F3_Manifestation_Product_Type rdf:type owl:Class ;
+                                     rdfs:isDefinedBy frbroo: .
 
 
 ###  http://schema.org/CreativeWork
-schema:CreativeWork rdf:type owl:Class .
+schema:CreativeWork rdf:type owl:Class ;
+                    rdfs:isDefinedBy schema: .
 
 
 ###  http://www.cidoc-crm.org/cidoc-crm/E21_Person
-crm:E21_Person rdf:type owl:Class .
+crm:E21_Person rdf:type owl:Class ;
+               rdfs:isDefinedBy crm: .
 
 
 ###  http://www.cidoc-crm.org/cidoc-crm/E74_Group
-crm:E74_Group rdf:type owl:Class .
+crm:E74_Group rdf:type owl:Class ;
+              rdfs:isDefinedBy crm: .
 
 
 ###  http://xmlns.com/foaf/0.1/Image
-foaf:Image rdf:type owl:Class .
+foaf:Image rdf:type owl:Class ;
+           rdfs:isDefinedBy foaf: .
 
 
 ###  https://alessandro-rocchi.github.io/project_InformationScienceandCH/ontology/DDOntology#Albo
 dd:Albo rdf:type owl:Class ;
-        rdfs:subClassOf cbo:Issue .
+        rdfs:subClassOf cbo:Issue ;
+        rdfs:comment "Custom class representing the single issues ('albi') of the Dylan Dog comic series. It extends the cbo:Issue class from the Comic Book Ontology to capture the specific publishing features of this Italian comic domain." ;
+        rdfs:isDefinedBy <https://alessandro-rocchi.github.io/project_InformationScienceandCH/ontology/DDOntology#> .
 
 
 #################################################################
