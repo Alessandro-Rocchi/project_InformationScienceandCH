@@ -1,0 +1,193 @@
+/* Dylan Dog Theme Stylesheet - Soft Light / Comic Page Version */
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&family=Open+Sans:wght@400;600&display=swap');
+
+:root {
+    /* Softened the absolute black to a very dark charcoal for less eye strain */
+    --dd-black: #1a1a1a; 
+    --dd-red: #cc0000;
+    --dd-dark-grey: #404040;
+    /* Warmer, softer off-white for the main background (simulating comic paper) */
+    --dd-light-bg: #f4f1ea; 
+    /* Slightly toned down white for the content panels */
+    --dd-panel-bg: #fdfdfc; 
+    /* Softer text color instead of pure black */
+    --dd-text: #2b2b2b;
+}
+
+body {
+    background-color: var(--dd-light-bg);
+    color: var(--dd-text);
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.7; /* Slightly increased for better readability */
+    /* Much lighter halftone pattern effect to not overwhelm the eyes */
+    background-image: radial-gradient(rgba(0, 0, 0, 0.04) 1px, transparent 1px);
+    background-size: 20px 20px; 
+}
+
+/* Headings - Using a typewriter/noir font for the detective vibe */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Special Elite', monospace;
+    color: var(--dd-black) !important;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: none;
+}
+
+h1 {
+    color: var(--dd-red) !important;
+    text-shadow: 2px 2px 0px rgba(0,0,0,0.05); /* Softer shadow */
+}
+
+h2 {
+    border-bottom: 3px solid var(--dd-red);
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+h3 {
+    color: var(--dd-red) !important;
+}
+
+/* Header styling */
+header {
+    background-color: var(--dd-panel-bg);
+    padding: 50px 0;
+    border-bottom: 4px solid var(--dd-red);
+    border-top: 4px solid var(--dd-black);
+    margin-bottom: 40px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03); /* Softer shadow */
+}
+
+header p {
+    color: var(--dd-text);
+}
+
+header p.lead {
+    font-family: 'Special Elite', monospace;
+    color: var(--dd-red);
+    font-weight: bold;
+}
+
+/* Links */
+a {
+    color: var(--dd-red);
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.2s ease;
+    border-bottom: 1px dotted rgba(204, 0, 0, 0.5);
+}
+
+a:hover {
+    color: var(--dd-black);
+    background-color: rgba(204, 0, 0, 0.05);
+    border-bottom: 1px solid var(--dd-black);
+}
+
+/* Containers & Sections - Comic panel feel */
+section.container {
+    background-color: var(--dd-panel-bg);
+    padding: 30px;
+    border: 2px solid var(--dd-black); /* Slightly thinner border */
+    margin-bottom: 30px;
+    /* Softer comic shadow */
+    box-shadow: 5px 5px 0px rgba(26, 26, 26, 0.85); 
+}
+
+/* Cards (Ontologies) */
+.card {
+    background-color: var(--dd-panel-bg) !important;
+    border: 2px solid var(--dd-black) !important;
+    color: var(--dd-text);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border-radius: 0 !important;
+}
+
+.card:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 4px 4px 0px var(--dd-red);
+}
+
+.card-header {
+    background-color: #f0eee8 !important; /* Warmer card header */
+    border-bottom: 2px solid var(--dd-black) !important;
+    color: var(--dd-black) !important;
+    font-family: 'Special Elite', monospace;
+}
+
+.card-body p.card-text strong {
+    color: var(--dd-black);
+}
+
+/* Code blocks */
+pre {
+    background-color: #f7f6f2 !important;
+    border: 1px solid var(--dd-black) !important;
+    border-left: 5px solid var(--dd-red) !important;
+    padding: 15px;
+    color: var(--dd-text) !important;
+}
+
+code {
+    color: var(--dd-red) !important;
+    background-color: #fdfdfc !important;
+    border: 1px solid #e0dfdb !important;
+    padding: 2px 5px;
+    font-family: 'Courier New', Courier, monospace !important;
+    font-weight: bold;
+}
+
+/* Buttons */
+.btn-dark {
+    background-color: var(--dd-black) !important;
+    color: var(--dd-panel-bg) !important;
+    border: 2px solid var(--dd-black) !important;
+    text-transform: uppercase;
+    font-family: 'Special Elite', monospace;
+    font-weight: bold;
+    letter-spacing: 1px;
+    border-radius: 0;
+    transition: all 0.2s ease;
+    box-shadow: 3px 3px 0px var(--dd-red);
+}
+
+.btn-dark:hover, .btn-dark:focus {
+    background-color: var(--dd-red) !important;
+    color: var(--dd-panel-bg) !important;
+    border-color: var(--dd-red) !important;
+    box-shadow: 3px 3px 0px var(--dd-black);
+    transform: translate(1px, 1px);
+}
+
+/* Badges */
+.badge {
+    background-color: var(--dd-red) !important;
+    color: var(--dd-panel-bg) !important;
+    font-family: 'Open Sans', sans-serif;
+    border-radius: 0 !important; 
+    border: 1px solid var(--dd-black) !important;
+    font-weight: bold;
+}
+
+.badge.bg-warning, .badge.bg-info, .badge.bg-success {
+    background-color: #f0eee8 !important;
+    color: var(--dd-black) !important;
+    border: 1px solid var(--dd-black) !important;
+}
+
+/* Lists */
+ul {
+    list-style-type: square;
+    color: var(--dd-red);
+}
+
+ul li span, ul li {
+    color: var(--dd-text);
+}
+
+/* iFrames / Zoom areas */
+.border.rounded.shadow-sm {
+    border: 2px solid var(--dd-black) !important;
+    background-color: var(--dd-panel-bg);
+    border-radius: 0 !important;
+    box-shadow: 4px 4px 0px rgba(0,0,0,0.05) !important;
+}

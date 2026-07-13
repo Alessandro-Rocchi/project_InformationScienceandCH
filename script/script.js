@@ -3,6 +3,41 @@ async function init() {
     transformXML()
 }
 
+document.querySelectorAll('pre code').forEach((blocco) => {
+  // 1. Dividiamo il testo riga per riga (cattura sia i ritorni a capo Windows che Mac/Linux)
+  let righe = blocco.textContent.split(/\r?\n/);
+  
+  // 2. Rimuoviamo la prima riga se contiene solo spazi vuoti (creata andando a capo dopo <code>)
+  if (righe.length > 0 && righe[0].trim() === '') {
+    righe.shift();
+  }
+  
+  // 3. Rimuoviamo l'ultima riga se contiene solo spazi vuoti (creata prima del tag </code>)
+  if (righe.length > 0 && righe[righe.length - 1].trim() === '') {
+    righe.pop();
+  }
+  
+  // 4. Calcoliamo qual è l'indentazione minima tra tutte le righe che contengono testo
+  let minSpazi = Infinity;
+  righe.forEach(riga => {
+    // Ignoriamo le righe totalmente vuote
+    if (riga.trim() !== '') {
+      const spazi = riga.match(/^\s*/)[0].length;
+      if (spazi < minSpazi) {
+        minSpazi = spazi;
+      }
+    }
+  });
+  
+  // 5. Tagliamo esattamente quel numero di spazi dall'inizio di OGNI riga
+  if (minSpazi < Infinity) {
+    righe = righe.map(riga => riga.substring(minSpazi));
+  }
+  
+  // 6. Uniamo di nuovo le righe e aggiorniamo l'HTML
+  blocco.textContent = righe.join('\n');
+});
+
 document.addEventListener('DOMContentLoaded', init);
 
 function transformXML() {

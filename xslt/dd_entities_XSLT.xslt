@@ -27,7 +27,7 @@
         </html>
     </xsl:template>
     <xsl:template match="tei:listPerson">
-        <h3 class="mt-4 text-primary">
+        <h3 class="mt-4">
             Person List (Type: <xsl:value-of select="@type"/>)
         </h3>
         
@@ -61,7 +61,7 @@
     </xsl:template>
 
     <xsl:template match="tei:listBibl">
-    <h3 class="mt-5 text-primary">Bibliographic Entities</h3>
+    <h3 class="mt-5">Bibliographic Entities</h3>
     
     <div class="row mt-3">
             <xsl:for-each select="tei:bibl">
@@ -77,7 +77,7 @@
                                 <xsl:if test="tei:title[1]/@level != 's'">
                                     <xsl:value-of select="tei:title[1]"/>
                                 </xsl:if>
-                                    <span class="badge ms-2 rounded-pill text-primary" style="font-size: 0.6em; text-transform: uppercase;">
+                                    <span class="badge ms-2 rounded-pill text-white" style="font-size: 0.6em; text-transform: uppercase;">
                                         <xsl:value-of select="@type" />
                                     </span>
                             </h5>
@@ -148,7 +148,7 @@
                             </xsl:if>
                             
                             <xsl:if test="tei:idno">
-                                <span class="badge text-bg-light border text-muted">
+                                <span class="badge text-bg-light border border-secondary rounded-pill small">
                                     SBN: <xsl:value-of select="tei:idno[1]"/>
                                 </span>
                             </xsl:if>
@@ -161,7 +161,7 @@
     </xsl:template>
 
     <xsl:template match="tei:listOrg">
-        <h3 class="mt-4 text-primary">
+        <h3 class="mt-4">
             Organization List
         </h3>
         
@@ -191,7 +191,7 @@
     </xsl:template>
 
     <xsl:template match="tei:listPlace">
-        <h3 class="mt-4 text-primary">
+        <h3 class="mt-4">
             Place List
         </h3>
         

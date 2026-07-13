@@ -1,5 +1,5 @@
 from lxml import etree as ET
-from rdflib import DCTERMS, Graph, Namespace, URIRef, RDF, OWL, Literal
+from rdflib import Graph, Namespace, URIRef, RDF, OWL, Literal
 from rdflib.namespace import XSD
 
 def extract_rdf_from_tei(xml_file_path):
@@ -10,7 +10,7 @@ def extract_rdf_from_tei(xml_file_path):
     DCTERMS = Namespace("http://purl.org/dc/terms/")
     CBO = Namespace("http://comicmeta.org/cbo/")
     FRBROO = Namespace("http://iflastandards.info/ns/fr/frbr/frbroo/")
-    SCHEMA = Namespace("https://schema.org/")
+    SCHEMA = Namespace("http://schema.org/")
     DBO = Namespace("http://dbpedia.org/ontology/")
     DD = Namespace("https://alessandro-rocchi.github.io/project_InformationScienceandCH/ontology/DDOntology#")
     CRM = Namespace("http://www.cidoc-crm.org/cidoc-crm/")
@@ -92,8 +92,16 @@ def extract_rdf_from_tei(xml_file_path):
         subject_uri = LOCAL[p_id]
         
         name_tag = person.find('./tei:persName', namespaces=nsmap)
-        if name_tag is not None and name_tag.text:
-            g.add((subject_uri, FOAF.name, Literal(name_tag.text.strip(), datatype=XSD.string)))
+        if name_tag is not None:
+            # Estrae tutto il testo dal tag e dai suoi figli (forename, surname, ecc.)
+            raw_text = "".join(name_tag.itertext())
+            
+            # Pulisce gli spazi, i tab e gli "a capo" creati dall'XML
+            full_name = " ".join(raw_text.split())
+            
+            # Se dopo la pulizia c'è effettivamente un nome, aggiunge la tripla
+            if full_name:
+                g.add((subject_uri, FOAF.name, Literal(full_name, datatype=XSD.string)))
 
     # B. Estrazione Titoli, Date e Numeri degli Albi 
     for bibl in root.xpath('.//tei:bibl[@xml:id]', namespaces=nsmap):
@@ -110,8 +118,13 @@ def extract_rdf_from_tei(xml_file_path):
         if date_tag is not None:
             year_val = date_tag.get("when")
             if year_val:
-                g.add((subject_uri, DCTERMS.date, Literal(year_val, datatype=XSD.gYear)))
-                
+                year_val = year_val.strip()
+                if len(year_val) == 4:
+                    date_value = Literal(year_val, datatype=XSD.gYear)
+                else:
+                    date_value = Literal(year_val, datatype=XSD.date)
+                g.add((subject_uri, DCTERMS.date, date_value))
+
         # Numero dell'albo (xsd:integer)
         issue_tag = bibl.find('./tei:biblScope[@unit="albo"]', namespaces=nsmap)
         if issue_tag is not None and issue_tag.text:
@@ -120,7 +133,7 @@ def extract_rdf_from_tei(xml_file_path):
     return g
 
 if __name__ == "__main__":
-    file_input = "dylanDog_TEI.xml" 
+    file_input = "./xml/dylanDog_TEI.xml" 
     
     # Avvio della trasformazione
     grafo_risultante = extract_rdf_from_tei(file_input)

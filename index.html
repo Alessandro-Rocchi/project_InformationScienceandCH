@@ -3,6 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style/dylan_dog_theme.css">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"></link>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
         <script src="script/script.js" defer></script>
@@ -14,7 +15,7 @@
             <p class="lead">A project to create a linked open data (LOD) representation of Dylan Dog citations.</p>
             <p>By Alessandro Rocchi</p>
         </header>
-        <section class="container-fluid mt-4" id="introduzione">
+        <section class="container mt-4" id="introduzione">
             <h2 class="mb-4 pb-2 fw-bold text-uppercase">Introduction</h2>
             <div class="row">
                 <div class="col-md-12">
@@ -22,9 +23,9 @@
                 </div>
             </div>
         </section>
-        <section class="container-fluid mt-4" id="domain">
+        <section class="container mt-4" id="domain">
             <h2 class="mb-4 pb-2 fw-bold text-uppercase">Domain Analysis</h2>
-            <section class="container-fluid mt-3" id="idea">
+            <section class="container mt-3" id="idea">
                 <h3 class="mb-4 pb-2 fw-bold text-uppercase">Project Idea</h3>
                 <div class="row">
                     <div class="col-12">
@@ -38,7 +39,7 @@
                     </div>
                 </div>
             </section>
-            <section class="container-fluid mt-3" id="entities">
+            <section class="container mt-3" id="entities">
                 <h3 class="mb-4 pb-2 fw-bold text-uppercase">Entities</h3>
                 <div class="row">
                     <div class="col-12">
@@ -59,16 +60,16 @@
                 </div>
             </section>
         </section>
-        <section class="container-fluid mt-4" id="knowledge_organization">
+        <section class="container mt-4" id="knowledge_organization">
             <h2 class="mb-4 pb-2 fw-bold text-uppercase">Knowledge organization: elaborate models</h2>
-            <section class="container-fluid mt-3" id="theoretical_model">
+            <section class="container mt-3" id="theoretical_model">
                 <h3 class="mb-4 pb-2 fw-bold text-uppercase" style="color: #cc0000;">Theoretical Model</h3>
                 <p>After identifying the key entities and their relationships, I developed a theoretical model to represent the knowledge structure of Dylan Dog citations. This model aims to capture the semantic connections between different types of entities. And to show connections which weren't explicitly mentioned in the original text.</p>
                 <p>The model is composed of three main components: the main entities, their attributes, and the external resources (URIs) used to link them to authoritative sources or catalogues. In particular, the autoritative sources used are: VIAF and OPAC SBN. Wikidata has been used to conciliate and a semantic disambiguation for entities which are not bibliographic. For the location has been used Geonames as authoritative source.</p>
                 <p>The graph was created using yED software and  it was included a zoom javascript plugin to enable interactive exploration and make it more readble. On the left you can find a legend which explain the symbols used in the graph.</p>
             </section>
-            <section class="container-fluid mt-3" id="theoretical_model_zoom">
-                <div class="container-fluid mt-4">
+            <section class="container mt-3" id="theoretical_model_zoom">
+                <div class="container mt-4">
                     <div class="row">
                         <div class="col-lg-9 mb-4">
                             <div class="border rounded shadow-sm" style="height: 75vh; width: 100%;">
@@ -90,7 +91,7 @@
                     </div>
                 </div>
             </section>
-            <section class="container-fluid mt-3" id="conceptual_model">
+            <section class="container mt-3" id="conceptual_model">
                 <h3 class="mb-4 pb-2 fw-bold text-uppercase">Conceptual Model</h3>
                 <p>After realising the theoretical model, I developed a conceptual model to create a formal representation of the theoretical model. I choose to reuse exiting ontologies where possible and create a personal ontology to fill the gaps with existing ones.</p>
                 <p>The conceptual model is based on the following ontologies:</p>
@@ -106,7 +107,7 @@
                                 <div class="card h-100 border-dark border-2 rounded-0 shadow-sm">
                                     <div class="card-body d-flex flex-column">
                                         <div class="mb-3">
-                                            <p>Prefix: <span class="badge rounded-pill bg-dark text-white border border-dark">DD</span></p>
+                                            <p>Prefix: <span class="badge rounded-pill text-white border border-dark" style="background-color: #cc0000;">DD</span></p>
                                         </div>
                                         <h4 class="card-title h5 fw-bold">DDOntology</h4>
                                         <p class="card-text flex-grow-1">
@@ -117,6 +118,9 @@
                                                 https://alessandro-rocchi.github.io/project_InformationScienceandCH/ontology/DDOntology#
                                             </code>
                                         </p>
+                                         <a href="#" target="_blank" class="btn btn-dark rounded-0 fw-bold w-100">
+                                            Official Docs
+                                        </a>
                                     </div>
                                 </div>
                             </div>
@@ -153,7 +157,7 @@
                                         </div>
                                         <h4 class="card-title h5 fw-bold">Friend of a Friend</h4>
                                         <p class="card-text flex-grow-1">
-                                            <strong>Why I chose it:</strong> The absolute standard for describing people. I employed it to model authors and actors, and to create links between physical entities and their visual depictions.
+                                            <strong>Why I chose it:</strong> The absolute standard for describing people. I employed it to create links between physical entities and their visual depictions.
                                         </p>
                                         <p>URI:
                                             <code class="d-block p-2 text-dark bg-light border border-dark font-monospace small" style="word-break: break-all;">
@@ -287,7 +291,7 @@
                                 <div class="card h-100 border-dark border-2 rounded-0 shadow-sm">
                                     <div class="card-body d-flex flex-column">
                                         <div class="mb-3">
-                                            <p>Prefix: <span class="badge rounded-pill bg-dark text-white border border-dark">crm</span></p>
+                                            <p>Prefix: <span class="badge rounded-pill text-white border border-dark" style="background-color: #cc0000;">crm</span></p>
                                         </div>
                                         <h4 class="card-title h5 fw-bold">CIDOC CRM</h4>
                                         <p class="card-text flex-grow-1">
@@ -337,7 +341,7 @@
                                         </div>
                                         <h4 class="card-title h5 fw-bold">Web Ontology Language</h4>
                                         <p class="card-text flex-grow-1">
-                                            <strong>Why I chose it:</strong> It adds advanced computational logic. Crucial for defining identity alignments across different datasets and setting strict cardinality restrictions for the Reasoner.
+                                            <strong>Why I chose it:</strong> To ensure the dataset's full interoperability within the Linked Open Data (LOD) cloud, the Web Ontology Language (OWL) standards were used.
                                         </p>
                                         <p>URI:
                                             <code class="d-block p-2 text-dark bg-light border border-dark font-monospace small" style="word-break: break-all;">
@@ -350,7 +354,36 @@
                                     </div>
                                 </div>
                             </div>
+
+                            <!-- PROV-O -->
+                            <div class="col-12 col-md-6 col-xl-3">
+                                <div class="card h-100 border-dark border-2 rounded-0 shadow-sm">
+                                    <div class="card-body d-flex flex-column">
+                                        <div class="mb-3">
+                                            <p>Prefix: <span class="badge rounded-pill text-white border border-dark" style="background-color: #cc0000;">prov</span></p>
+                                        </div>
+                                        <h4 class="card-title h5 fw-bold">Prov-O</h4>
+                                        <p class="card-text flex-grow-1">
+                                            <strong>Why I chose it:</strong> It's the W3C standard for representing provenance information. I used it to create my own object-properties to describe the inspiration of one element by another. 
+                                        </p>
+                                        <p>URI:
+                                            <code class="d-block p-2 text-dark bg-light border border-dark font-monospace small" style="word-break: break-all;">
+                                                http://www.w3.org/ns/prov#
+                                            </code>
+                                        </p>
+                                        <a href="https://www.w3.org/TR/prov-o/" target="_blank" class="btn btn-dark rounded-0 fw-bold w-100">
+                                            Official Docs
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <p>I modeled the ontology I created using Protégé in order to achieve a valid, robust result and to take full advantage of the program's features. This allowed me to achieve a consistent and accurate result.</p>
+                        <a class="btn btn-dark" href="https://github.com/Alessandro-Rocchi/project_InformationScienceandCH/blob/66b59b8acb53cc717a55c2c704e663e7c1493350/ontology/DDOntology.ttl" role="button" target="_blank">View the Ontology file! 🌐</a>
                     </div>
                 </div>
                 <div class="row mt-4">
@@ -381,8 +414,14 @@
                     </div>
                 </div>
             </section>
-           <section class="container-fluid mt-3" id="conceptual_model_zoom">
-                <div class="container-fluid mt-4">
+           <section class="container mt-3" id="conceptual_model_zoom">
+                <div class="row">
+                    <div class="col-12">
+                        <h3 class="mb-4 pb-2 fw-bold text-uppercase">Conceptual Model Zoom</h3>
+                        <p>To create the conceptual model I used the software yED plus the Graffoo palette by Silvio Peroni.</p>
+                    </div>
+                </div>
+                <div class="container mt-4">
                     <div class="row">
                         <div class="col-lg-9 mb-4">
                             <div class="border rounded shadow-sm" style="height: 75vh; width: 100%;">
@@ -404,7 +443,7 @@
                     </div>
                 </div>
             </section>
-            <section class="container-fluid mt-4" id="idk">
+            <section class="container mt-4" id="customization">
                 <div class="row">
                     <div class="col-12">
                         <h3 class="mb-4 pb-2 fw-bold text-uppercase">Why creating a new class instead of using an existing one?</h3>
@@ -413,7 +452,212 @@
                         <p>So to describe better my domain I created the new class <code>dd:Albo</code> which is a specialized entity to represent the unique characteristics of Italian comic publications. I decide to make it a subclass of the existing <code>cbo:Issue</code> class because it shares some common properties with the existing class, but it also has distinct characteristics that warrant its own classification.</p>
                     </div>
                 </div>
+                <div class="row">
+                    <div class="col-12">
+                        <h3 class="mb-4 pb-2 fw-bold text-uppercase">Why creating a new set of Object Properties?</h3>
+                        <p>I created a new set of Object Properties to better capture the relation of Inspired By between different entities in my domain.</p>
+                        <p>In particular, I created the following Object Properties:<code>dd:inspiredBy</code> which represents the relationship between an entity and the entity that inspired it, this property is a sub-property of the more general <code>prov:wasInfluencedBy</code> property.</p>
+                        <p>I then created the properties: <code>dd:appearanceInspiredBy</code>, <code>dd:familyNameInspiredBy</code>, <code>dd:givenNameInspiredBy</code>, to describe the relationships between the various entities in the domain in even greater detail. All of these properties are subproperties of dd:inspiredBy to maintain the logical and semantic consistency of the domain.</p>
+                        <p>In addition, I also created the property <code>dd:isATributeTo</code> and its subproperty <code>dd:isNameATributeTo</code>. These properties are necessary to more accurately represent tributes, which differ semantically from inspirations, to people or characters.</p>
+                    </div>
+                </div>
             </section>
         </section>
-    </body>
+        <section class="container mt-4" id="knowledge_representation">
+            <h2 class="mb-4 pb-2 fw-bold text-uppercase">Knowledge representation</h2>
+            <p>After developing the various models and defining the domain, I proceeded to generate the data based on the original sources.</p>
+            <section class="container mt-3" id="XML_TEI">
+                    <h3 class="mb-4 pb-2 fw-bold text-uppercase">XML/TEI</h3>
+                    <div class="row">
+                        <div class="col-12">
+                            <p>For the first task, I created an XML/TEI file using the <a href="https://it.wikipedia.org/wiki/Dylan_Dog" target="_blank">Dylan Dog Wikipedia page</a> as the source (the starting point for the entire project). Within the document, the annotated <a href="#entities">entities</a> were the same ones used for the domain study and any textual phenomena. You can view the XML/TEI file by clicking the button below.</p>
+                            <a class="btn btn-dark" href="./xml/dylanDog_TEI.xml" role="button" target="_blank">View the XML/TEI file! 📄</a>
+                        </div>
+                    </div>
+                    <section class="container mt-3" id="realworld_entities">
+                        <h4 class="mb-4 pb-2 fw-bold text-uppercase">Real-world Entities in the XML/TEI file</h4>
+                        <div class="row">
+                            <div class="col-12">
+                                <p>In the XML/TEI file, I annotated the following real-world entities:</p>
+                                <ul>
+                                    <li>People (authors, actors, etc.)</li>
+                                    <li>Places (locations)</li>
+                                    <li>Organizations (publishers, production companies)</li>
+                                    <li>Works (comic, books, movies)</li>
+                                </ul>
+                                <p>All of them were annotated with relevant metadata, a unique identifier, and reconciliated with authority files, in particular I use VIAF and OPAC. In this section you can find an example for each entity type.</p>
+                            </div>
+                       </div>
+                       <div class="row">
+                            <div class="col-12">
+                                <h5 class="mb-4 pb-2 fw-bold text-uppercase">People</h5> 
+                            </div>
+                       </div>
+                       <div class="row">
+                            <div class="col-7">
+                                <pre><code>
+                                        &lt;person xml:id="g_marx" sameAs="http://viaf.org/viaf/120720626" role="actor"&gt;
+                                            &lt;persName&gt;
+                                                &lt;surname&gt;Marx&lt;/surname&gt;
+                                                &lt;forename type="middle"&gt;Henry&lt;/forename&gt;
+                                                &lt;forename type="first"&gt;Julius&lt;/forename&gt;
+                                            &lt;/persName&gt;
+                                            &lt;persName type="pseudonym"&gt;
+                                                &lt;surname&gt;Marx&lt;/surname&gt;
+                                                &lt;forename type="first"&gt;Groucho&lt;/forename&gt;
+                                            &lt;/persName&gt;
+                                        &lt;/person&gt;
+                                </code></pre>
+                            </div>
+                            <div class="col-5">
+                                <p>Here we can see an example of a person entity annotated in the XML/TEI file. The entity represents Groucho Marx, an actor, and includes his full name, pseudonym, and a link to his VIAF authority record for reconciliation. I used the <code>@role</code> attribute to specify that Groucho Marx is an actor in the context of the Dylan Dog Wikipedia page and the <code>@sameAs</code> attribute to link the entity to its corresponding authority record in VIAF.</p>
+                                <p>Since the entity has a pseudonym, I chose to indicate this by using another <code>&lt;persName&gt;</code> tag and assigning it the attribute <code>@type="pseudonym"</code> to specify that the content is the pseudonym and not the legal name.</p>
+                            </div>
+                       </div>
+                       <div class="row">
+                            <div class="col-12">
+                                <h5 class="mb-4 pb-2 fw-bold text-uppercase">Places</h5> 
+                            </div>
+                       </div>
+                       <div class="row">
+                            <div class="col-7">
+                                <pre><code>
+                                        &lt;place xml:id="london" sameAs="http://sws.geonames.org/2643743"&gt;
+                                            &lt;placeName&gt;London&lt;/placeName&gt;
+                                        &lt;/place&gt;
+                                </code></pre>
+                            </div>
+                            <div class="col-5">
+                                <p>Here we can see an example of a place entity annotated in the XML/TEI file. The entity represents London, and includes its name and a link to its GeoNames authority record for reconciliation. I used the <code>@sameAs</code> attribute to link the entity to its corresponding authority record in GeoNames.</p>
+                            </div>
+                       </div>
+                       <div class="row">
+                            <div class="col-12">
+                                <h5 class="mb-4 pb-2 fw-bold text-uppercase">Organizations</h5> 
+                            </div>
+                       </div>
+                       <div class="row">
+                            <div class="col-7">
+                                <pre><code>
+                                       &lt;org xml:id="sb_editore" sameAs="http://viaf.org/viaf/182167411" type="publisher"&gt;
+                                            &lt;orgName&gt;Sergio Bonelli Editore&lt;/orgName&gt;
+                                            &lt;country&gt;Italy&lt;/country&gt;
+                                        &lt;/org&gt;
+                                </code></pre>
+                            </div>
+                            <div class="col-5">
+                                <p>Here we can see an example of an organization entity annotated in the XML/TEI file. The entity represents Sergio Bonelli Editore, and includes its name and a link to its VIAF authority record for reconciliation. I used the <code>@sameAs</code> attribute to link the entity to its corresponding authority record in VIAF.</p>
+                            </div>
+                       </div>
+                       <div class="row">
+                            <div class="col-12">
+                                <h5 class="mb-4 pb-2 fw-bold text-uppercase">Works</h5> 
+                            </div>
+                       </div>
+                       <div class="row">
+                            <div class="col-7">
+                                <pre><code>
+                                      &lt;bibl xml:id="pascal_book" type="book" sameAs="http://id.sbn.it/opera/CFI0138942"&gt;
+                                            &lt;title level="m" xml:lang="it"&gt;Il fu Mattia Pascal&lt;/title&gt;
+                                            &lt;title level="m" xml:lang="en"&gt;The Late Mattia Pascal&lt;/title&gt;
+                                            &lt;author ref="#l_pirandello"/&gt;
+                                        &lt;/bibl&gt;
+                                </code></pre>
+                            </div>
+                            <div class="col-5">
+                                <p>Here we can see an example of a work entity annotated in the XML/TEI file. The entity represents "Il fu Mattia Pascal," and includes its titles in Italian and English,the author which refers to the person encoded in the listPerson section, along with a link to its VIAF authority record for reconciliation. I used the <code>@sameAs</code> attribute to link the entity to its corresponding authority record in VIAF.</p>
+                            </div>
+                       </div>
+                       <div class="row">
+                            <div class="col-7">
+                                <pre><code>
+                                        &lt;bibl xml:id="dd_nr1" type="comic_issue" sameAs="http://id.sbn.it/bid/RAV1384287"&gt;
+                                            &lt;title level="s" ref="#dd_comic_series"&gt;Dylan Dog: &lt;/title&gt;
+                                            &lt;title type="comic_issue" level="m" xml:lang="it"&gt;L'Alba dei Morti Viventi&lt;/title&gt;
+                                            &lt;title type="comic_issue" level="m" xml:lang="en"&gt;Dawn of the Living Dead&lt;/title&gt;
+                                            &lt;respStmt&gt;
+                                                &lt;resp&gt;writer&lt;/resp&gt;
+                                                &lt;persName ref="#t_sclavi"/&gt;
+                                            &lt;/respStmt&gt;
+                                            &lt;respStmt&gt;
+                                                &lt;resp&gt;artist&lt;/resp&gt;
+                                                &lt;persName ref="#a_stano"/&gt;
+                                            &lt;/respStmt&gt;
+                                            &lt;respStmt&gt;
+                                                &lt;resp&gt;coverArtist&lt;/resp&gt;
+                                                &lt;persName ref="#c_villa"/&gt;
+                                            &lt;/respStmt&gt;
+                                            &lt;date type="pubDate" when="1986-10-01"&gt;01/10/1986&lt;/date&gt;
+                                            &lt;biblScope unit="albo"&gt;1&lt;/biblScope&gt;
+                                        &lt;/bibl&gt;
+                                </code></pre>
+                            </div>
+                            <div class="col-5">
+                                <p>Here we can see an example of a work entity annotated in the XML/TEI file. The entity represents the first issue of the Dylan Dog series: "L'Alba dei Morti Viventi" and includes its titles in Italian and English, the publication date, along with a link to its VIAF authority record for reconciliation. I used the <code>@sameAs</code> attribute to link the entity to its corresponding authority record in VIAF.</p>
+                                <p>In this case, there isn't a single &lt;author&gt; tag because a comic is a complex entity that can be created through the work of multiple people, each with their own specific role in the production process. Therefore, I decided to divide the various roles into responsibilities in order to better represent the resource. I used the same approach for movies as well.</p>
+                            </div>
+                       </div>
+                       <div class="row">
+                            <div class="col-12">
+                                <h5 class="mb-4 pb-2 fw-bold text-uppercase">Relations</h5> 
+                            </div>
+                       </div>
+                       <div class="row">
+                            <div class="col-7">
+                                <pre><code>
+                                        &lt;relation active="#dd_nr1" name="cbo:writer" passive="#t_sclavi"/&gt;
+                                        &lt;relation active="#dd_nr1" name="cbo:artist" passive="#a_stano"/&gt;
+                                        &lt;relation active="#dd_nr1" name="cbo:coverArtist" passive="#c_villa"/&gt;
+                                </code></pre>
+                            </div>
+                            <div class="col-5">
+                                <p>In my XML/TEI file, I also wanted to explicitly specify the relationships between the various annotated entities and indicate which domain class they belonged to. This approach helped when generating the dataset using a Python script, since all that was needed was to translate the existing triples.</p>
+                                <p>The relationship is defined using the <code>&lt;relation&gt;</code> tag, where <code>@active</code> is the subject, <code>@name</code> is the predicate, and <code>@passive</code> is the object.</p>
+                            </div>
+                       </div>
+                    </section>
+                </section>
+            </section>
+            <section class="container mt-3" id="xml_to_html">
+                <h3 class="mb-4 pb-2 fw-bold text-uppercase">XML to HTML</h3>
+                <div class="row">
+                    <div class="col-12">
+                        <p>After creating the XML/TEI file, I transformed it into an HTML page using XSLT plus a python script. For this task, I utilized the lxml library in Python to apply the XSLT transformation and generate the final HTML page.</p>
+                        <a class="btn btn-dark" href="./html/dylanDog_py.html" role="button" target="_blank">Visit the HTML page! 🌐</a>
+                        <a class="btn btn-dark" href="https://github.com/Alessandro-Rocchi/project_InformationScienceandCH/blob/66b59b8acb53cc717a55c2c704e663e7c1493350/html/dylanDog_py.html" role="button" target="_blank">View the HTML code! 📄</a>
+                        <a class="btn btn-dark" href="https://github.com/Alessandro-Rocchi/project_InformationScienceandCH/blob/66b59b8acb53cc717a55c2c704e663e7c1493350/xslt/dd_XSLT.xslt" role="button" target="_blank">View the XSLT file! 📄</a>
+                        <a class="btn btn-dark" href="https://github.com/Alessandro-Rocchi/project_InformationScienceandCH/blob/66b59b8acb53cc717a55c2c704e663e7c1493350/python_scripts/xml_to_html_python.py" role="button" target="_blank">View the Python script! 🐍</a>
+                    </div>
+                </div>
+            </section>
+            <section class="container mt-3" id="xml_to_rdf">
+                <h3 class="mb-4 pb-2 fw-bold text-uppercase">XML to RDF</h3>
+                <div class="row">
+                    <div class="col-12">
+                        <p>The final task involved creating an RDF dataset using a Python script, with the XML/TEI file as the source. The final task involved creating an RDF dataset using a Python script, with the XML/TEI file as the source. To perform the transformation, I used the lxml and rdflib libraries. Lxml was necessary for data extraction, while rdflib was used to generate the triples and the final TURTLE file.</p>
+                        <a class="btn btn-dark" href="https://github.com/Alessandro-Rocchi/project_InformationScienceandCH/blob/66b59b8acb53cc717a55c2c704e663e7c1493350/python_scripts/xml_to_rdf.py" role="button" target="_blank">View the Python script! 🐍</a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <p>Below, you can see a graph representation of the final dataset. This representation was automatically generated using RDF Grapher.</p>
+                        <div class="border rounded shadow-sm" style="height: 75vh; width: 100%;">
+                                <iframe src="html/zoom-page.html?img=../images/rdf-grapher_DD.png" style="width: 100%; height: 100%; border: none;"></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <p>Once the data extraction and conversion process was complete, the Knowledge Graph was validated. The custom ontology and the final dataset were uploaded together to Protégé. The use of a logical inference engine (the reasoner; for this project, I used Pellet) made it possible to verify the absence of internal contradictions and to test the correct automatic inference of relationships.</p>
+                        <a class="btn btn-dark" href="https://github.com/Alessandro-Rocchi/project_InformationScienceandCH/blob/66b59b8acb53cc717a55c2c704e663e7c1493350/rdf_dataset/dataset_dylandog.ttl" role="button" target="_blank">View the dataset! 📊</a>
+                    </div>
+                </div>
+            </section>
+        </section>
+        <section class="container mt-4" id="conclusion">
+            <h2 class="mb-4 pb-2 fw-bold text-uppercase">Conclusion</h2>
+            <p>In conclusion, this project has provided a comprehensive exploration of the domain of Dylan Dog, utilizing various ontologies and data representation techniques to create a rich and interconnected dataset. The use of XML/TEI for initial data annotation, followed by transformation into HTML and RDF formats, has allowed for effective data management.</p>
+            <p>The creation of custom classes and object properties has enabled a more accurate representation of the unique characteristics of Italian comic publications, while the integration of external authority files has ensured the reliability and verifiability of the data. Overall, this project help me to understand the power of semantic technologies in organizing and representing complex information in a meaningful way.</p>
+        </section>  
+      </body>
 </html>
