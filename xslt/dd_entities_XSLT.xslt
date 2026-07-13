@@ -49,7 +49,7 @@
                             </p>
                             
                             <xsl:if test="@sameAs">
-                                <a href="{@sameAs}" target="_blank" class="btn btn-dark rounded-0 fw-bold w-100">
+                                <a href="{@sameAs}" target="_blank" class="btn btn-dark rounded-0 fw-bold">
                                     View Record (Authority File)
                                 </a>
                             </xsl:if>
@@ -142,7 +142,7 @@
 
                         <div class="card-footer bg-transparent d-flex justify-content-between align-items-center">
                             <xsl:if test="@sameAs">
-                                <a href="{@sameAs}" target="_blank" class="btn btn-dark rounded-0 fw-bold w-100">
+                                <a href="{@sameAs}" target="_blank" class="btn btn-dark rounded-0 fw-bold">
                                     View Record (Authority File)
                                 </a>
                             </xsl:if>
@@ -179,7 +179,7 @@
                             </p>
                             
                             <xsl:if test="@sameAs">
-                                <a href="{@sameAs}" target="_blank" class="btn btn-dark rounded-0 fw-bold w-100">
+                                <a href="{@sameAs}" target="_blank" class="btn btn-dark rounded-0 fw-bold">
                                     View Record (Authority File)
                                 </a>
                             </xsl:if>
@@ -205,7 +205,7 @@
                             </h5>
                             
                             <xsl:if test="@sameAs">
-                                <a href="{@sameAs}" target="_blank" class="btn btn-dark rounded-0 fw-bold w-100">
+                                <a href="{@sameAs}" target="_blank" class="btn btn-dark rounded-0 fw-bold">
                                     View Record (Authority File)
                                 </a>
                             </xsl:if>
