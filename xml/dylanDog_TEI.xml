@@ -26,11 +26,11 @@
                     <ptr target="https://it.wikipedia.org/wiki/Dylan_Dog"/>
                 </bibl>
                 <listBibl type="source_in_page">
-                    <bibl xml:id="dd_comic_series" type="comic_Series" sameAs="http://www.wikidata.org/entity/Q12098">
+                    <bibl xml:id="dd_comic_series" type="comic_Series" sameAs="http://id.sbn.it/opera/PIA0027617">
                         <title level="s">Dylan Dog</title>
                         <author ref="#t_sclavi"/>
                         <publisher ref="#sb_editore"/>
-                        <idno type="SBN">http://id.sbn.it/opera/PIA0027617</idno>
+                        <idno type="SBN">http://www.wikidata.org/entity/Q12098</idno>
                         <idno type="SBN">http://id.sbn.it/bid/CFI0070485</idno>
                     </bibl>
                     <bibl xml:id="dog_book" type="book" sameAs="http://id.sbn.it/bid/TO00392471">

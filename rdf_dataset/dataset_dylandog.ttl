@@ -62,7 +62,7 @@ dd_data:dd_comic_series a cbo:Series ;
     dcterms:publisher dd_data:sb_editore ;
     dcterms:title "Dylan Dog"^^xsd:string ;
     schema1:contentLocation dd_data:london ;
-    owl:sameAs <http://www.wikidata.org/entity/Q12098> .
+    owl:sameAs <http://id.sbn.it/opera/PIA0027617> .
 
 dd_data:dd_kelly a dbo:FictionalCharacter ;
     schema1:character dd_data:dog_book ;

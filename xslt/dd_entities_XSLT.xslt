@@ -140,7 +140,7 @@
                             </xsl:if>
                         </div>
 
-                        <div class="card-footer bg-transparent d-flex justify-content-between align-items-center">
+                        <div class="card-footer bg-transparent d-flex justify-content-between align-items-center gap-3 flex-wrap">
                             <xsl:if test="@sameAs">
                                 <a href="{@sameAs}" target="_blank" class="btn btn-dark rounded-0 fw-bold">
                                     View Record (Authority File)
@@ -149,7 +149,7 @@
                             
                             <xsl:if test="tei:idno">
                                 <span class="badge text-bg-light border border-secondary rounded-pill small">
-                                    SBN: <xsl:value-of select="tei:idno[1]"/>
+                                    Wikidata: <xsl:value-of select="tei:idno[1]"/>
                                 </span>
                             </xsl:if>
                         </div>
