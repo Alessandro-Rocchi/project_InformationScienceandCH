@@ -78,7 +78,7 @@ dd_data:dd_nr1 a dd:Albo ;
     dcterms:date "1986-10-01"^^xsd:date ;
     dcterms:references dd_data:american_werewolf_london,
         dd_data:dawn_of_the_dead ;
-    dcterms:title "Dylan Dog:"^^xsd:string ;
+    dcterms:title "L'Alba dei Morti Viventi"^^xsd:string ;
     owl:sameAs <http://id.sbn.it/bid/RAV1384287> .
 
 dd_data:dd_nr3 a dd:Albo ;
@@ -87,7 +87,7 @@ dd_data:dd_nr3 a dd:Albo ;
     cbo:writer dd_data:t_sclavi ;
     dcterms:date "1986-11-01"^^xsd:date ;
     dcterms:references dd_data:suspiria ;
-    dcterms:title "Dylan Dog:"^^xsd:string ;
+    dcterms:title "Le Notti della Luna Piena"^^xsd:string ;
     owl:sameAs <http://id.sbn.it/bid/RAV1387262> .
 
 dd_data:dd_nr67 a dd:Albo ;
@@ -96,7 +96,7 @@ dd_data:dd_nr67 a dd:Albo ;
     cbo:writer dd_data:t_sclavi ;
     dcterms:date "1992-04-01"^^xsd:date ;
     dcterms:references dd_data:pascal_book ;
-    dcterms:title "Dylan Dog:"^^xsd:string ;
+    dcterms:title "L'Uomo che Visse Due Volte"^^xsd:string ;
     owl:sameAs <http://id.sbn.it/bid/RAV1428241> .
 
 dd_data:dellamorte_film a dbo:Film ;

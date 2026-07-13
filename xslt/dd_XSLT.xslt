@@ -6,25 +6,11 @@
     <xsl:template match="/"> <!-- Template-->
         <html>
             <head>
-                <link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"/>
-                <META name="DC.Title" content="{//tei:titleStmt/tei:title}"/>
-                <META name="DC.Creator" content="Alessandro Rocchi"/>
-                <META name="DC.Subject" content="Dylan Dog, Fumetti"/>
-                <META name="DC.Description" content="Un catalogo contenente i primi 150 numeri del fumetto italiano Dylan Dog"/>
-                <META name="DC.Publisher" content="Github Pages"/>
-                <META name="DC.Date" content="2024/01/01"/>
-                <META name="DC.Type" content="Catalogo web"/>
-                <META name="DC.Format" content="Sito web"/>
-                <META name="DC.Source" content="Collana di fumetti Dylan Dog"/>
-                <META name="DC.Language" content="It"/>
                 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"></link> <!-- Bootstrap stylesheet-->
-                <link rel="stylesheet" href="../style/style.css"/> <!-- Custom stylesheet-->
-
                 <link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-touch-icon.png"/>
                 <link rel="icon" type="image/png" sizes="32x32" href="../favicon/favicon-32x32.png"/>
                 <link rel="icon" type="image/png" sizes="16x16" href="../favicon/favicon-16x16.png"/>
                 <link rel="manifest" href="../favicon/site.webmanifest"/>
-
                 <title><xsl:value-of select="//tei:titleStmt/tei:title"/></title>
             </head>
             <body> <!-- Body of the final HTML page -->
