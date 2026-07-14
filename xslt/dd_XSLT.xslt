@@ -68,6 +68,11 @@
             <xsl:apply-templates/>
         </p>
     </xsl:template>
+    <xsl:template match="tei:q"> <!-- Transform every tag <q> in html tag <q>-->
+        <q>
+            <xsl:apply-templates/>
+        </q>
+    </xsl:template>
     <xsl:template match="tei:label"> <!-- Transform every tag <label> in html tag <strong> to emphasize list items -->
         <strong>
             <xsl:apply-templates/>
